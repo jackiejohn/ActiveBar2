@@ -1,0 +1,44 @@
+#include <olectl.h>
+#include "dispids.h"
+
+[
+	uuid(4EB91002-2661-11D2-BC36-8DFEBE3A8B36),
+	helpstring("Designer"),
+	lcid(0x0000),
+	version(2.0)
+]
+library Designer {
+
+	// Standard Imports
+
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	[uuid(0564AE52-FEFE-11D2-A2F4-0060081C43D9),
+	dual	]
+	interface IDesigner : IDispatch
+	{
+		[id(DISPID_OPENDESIGNER)]
+		HRESULT OpenDesigner([in] OLE_HANDLE hWndParent, [in] LPDISPATCH pActiveBar, [in] boolean vbStandALone);
+		[id(DISPID_CLOSEDESIGNER)]
+		HRESULT CloseDesigner();
+		[id(DISPID_SETFOCUS)]
+		HRESULT SetFocus();
+		[id(DISPID_UIDEACTIVATECLOSE)]
+		HRESULT UIDeactivateCloseDesigner();
+	};
+	typedef
+	[uuid(7CF979A1-27E0-11D2-8E41-0060081C43D9)]
+	enum {
+		[helpstring("Hierarchy")] Hierarchy=0,
+		[helpstring("Category")] Category=1,
+	} DesignerTreeTypes;
+
+	[ uuid(5A168040-2657-11D2-BC36-8DFEBE3A8B36)
+	, helpstring("Activebar Designer"), version(1.0)]	coclass DesignerPage {
+		[default] interface IUnknown;
+	};
+	[ uuid(0564AE54-FEFE-11D2-A2F4-0060081C43D9)]	coclass Designer {
+		[default] interface IDesigner;
+	};
+};

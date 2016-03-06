@@ -1,0 +1,339 @@
+:Base ActiveBar20.hlp
+1 User Guide
+2 Welcome=HX_Welcome
+2 Introduction
+3 Introduction=HX_Introduction
+3 Features=HX_Features
+3 ActiveBar Terms=HX_ActiveBar_Terms
+3 Architecture=HX_Architecture
+2 Installation
+3 Installation=HX_Installation
+3 System Requirements=HX_System_Requirements
+3 Included Files=HX_Included_Files
+3 Troubleshooting=HX_Troubleshooting_1
+2 Using ActiveBar
+3 Using ActiveBar=HX_Using_ActiveBar
+3 Adding ActiveBar to a New VB Project=HX_Adding_ActiveBar_to_a_New_VB_Project
+3 ActiveBar Designer=HX_ActiveBar_Designer
+3 ActiveBar Designer
+4 Designer Window=HX_Designer_Window
+4 Designer Toolbar=HX_Designer_Toolbar
+4 Tools and Bands Treeview=HX_Tools_and_Bands_Treeview
+4 Properties List=HX_Properties_List
+4 Icon Editor=HX_Icon_Editor
+4 Menu Capture=HX_Menu_Capture
+4 Saving ActiveBar Layouts=HX_Saving_ActiveBar_Layouts
+4 Layout Documentation=HX_Layout_Documentation
+4 Tool Libraries=HX_Tool_Libraries
+3 Toolbar Layout
+4 Designing the Layout=HX_Designing_the_Layout
+4 Tool Categories=HX_Tool_Categories
+4 Bands=HX_Bands
+4 Menu Bars=HX_Menu_Bars
+4 MDI Child Menus=HX_MDI_Child_Menus
+4 Toolbars=HX_Toolbars
+4 Context Menus=HX_Context_Menus_1
+4 Status Bar=HX_Status_Bar
+4 Child Bands=HX_Child_Bands
+2 Tutorials
+3 Single Document Interface
+4 Simple User Interface=HX_Simple_User_Interface
+4 Action Tools=HX_Action_Tools
+4 Setting Shortcut Keys=HX_Setting_Shortcut_Keys
+4 Menu and Submenu Bands=HX_Menu_and_Submenu_Bands
+4 Separators=HX_Separators
+4 Toolbar Bands=HX_Toolbar_Bands
+4 Status Bar=HX_Status_Bar_1
+4 Exploring the Active Designer=HX_Exploring_the_Active_Designer
+4 Finishing up the Form=HX_Finishing_up_the_Form
+4 Handling Tool Actions=HX_Handling_Tool_Actions
+4 Dropdown Buttons=HX_Dropdown_Buttons
+4 Label, TextBox and ComboBox Tools=HX_Label_TextBox_and_ComboBox_Tools
+4 Context Menus=HX_Context_Menus
+4 Personalized User Interface=HX_Personalized_User_Interface
+3 Multiple Document Interface
+4 Multiple Document Interface (MDI) Forms=HX_Multiple_Document_Interface_MDI_Forms
+4 MDI Child Window List=HX_MDI_Child_Window_List
+4 MDI Child Windows Menu=HX_MDI_Child_Windows_Menu
+4 Context Sensitive Toolbars=HX_Context_Sensitive_Toolbars
+3 Advanced User Interface
+4 Advanced User Interface=HX_Advanced_User_Interface
+4 Tabbed Bands and Shortcut Bars=HX_Tabbed_Bands_and_Shortcut_Bars
+4 Detachable Menus=HX_Detachable_Menus
+4 Dockable Forms=HX_Dockable_Forms
+4 ActiveX Controls as Tools=HX_ActiveX_Controls_as_Tools
+2 Runtime Operation
+3 System Menus=HX_System_Menus
+3 Runtime Customization=HX_Runtime_Customization
+3 Customization Dialog=HX_Customization_Dialog
+3 Create a Customization Dialog=HX_Create_a_Customization_Dialog
+3 Localizing Toolbars and Menus=HX_Localizing_Toolbars_and_Menus
+3 Localizing ActiveBar Strings=HX_Localizing_ActiveBar_Strings
+3 Using Toolbar Layout Files=HX_Using_Toolbar_Layout_Files
+3 Saving User Customized Layout=HX_Saving_User_Customized_Layout
+3 Updating Applications and Preserving User Settings=HX_Updating_Applications_and_Preserving_User_Settings
+2 Advanced
+3 Advanced Techniques=HX_Advanced_Techniques
+3 Docking and Sizing Events=HX_Docking_and_Sizing_Events
+3 Resizing Forms=HX_Resizing_Forms
+3 New Bands and Tools at Runtime=HX_New_Bands_and_Tools_at_Runtime
+3 Optimizing ActiveBar=HX_Optimizing_ActiveBar
+2 Distribution
+3 Packaging and Deployment=HX_Packaging_and_Deployment
+3 Troubleshooting=HX_Troubleshooting
+1 Developer Reference
+2 ActiveBar2 Control
+3 ActiveBar2 Control=csCtlActiveBar2
+3 ActiveBar2 Properties
+4 ActiveBand=csPActiveBandActiveBar2
+4 AlignToForm=csPAlignToFormActiveBar2
+4 AllowDuplicateToolIds=csPAllowDuplicateToolIdsActiveBar2
+4 Bands=csPBandsActiveBar2
+4 ChildBandFont=csPChildBandFontActiveBar2
+4 ControlFont=csPControlFontActiveBar2
+4 DataPath=csPDataPathActiveBar2
+4 DisplayKeysInToolTip=csPDisplayKeysInToolTipActiveBar2
+4 DisplayToolTips=csPDisplayToolTipsActiveBar2
+4 HighLightColor=csPHighLightColorActiveBar2
+4 LargeIcons=csPLargeIconsActiveBar2
+4 MenuAnimation=csPMenuAnimationActiveBar2
+4 MenuFontStyle=csPMenuFontStyleActiveBar2
+4 ShadowColor=csPShadowColorActiveBar2
+4 Tools=csPToolsActiveBar2
+4 Version=csPVersionActiveBar2
+4 WhatsThisHelpMode=csPWhatsThisHelpModeActiveBar2
+3 ActiveBar2 Events
+4 BandClose=csEBandCloseActiveBar2
+4 BandDock=csEBandDockActiveBar2
+4 BandMove=csEBandMoveActiveBar2
+4 BandOpen=csEBandOpenActiveBar2
+4 BandResize=csEBandResizeActiveBar2
+4 BandUndock=csEBandUndockActiveBar2
+4 ChildBandChange=csEChildBandChangeActiveBar2
+4 Click=csEClickActiveBar2
+4 ComboDrop=csEComboDropActiveBar2
+4 ComboSelChange=csEComboSelChangeActiveBar2
+4 CustomizeBegin=csECustomizeBeginActiveBar2
+4 CustomizeEnd=csECustomizeEndActiveBar2
+4 DataReady=csEDataReadyActiveBar2
+4 DblClick=csEDblClickActiveBar2
+4 Error=csEErrorActiveBar2
+4 FileDrop=csEFileDropActiveBar2
+4 MenuItemEnter=csEMenuItemEnterActiveBar2
+4 MenuItemExit=csEMenuItemExitActiveBar2
+4 MouseEnter=csEMouseEnterActiveBar2
+4 MouseExit=csEMouseExitActiveBar2
+4 NewToolbar=csENewToolbarActiveBar2
+4 PreCustomizeMenu=csEPreCustomizeMenuActiveBar2
+4 PreSysMenu=csEPreSysMenuActiveBar2
+4 Reset=csEResetActiveBar2
+4 Resize=csEResizeActiveBar2
+4 TextChange=csETextChangeActiveBar2
+4 ToolGotFocus=csEToolGotFocusActiveBar2
+4 ToolLostFocus=csEToolLostFocusActiveBar2
+4 ToolReset=csEToolResetActiveBar2
+4 WhatsThisHelp=csEWhatsThisHelpActiveBar2
+3 ActiveBar2 Methods
+4 About=csMAboutActiveBar2
+4 Customize=csMCustomizeActiveBar2
+4 Load=csMLoadActiveBar2
+4 LoadLayoutChanges=csMLoadLayoutChangesActiveBar2
+4 Localize=csMLocalizeActiveBar2
+4 OnSysColorChanged=csMOnSysColorChangedActiveBar2
+4 PlaySound=csMPlaySoundActiveBar2
+4 RecalcLayout=csMRecalcLayoutActiveBar2
+4 Refresh=csMRefreshActiveBar2
+4 RegisterChildMenu=csMRegisterChildMenuActiveBar2
+4 ReleaseFocus=csMReleaseFocusActiveBar2
+4 Save=csMSaveActiveBar2
+4 SaveLayoutChanges=csMSaveLayoutChangesActiveBar2
+2 Band Object
+3 Band Object=csCtlBand
+3 Band Properties
+4 AutoSizeForms=csPAutoSizeFormsBand
+4 ChildBands=csPChildBandsBand
+4 ChildBandStyle=csPChildBandStyleBand
+4 CreatedBy=csPCreatedByBand
+4 CurrentChildBand=csPCurrentChildBandBand
+4 CurrentTool=csPCurrentToolBand
+4 DisplayHandles=csPDisplayHandlesBand
+4 DockedHorzHeight=csPDockedHorzHeightBand
+4 DockedHorzWidth=csPDockedHorzWidthBand
+4 DockedVertHeight=csPDockedVertHeightBand
+4 DockedVertWidth=csPDockedVertWidthBand
+4 DockingArea=csPDockingAreaBand
+4 DockingOffset=csPDockingOffsetBand
+4 DockLine=csPDockLineBand
+4 Flags=csPFlagsBand
+4 GrabHandleStyle=csPGrabHandleStyleBand
+4 Height=csPHeightBand
+4 Left=csPLeftBand
+4 MaxHeight=csPMaxHeightBand
+4 MaxWidth=csPMaxWidthBand
+4 MouseTracking=csPMouseTrackingBand
+4 Name=csPNameBand
+4 TagVariant=csPTagVariantBand
+4 Tools=csPToolsBand
+4 ToolsHPadding=csPToolsHPaddingBand
+4 ToolsHSpacing=csPToolsHSpacingBand
+4 ToolsVPadding=csPToolsVPaddingBand
+4 ToolsVSpacing=csPToolsVSpacingBand
+4 Top=csPTopBand
+4 Type=csPTypeBand
+4 Visible=csPVisibleBand
+4 Width=csPWidthBand
+4 WrapTools=csPWrapToolsBand
+3 Band Methods
+4 Refresh=csMRefreshBand
+4 TrackPopup=csMTrackPopupBand
+4 TrackPopupEx=csMTrackPopupExBand
+2 Tool Object
+3 Tool Object=csCtlTool
+3 Tool Properties
+4 Alignment=csPAlignmentTool
+4 AutoRepeat=csPAutoRepeatTool
+4 AutoRepeatInterval=csPAutoRepeatIntervalTool
+4 CaptionPosition=csPCaptionPositionTool
+4 Category=csPCategoryTool
+4 CBList=csPCBListTool
+4 CBListCount=csPCBListCountTool
+4 CBListIndex=csPCBListIndexTool
+4 CBStyle=csPCBStyleTool
+4 CBWidth=csPCBWidthTool
+4 Checked=csPCheckedTool
+4 ControlType=csPControlTypeTool
+4 Custom=csPCustomTool
+4 Default=csPDefaultTool
+4 Description=csPDescriptionTool
+4 Height=csPHeightTool
+4 HelpContextID=csPHelpContextIDTool
+4 ID=csPIDTool
+4 LabelStyle=csPLabelStyleTool
+4 List=csPListTool
+4 Name=csPNameTool
+4 ShortCuts=csPShortCutsTool
+4 Style=csPStyleTool
+4 SubBand=csPSubBandTool
+4 TagVariant=csPTagVariantTool
+4 Text=csPTextTool
+4 TooltipText=csPTooltipTextTool
+4 Visible=csPVisibleTool
+4 Width=csPWidthTool
+3 Tool Methods
+4 CBAddItem=csMCBAddItemTool
+4 CBClear=csMCBClearTool
+4 CBRemoveItem=csMCBRemoveItemTool
+4 GetPicture=csMGetPictureTool
+4 SetFocus=csMSetFocusTool
+4 SetPicture=csMSetPictureTool
+4 SetPictureMask=csMSetPictureMaskTool
+2 Bands Object
+3 Bands Object=csCtlBands
+3 Bands Methods
+4 Add=csMAddBands
+4 Count=csMCountBands
+4 Item=csMItemBands
+4 Remove=csMRemoveBands
+4 RemoveAll=csMRemoveAllBands
+2 Tools Object
+3 Tools Object=csCtlTools
+3 Tools Methods
+4 Add=csMAddTools
+4 Count=csMCountTools
+4 Insert=csMInsertTools
+4 Item=csMItemTools
+4 Remove=csMRemoveTools
+4 RemoveAll=csMRemoveAllTools
+2 ChildBands Object
+3 ChildBands Object=csCtlChildBands
+3 ChildBands Properties
+4 BackColor=csPBackColorChildBands
+4 ChildBandBackgroundStyle=csPChildBandBackgroundStyleChildBands
+4 ChildBandCaptionAlignment=csPChildBandCaptionAlignmentChildBands
+4 ChildBandFont3D=csPChildBandFont3DChildBands
+4 ForeColor=csPForeColorChildBands
+4 HighLightColor=csPHighLightColorChildBands
+4 PictureBackground=csPPictureBackgroundChildBands
+4 PictureBackgroundMaskColor=csPPictureBackgroundMaskColorChildBands
+4 PictureBackgroundStyle=csPPictureBackgroundStyleChildBands
+4 PictureBackgroundUseMask=csPPictureBackgroundUseMaskChildBands
+4 ShadowColor=csPShadowColorChildBands
+4 ToolForeColor=csPToolForeColorChildBands
+3 ChildBands Methods
+4 Add=csMAddChildBands
+4 Count=csMCountChildBands
+4 Item=csMItemChildBands
+4 Remove=csMRemoveChildBands
+2 ComboList Object
+3 ComboList Object=csCtlComboList
+3 ComboList Properties
+4 ItemData=csPItemDataComboList
+3 ComboList Methods
+4 AddItem=csMAddItemComboList
+4 Clear=csMClearComboList
+4 Count=csMCountComboList
+4 InsertItem=csMInsertItemComboList
+4 Item=csMItemComboList
+4 Remove=csMRemoveComboList
+2 CustomizeListbox Control
+3 CustomizeListbox Control=csCtlCustomizeListbox
+3 CustomizeListbox Properties
+4 ActiveBar=csPActiveBarCustomizeListbox
+4 Category=csPCategoryCustomizeListbox
+4 ToolDragDrop=csPToolDragDropCustomizeListbox
+4 Type=csPTypeCustomizeListbox
+3 CustomizeListbox Events
+4 Error=csEErrorCustomizeListbox
+4 SelChangeBand=csESelChangeBandCustomizeListbox
+4 SelChangeCategory=csESelChangeCategoryCustomizeListbox
+4 SelChangeTool=csESelChangeToolCustomizeListbox
+3 CustomizeListbox Methods
+4 Add=csMAddCustomizeListbox
+4 Delete=csMDeleteCustomizeListbox
+4 Rename=csMRenameCustomizeListbox
+4 Reset=csMResetCustomizeListbox
+2 Constants
+3 BandChangeTypes Constants=csSetBandChangeTypes
+3 BandFlags Constants=csSetBandFlags
+3 BandTypes Constants=csSetBandTypes
+3 CaptionAlignmentTypes Constants=csSetCaptionAlignmentTypes
+3 CaptionPositionTypes Constants=csSetCaptionPositionTypes
+3 ChildBandBackgroundStyle Constants=csSetChildBandBackgroundStyle
+3 ChildBandStyles Constants=csSetChildBandStyles
+3 ComboStyles Constants=csSetComboStyles
+3 CreatedByTypes Constants=csSetCreatedByTypes
+3 CustomizeListboxTypes Constants=csSetCustomizeListboxTypes
+3 CustomizeTypes Constants=csSetCustomizeTypes
+3 CustomToolTypes Constants=csSetCustomToolTypes
+3 DDAutoSizeChildrenTypes Constants=csSetDDAutoSizeChildrenTypes
+3 DDGrabHandleStyle Constants=csSetDDGrabHandleStyle
+3 DockingArea Constants=csSetDockingArea
+3 Font3DTypes Constants=csSetFont3DTypes
+3 ImageStyles Constants=csSetImageStyles
+3 LabelStyles Constants=csSetLabelStyles
+3 LocalizationTypes Constants=csSetLocalizationTypes
+3 MenuFontStyles Constants=csSetMenuFontStyles
+3 MenuStyles Constants=csSetMenuStyles
+3 PictureBackgroundStyle Constants=csSetPictureBackgroundStyle
+3 SaveOptionTypes Constants=csSetSaveOptionTypes
+3 SoundTypes Constants=csSetSoundTypes
+3 ToolAlignmentTypes Constants=csSetToolAlignmentTypes
+3 ToolStyles Constants=csSetToolStyles
+3 ToolTypes Constants=csSetToolTypes
+3 TrackingStyles Constants=csSetTrackingStyles
+3 BandFlags (Enumeration)=csCstBandFlagsEnumeration
+3 CreatedByTypes (Enumeration)=csCstCreatedByTypesEnumeration
+3 DockingArea (Enumeration)=csCstDockingAreaEnumeration
+3 Add Band and Tool=csCstAddBandandTool
+3 Add Two Bands=csCstAddTwoBands
+3 Save & Load Layout to Byte Array=csCstSaveLoadLayouttoByteArray
+1 Technical Support
+2 Technical Support=HX_Technical_Support
+2 Support Options=HX_Support_Options
+2 Be Prepared!=HX_Be_Prepared_
+2 Web Site=HX_Web_Site
+2 Newsgroups=HX_Newsgroups
+2 Email=HX_Email
+2 Telephone and Fax=HX_Telephone_and_Fax
+1 License Agreement
+2 License Agreement=HX_License_Agreement

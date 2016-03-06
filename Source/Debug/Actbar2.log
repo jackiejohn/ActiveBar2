@@ -1,0 +1,1026 @@
+﻿Build started 1/25/2016 9:20:23 AM.
+     1>Project "C:\ThinkingSoftware\AB2\Source\Actbar2.vcxproj" on node 2 (Rebuild target(s)).
+     1>Midl:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\midl.exe /D _DEBUG /mktyplib203 /W1 /nologo /char signed /env win32 /h ".\PrivateInterfaces.h" /tlb ".\Debug\Actbar2.tlb" Private.odl 
+         Processing .\Private.odl
+         Private.odl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.acf
+         oaidl.acf
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\midl.exe /D _DEBUG /mktyplib203 /W1 /nologo /char signed /env win32 /h ".\interfaces.h" /tlb ".\prj.tlb" prj.odl 
+         Processing .\prj.odl
+         prj.odl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\ocidl.idl
+         ocidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oleidl.idl
+         oleidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\servprov.idl
+         servprov.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\urlmon.idl
+         urlmon.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\msxml.idl
+         msxml.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.acf
+         oaidl.acf
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\ocidl.acf
+         ocidl.acf
+     1>.\prj.odl(1077): warning MIDL2400: for oleautomation, optional parameters should be VARIANT or VARIANT * : [optional] [ Parameter 'Index' of Procedure '_CBAddItem' ( Interface 'ITool' ) ]
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _SCRIPTSTRING /D _VC80_UPGRADE=0x0600 /D _WINDLL /Gm- /EHsc /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yc"precomp.h" /Fp".\Debug\Actbar2.pch" /Fo".\Debug\\" /Fd".\Debug\vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt  /D /D   /D /D precomp.cpp
+         precomp.cpp
+     1>c:\thinkingsoftware\ab2\source\utility.h(298): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _SCRIPTSTRING /D _VC80_UPGRADE=0x0600 /D _WINDLL /Gm- /EHsc /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Yu"precomp.h" /Fp".\Debug\Actbar2.pch" /Fo".\Debug\\" /Fd".\Debug\vc110.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt  /D /D   /D /D band.cpp Bands.cpp Bar.cpp Btabs.cpp CategoryMgr.cpp catidreg.cpp CBList.cpp ChildBands.cpp Custom.cpp CustomizeListbox.cpp customproxy.cpp DDASYNC.CPP debug.cpp Dib.cpp Dock.cpp Designer\DragDrop.cpp Designer\DragDropMgr.cpp DropSource.cpp enumx.cpp EventLog.cpp FDIALOG.CPP Flicker.cpp fontholder.cpp fregkey.cpp FWND.CPP Globals.cpp guids.cpp Ibar.cpp ImageMgr.cpp ipserver.cpp localizer.cpp Map.cpp Miniwin.cpp pictureholder.cpp Popupwin.cpp Private.cpp proppage.cpp returnbool.cpp returnstring.cpp ScriptString.cpp ShortCuts.cpp StaticLink.cpp Streams.cpp support.cpp tool.cpp Tools.cpp Tooltip.cpp Tppopup.cpp Utility.cpp WhatsThisHelp.cpp WindowProc.cpp xevents.cpp
+         band.cpp
+     1>c:\thinkingsoftware\ab2\source\band.cpp(188): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(222): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(236): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(300): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(312): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(318): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(630): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3159): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3193): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3217): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3443): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3654): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3741): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3816): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3862): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(3923): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(4053): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(4144): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(4334): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(4367): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(4714): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(5191): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(5199): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(5789): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(5988): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6425): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6470): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6502): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6535): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6564): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6579): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6924): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(6945): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7020): warning C4258: 'nTool' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\band.cpp(7009) : definition of 'nTool' ignored
+                 c:\thinkingsoftware\ab2\source\band.cpp(6357) : definition of 'nTool' used
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7045): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7059): warning C4258: 'nTool' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\band.cpp(7009) : definition of 'nTool' ignored
+                 c:\thinkingsoftware\ab2\source\band.cpp(6357) : definition of 'nTool' used
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7077): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7366): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7409): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7447): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7933): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(7972): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8006): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8166): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8177): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8380): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8510): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8545): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8622): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8847): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8905): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8921): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8939): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(8988): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(9632): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(10037): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(10198): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(10394): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(10874): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\band.cpp(10917): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Bands.cpp
+     1>c:\thinkingsoftware\ab2\source\bands.cpp(853): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bands.cpp(897): warning C4258: 'nBand' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\bands.cpp(886) : definition of 'nBand' ignored
+                 c:\thinkingsoftware\ab2\source\bands.cpp(866) : definition of 'nBand' used
+     1>c:\thinkingsoftware\ab2\source\bands.cpp(899): warning C4258: 'nBand' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\bands.cpp(886) : definition of 'nBand' ignored
+                 c:\thinkingsoftware\ab2\source\bands.cpp(866) : definition of 'nBand' used
+     1>c:\thinkingsoftware\ab2\source\bands.cpp(1024): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Bar.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(977): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(1001): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(2380): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(2551): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(3585): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(3594): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(5787): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(5927): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(5941): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(5950): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(6641): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(6797): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(6851): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(8139): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(8278): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\bar.cpp(8764): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Btabs.cpp
+     1>c:\thinkingsoftware\ab2\source\btabs.cpp(524): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         CategoryMgr.cpp
+         catidreg.cpp
+         CBList.cpp
+     1>c:\thinkingsoftware\ab2\source\cblist.cpp(126): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\cblist.cpp(583): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         ChildBands.cpp
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(324): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(993): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1093): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1125): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1161): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1186): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1312): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1478): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1557): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1739): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1789): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1858): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(1930): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(2019): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(2228): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(2674): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\childbands.cpp(2711): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Custom.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(118): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(192): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(248): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(310): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(343): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(371): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(405): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(634): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(683): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(732): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(803): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1035): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1238): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1310): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1357): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1438): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1620): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1715): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1771): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(1911): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(2006): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(2025): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(2080): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(2265): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\custom.cpp(2387): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         CustomizeListbox.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(678): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(2131): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(2969): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3066): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3511): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3532): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3615): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3645): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3747): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(3963): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(288) : see declaration of 'wcscpy'
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.cpp(4521): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         customproxy.cpp
+         DDASYNC.CPP
+         debug.cpp
+         Dib.cpp
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(105): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(460): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(513): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(548): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(705): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dib.cpp(738): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Dock.cpp
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(246): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(345): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(368): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(401): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(420): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(499): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(565): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(598): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(714): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(796): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(855): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(881): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(939): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(967): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(972): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1062): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1144): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1164): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1756): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1762): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1770): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1794): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1802): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(1866): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2158): warning C4101: 'nLine' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2154): warning C4101: 'nSplitterBandWidth' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2148): warning C4101: 'nBandIndex' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2147): warning C4101: 'nLineHeight' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2146): warning C4101: 'nSlackTotal' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2123): warning C4101: 'hResult' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2160): warning C4101: 'nX' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2145): warning C4101: 'nBandsInLine' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2150): warning C4101: 'nBandCount' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2157): warning C4101: 'nNumOfSplitterBands' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2155): warning C4101: 'nPrevSplitterBandWidth' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2151): warning C4101: 'nCurWidth' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2140): warning C4101: 'bSameLastDocked' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2133): warning C4101: 'dwLastDocked' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2153): warning C4101: 'nContractedBandsWidth' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2152): warning C4101: 'nRemainder' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2149): warning C4101: 'nLineIndex' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2141): warning C4101: 'bResult' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2159): warning C4101: 'nBand' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2156): warning C4101: 'nNonSplitterBandWidth' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2161): warning C4101: 'nY' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(2132): warning C4101: 'nPrevLine' : unreferenced local variable
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3598): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3771): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3801): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3803): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3811): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3814): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3816): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3823): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3827): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3831): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3842): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3844): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3847): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3850): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3858): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3865): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3894): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3933): warning C4258: 'nLine' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3783) : definition of 'nLine' ignored
+                 c:\thinkingsoftware\ab2\source\dock.cpp(3694) : definition of 'nLine' used
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3939): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3946): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4161): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4207): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4329): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4337): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4464): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4521): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4549): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4555): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4561): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4610): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4660): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4693): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4729): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4866): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4908): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(4922): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(5264): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         DragDrop.cpp
+         DragDropMgr.cpp
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(60): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(83): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(168): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(190): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(223): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(258): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(289): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(317): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\designer\dragdropmgr.cpp(357): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         DropSource.cpp
+         enumx.cpp
+         EventLog.cpp
+     1>c:\thinkingsoftware\ab2\source\eventlog.cpp(75): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\eventlog.cpp(91): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Generating Code...
+     1>c:\thinkingsoftware\ab2\source\dock.cpp(3571): warning C4700: uninitialized local variable 'size' used
+         Compiling...
+         FDIALOG.CPP
+         Flicker.cpp
+         fontholder.cpp
+     1>c:\thinkingsoftware\ab2\source\fontholder.cpp(418): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(288) : see declaration of 'wcscpy'
+         fregkey.cpp
+         FWND.CPP
+         Globals.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\globals.cpp(69): warning C4535: calling _set_se_translator() requires /EHa
+     1>c:\thinkingsoftware\ab2\source\globals.cpp(253): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\globals.cpp(405): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         guids.cpp
+         Ibar.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\ibar.cpp(236): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\ibar.cpp(308): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\ibar.cpp(341): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         ImageMgr.cpp
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(97): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(102): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(114): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(258): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(504): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(591): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(884): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1031): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1036): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1259): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1373): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1382): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(1398): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\imagemgr.cpp(2692): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         ipserver.cpp
+         localizer.cpp
+         Map.cpp
+         Miniwin.cpp
+     1>c:\thinkingsoftware\ab2\source\miniwin.cpp(596): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\miniwin.cpp(776): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\miniwin.cpp(971): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\miniwin.cpp(1048): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         pictureholder.cpp
+         Popupwin.cpp
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(162): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(231): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(474): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(723): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(749): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(785): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(828): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(953): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(966): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1088): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1098): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1148): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1168): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1195): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1208): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1217): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1235): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1280): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1304): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1314): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(1958): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2195): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2267): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2282): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2484): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2523): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2538): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(2774): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\popupwin.cpp(3073): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Private.cpp
+     1>c:\thinkingsoftware\ab2\source\private.cpp(78): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\private.cpp(186): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         proppage.cpp
+         returnbool.cpp
+         returnstring.cpp
+         ScriptString.cpp
+     1>c:\thinkingsoftware\ab2\source\scriptstring.cpp(129): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(317) : see declaration of 'wcsncpy'
+         Generating Code...
+         Compiling...
+         ShortCuts.cpp
+     1>c:\thinkingsoftware\ab2\source\customizelistbox.h(584): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : see declaration of 'strncpy'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(229): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(888): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(1089): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(1119): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(1126): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(1161): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\shortcuts.cpp(1368): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         StaticLink.cpp
+         Streams.cpp
+         support.cpp
+         tool.cpp
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(125): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(155): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(183): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(210): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(280): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(399): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(403): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(1135): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(1972): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2012): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2119): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2144): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2229): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2254): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2316): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2386): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(288) : see declaration of 'wcscpy'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2389): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(317) : see declaration of 'wcsncpy'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2524): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2574): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(2875): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(3260): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(6853): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(6973): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7182): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7284): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7416): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7624): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7634): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7643): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7824): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7864): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(7972): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8005): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8032): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8074): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8114): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8193): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8204): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8244): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8303): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8458): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(8984): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9198): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9220): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9390): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9440): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9453): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9465): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9582): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tool.cpp(9605): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Tools.cpp
+     1>c:\thinkingsoftware\ab2\source\tools.cpp(689): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tools.cpp(737): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tools.cpp(853): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tools.cpp(926): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Tooltip.cpp
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(132): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(217): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(251): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(329): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(415): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tooltip.cpp(423): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Tppopup.cpp
+     1>c:\thinkingsoftware\ab2\source\tppopup.cpp(150): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tppopup.cpp(162): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tppopup.cpp(174): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tppopup.cpp(322): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\tppopup.cpp(337): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         Utility.cpp
+     1>c:\thinkingsoftware\ab2\source\utility.cpp(312): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'vsprintf'
+     1>c:\thinkingsoftware\ab2\source\utility.cpp(932): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\utility.cpp(1196): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\utility.cpp(1499): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(288) : see declaration of 'wcscpy'
+     1>c:\thinkingsoftware\ab2\source\utility.cpp(1613): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         WhatsThisHelp.cpp
+         WindowProc.cpp
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(47): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(92): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(145): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(328): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(383): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(390): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(465): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(543): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(552): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(691): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(704): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(784): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(804): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(813): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+     1>c:\thinkingsoftware\ab2\source\windowproc.cpp(1085): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(349) : see declaration of '_snprintf'
+         xevents.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _SCRIPTSTRING /D _VC80_UPGRADE=0x0600 /D _WINDLL /Gm- /EHsc /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug\\" /Fd".\Debug\vc110.pdb" /FR".\Debug\\" /Gd /TC /analyze- /errorReport:prompt  /D /D   /D /D Crt\QSORT.C Crt\rand.c Crt\WCSCAT.C Crt\WCSCMP.C Crt\WCSLEN.C
+         QSORT.C
+         rand.c
+     1>c:\program files (x86)\microsoft visual studio 11.0\vc\include\stddef.h(71): warning C4142: benign redefinition of type
+         WCSCAT.C
+         WCSCMP.C
+         WCSLEN.C
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /l"0x0409" /I.\Debug\ /nologo /fo".\Debug\prj.res" prj.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1137,5): warning MSB8012: TargetPath(C:\ThinkingSoftware\AB2\Source\.\Debug\Actbar.dll) does not match the Linker's OutputFile property value (C:\ThinkingSoftware\AB2\Source\Debug\Actbar2.ocx). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1138,5): warning MSB8012: TargetExt(.dll) does not match the Linker's OutputFile property value (.ocx). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1139,5): warning MSB8012: TargetName(Actbar) does not match the Linker's OutputFile property value (Actbar2). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/Actbar2.ocx" /INCREMENTAL /NOLOGO libcmtd.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\PRJ.DEF" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug\Actbar.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /BASE:"0x35000000" /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\Actbar2.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug\prj.res
+         .\Debug\band.obj
+         .\Debug\Bands.obj
+         .\Debug\Bar.obj
+         .\Debug\Btabs.obj
+         .\Debug\CategoryMgr.obj
+         .\Debug\catidreg.obj
+         .\Debug\CBList.obj
+         .\Debug\ChildBands.obj
+         .\Debug\Custom.obj
+         .\Debug\CustomizeListbox.obj
+         .\Debug\customproxy.obj
+         .\Debug\DDASYNC.obj
+         .\Debug\debug.obj
+         .\Debug\Dib.obj
+         .\Debug\Dock.obj
+         .\Debug\DragDrop.obj
+         .\Debug\DragDropMgr.obj
+         .\Debug\DropSource.obj
+         .\Debug\enumx.obj
+         .\Debug\EventLog.obj
+         .\Debug\FDIALOG.obj
+         .\Debug\Flicker.obj
+         .\Debug\fontholder.obj
+         .\Debug\fregkey.obj
+         .\Debug\FWND.obj
+         .\Debug\Globals.obj
+         .\Debug\guids.obj
+         .\Debug\Ibar.obj
+         .\Debug\ImageMgr.obj
+         .\Debug\ipserver.obj
+         .\Debug\localizer.obj
+         .\Debug\Map.obj
+         .\Debug\Miniwin.obj
+         .\Debug\pictureholder.obj
+         .\Debug\Popupwin.obj
+         .\Debug\precomp.obj
+         .\Debug\Private.obj
+         .\Debug\proppage.obj
+         .\Debug\QSORT.obj
+         .\Debug\rand.obj
+         .\Debug\returnbool.obj
+         .\Debug\returnstring.obj
+         .\Debug\ScriptString.obj
+         .\Debug\ShortCuts.obj
+         .\Debug\StaticLink.obj
+         .\Debug\Streams.obj
+         .\Debug\support.obj
+         .\Debug\tool.obj
+         .\Debug\Tools.obj
+         .\Debug\Tooltip.obj
+         .\Debug\Tppopup.obj
+         .\Debug\Utility.obj
+         .\Debug\WCSCAT.obj
+         .\Debug\WCSCMP.obj
+         .\Debug\WCSLEN.obj
+         .\Debug\WhatsThisHelp.obj
+         .\Debug\WindowProc.obj
+         .\Debug\xevents.obj
+     1>band.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>.\PRJ.DEF : warning LNK4222: exported symbol 'DllCanUnloadNow' should not be assigned an ordinal
+     1>.\PRJ.DEF : warning LNK4222: exported symbol 'DllGetClassObject' should not be assigned an ordinal
+     1>.\PRJ.DEF : warning LNK4222: exported symbol 'DllRegisterServer' should not be assigned an ordinal
+     1>.\PRJ.DEF : warning LNK4222: exported symbol 'DllUnregisterServer' should not be assigned an ordinal
+            Creating library .\Debug\Actbar2.lib and object .\Debug\Actbar2.exp
+     1>Actbar2.exp : warning LNK4070: /OUT:ActBar2.dll directive in .EXP differs from output filename '.\Debug/Actbar2.ocx'; ignoring directive
+     1>band.obj : error LNK2001: unresolved external symbol _CLSID_Band
+     1>band.obj : error LNK2001: unresolved external symbol _IID_IBand
+     1>band.obj : error LNK2001: unresolved external symbol _IID_IDDPerPropertyBrowsing
+     1>Bar.obj : error LNK2001: unresolved external symbol _IID_IDDPerPropertyBrowsing
+     1>tool.obj : error LNK2001: unresolved external symbol _IID_IDDPerPropertyBrowsing
+     1>Bands.obj : error LNK2001: unresolved external symbol _CLSID_Bands
+     1>Bands.obj : error LNK2001: unresolved external symbol _IID_IBands
+     1>Globals.obj : error LNK2001: unresolved external symbol _IID_IBands
+     1>Bar.obj : error LNK2001: unresolved external symbol _IID_IActiveBar2
+     1>CustomizeListbox.obj : error LNK2001: unresolved external symbol _IID_IActiveBar2
+     1>Bar.obj : error LNK2001: unresolved external symbol _CLSID_ActiveBar2
+     1>Bar.obj : error LNK2001: unresolved external symbol _DIID_IActiveBar2Events
+     1>Bar.obj : error LNK2019: unresolved external symbol "public: virtual long __stdcall CBar::QueryInterface(struct _GUID const &,void * *)" (?QueryInterface@CBar@@UAGJABU_GUID@@PAPAX@Z) referenced in function "[thunk]:public: virtual long __stdcall CBar::QueryInterface`adjustor{4}' (struct _GUID const &,void * *)" (?QueryInterface@CBar@@W3AGJABU_GUID@@PAPAX@Z)
+     1>Bar.obj : error LNK2019: unresolved external symbol "public: virtual unsigned long __stdcall CBar::AddRef(void)" (?AddRef@CBar@@UAGKXZ) referenced in function "[thunk]:public: virtual unsigned long __stdcall CBar::AddRef`adjustor{4}' (void)" (?AddRef@CBar@@W3AGKXZ)
+     1>Bar.obj : error LNK2019: unresolved external symbol "public: virtual unsigned long __stdcall CBar::Release(void)" (?Release@CBar@@UAGKXZ) referenced in function "[thunk]:public: virtual unsigned long __stdcall CBar::Release`adjustor{4}' (void)" (?Release@CBar@@W3AGKXZ)
+     1>Bar.obj : error LNK2001: unresolved external symbol _LIBID_ActiveBar2Library
+     1>CustomizeListbox.obj : error LNK2001: unresolved external symbol _LIBID_ActiveBar2Library
+     1>Globals.obj : error LNK2001: unresolved external symbol _LIBID_ActiveBar2Library
+     1>ipserver.obj : error LNK2001: unresolved external symbol _LIBID_ActiveBar2Library
+     1>CBList.obj : error LNK2001: unresolved external symbol _IID_IComboList
+     1>CBList.obj : error LNK2001: unresolved external symbol _CLSID_ComboList
+     1>ChildBands.obj : error LNK2001: unresolved external symbol _CLSID_ChildBands
+     1>ChildBands.obj : error LNK2001: unresolved external symbol _IID_IChildBands
+     1>Globals.obj : error LNK2001: unresolved external symbol _IID_IChildBands
+     1>CustomizeListbox.obj : error LNK2001: unresolved external symbol _IID_ICustomizeListbox
+     1>CustomizeListbox.obj : error LNK2001: unresolved external symbol _DIID_ICustomizeListboxEvents
+     1>CustomizeListbox.obj : error LNK2001: unresolved external symbol _CLSID_CustomizeListbox
+     1>CustomizeListbox.obj : error LNK2019: unresolved external symbol "public: virtual long __stdcall CCustomizeListbox::QueryInterface(struct _GUID const &,void * *)" (?QueryInterface@CCustomizeListbox@@UAGJABU_GUID@@PAPAX@Z) referenced in function "[thunk]:public: virtual long __stdcall CCustomizeListbox::QueryInterface`adjustor{4}' (struct _GUID const &,void * *)" (?QueryInterface@CCustomizeListbox@@W3AGJABU_GUID@@PAPAX@Z)
+     1>CustomizeListbox.obj : error LNK2019: unresolved external symbol "public: virtual unsigned long __stdcall CCustomizeListbox::AddRef(void)" (?AddRef@CCustomizeListbox@@UAGKXZ) referenced in function "[thunk]:public: virtual unsigned long __stdcall CCustomizeListbox::AddRef`adjustor{4}' (void)" (?AddRef@CCustomizeListbox@@W3AGKXZ)
+     1>CustomizeListbox.obj : error LNK2019: unresolved external symbol "public: virtual unsigned long __stdcall CCustomizeListbox::Release(void)" (?Release@CCustomizeListbox@@UAGKXZ) referenced in function "[thunk]:public: virtual unsigned long __stdcall CCustomizeListbox::Release`adjustor{4}' (void)" (?Release@CCustomizeListbox@@W3AGKXZ)
+     1>ImageMgr.obj : error LNK2001: unresolved external symbol _CLSID_ImageMgr
+     1>ImageMgr.obj : error LNK2001: unresolved external symbol _IID_IImageMgr
+     1>returnbool.obj : error LNK2001: unresolved external symbol _IID_IReturnBool
+     1>returnbool.obj : error LNK2001: unresolved external symbol _CLSID_ReturnBool
+     1>returnstring.obj : error LNK2001: unresolved external symbol _CLSID_ReturnString
+     1>returnstring.obj : error LNK2001: unresolved external symbol _IID_IReturnString
+     1>ShortCuts.obj : error LNK2001: unresolved external symbol _IID_IShortCut
+     1>ShortCuts.obj : error LNK2001: unresolved external symbol _CLSID_ShortCut
+     1>tool.obj : error LNK2001: unresolved external symbol _CLSID_Tool
+     1>tool.obj : error LNK2001: unresolved external symbol _IID_ITool
+     1>tool.obj : error LNK2001: unresolved external symbol _IID_ICustomHost
+     1>Tools.obj : error LNK2001: unresolved external symbol _CLSID_Tools
+     1>Tools.obj : error LNK2001: unresolved external symbol _IID_ITools
+     1>.\Debug/Actbar2.ocx : fatal error LNK1120: 35 unresolved externals
+     1>Done Building Project "C:\ThinkingSoftware\AB2\Source\Actbar2.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:08.40

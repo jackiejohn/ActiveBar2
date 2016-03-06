@@ -1,0 +1,678 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_COMMANDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DEMOSCR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_KEYBOARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HSPLITBAR           CURSOR  DISCARDABLE     "res\\splith.cur"
+IDCC_DRAGTOOLCOPY       CURSOR  DISCARDABLE     "res\\idcc_dra.cur"
+IDCC_DRAGTOOLMOVE       CURSOR  DISCARDABLE     "res\\cursor1.cur"
+IDCC_DRAGTOOLNOT        CURSOR  DISCARDABLE     "res\\cur00001.cur"
+IDC_VSPLITBAR           CURSOR  DISCARDABLE     "res\\splitv.cur"
+IDC_COMBOSPLIT          CURSOR  DISCARDABLE     "res\\hsplitba.cur"
+IDC_POINT               CURSOR  DISCARDABLE     "res\\H_POINT.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 34, 22, 262, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ActiveBar"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         1,IDC_ABICON,"Static",SS_BITMAP | SS_SUNKEN,10,10,18,20
+    LTEXT           "ActiveBar, Version 2.0.0.0",IDC_VERSION,40,10,170,8
+    LTEXT           "Copyright © 1996-2001 Data Dynamics",IDC_STATIC,39,21,
+                    170,8
+    DEFPUSHBUTTON   "OK",IDOK,223,7,32,14,WS_GROUP,0,HIDOK
+    GROUPBOX        "Contact Info",IDC_STATIC,7,34,248,26
+    LTEXT           "http://www.datadynamics.com",IDC_WEBADDRESS,14,46,100,
+                    13
+END
+
+IDD_COMMANDS DIALOG DISCARDABLE  0, 0, 230, 130
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Categories:",IDC_ST_CATEGORIES,7,1,99,8
+    LTEXT           "Commands:",IDC_ST_COMMANDS,114,1,105,8
+    GROUPBOX        "Description",IDC_LABEL_DESC,7,97,216,30
+    LTEXT           "",IDC_ST_DESC,12,105,126,19
+    CHECKBOX        "Modify Selection",IDC_MODSELECT,142,106,75,16,
+                    BS_PUSHLIKE | WS_DISABLED
+END
+
+IDD_DEMOSCR DIALOG DISCARDABLE  0, 0, 299, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ActiveBar Evaluation Copy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,242,7,50,14,NOT WS_TABSTOP
+    CONTROL         1,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,17,7,13,12
+    LTEXT           "ActiveBar 2.0 32-Bit ActiveX ",IDC_STATIC,53,7,120,11,
+                    WS_TABSTOP
+    LTEXT           "2600 Tiller Lane\nColumbus, OH\n",IDC_STATIC,66,115,58,
+                    35
+    LTEXT           "Thank you for choosing to evaluate ActiveBar from Data Dynamics, Ltd. This version of the software is for Evaluation Purposes Only and may be used for up to 30 days to  determine if it meets your requirements. To license the software, or to  obtain ",
+                    IDC_STATIC,66,26,211,33
+    LTEXT           "assistance  during the  evaluation process, please call (614) 895-3142.  If you choose not to license the  software, you need to remove it from your system.",
+                    IDC_STATIC,66,58,226,29
+    LTEXT           "Copyright 1996-1999 © Data Dynamics, Ltd. All Rights Reserved.",
+                    IDC_STATIC,66,90,215,8
+    LTEXT           "Tel: 614.895.3142\nFax:614.899.2943\nInternet: support@datadynamics.com",
+                    IDC_STATIC,133,115,124,35
+END
+
+IDD_ERROR DIALOG DISCARDABLE  0, 0, 261, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ActiveBar Error"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,204,87,50,14
+    EDITTEXT        IDC_EDIT1,7,7,247,77,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_KEYBOARD DIALOGEX 0, 0, 309, 199
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Customize Keyboard"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Categories:",IDC_STATIC_CATE,7,8,97,8
+    LISTBOX         IDC_LT_CATEGORY,7,18,100,75,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDC_LT_CATEGORY
+    LTEXT           "Press &new shortcut key:",IDC_STATIC_NEWSHORTCUT,7,97,
+                    105,9
+    EDITTEXT        IDC_ED_SHORTCUT,7,107,100,12,ES_AUTOHSCROLL | ES_NUMBER,
+                    0,HIDC_ED_SHORTCUT
+    LTEXT           "C&ommands:",IDC_STATIC_CMD,118,8,120,8
+    LISTBOX         IDC_LT_COMMANDS,116,18,122,75,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDC_LT_COMMANDS
+    LTEXT           "C&urrent Keys:",IDC_STATIC_CURRENTKEY,116,97,123,9
+    LISTBOX         IDC_LB_KEYS,115,107,124,45,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDC_LB_KEYS
+    GROUPBOX        "Description:",IDC_STATIC_DESC,7,162,234,31
+    LTEXT           "",IDC_DESCRIPTION,13,172,220,15,0,0,HIDC_DESCRIPTION
+    PUSHBUTTON      "Close",IDC_CLOSE,247,17,54,14,0,0,HIDC_CLOSE
+    PUSHBUTTON      "Assign",IDC_ASSIGN,247,48,54,14,0,0,HIDC_ASSIGN
+    PUSHBUTTON      "Remove",IDC_REMOVE,247,66,54,14,0,0,HIDC_REMOVE
+    PUSHBUTTON      "Reset All...",IDC_RESETALL,247,83,54,14,0,0,
+                    HIDC_RESETALL
+END
+
+IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 140, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Toolbar"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Toolbar Name:",IDC_NAMESTATIC,7,10,126,8
+    EDITTEXT        IDC_NAME,7,20,126,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,48,38,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,93,38,40,14
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 230, 130
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Me&nu show recently used tools first",IDC_CK_MRUFIRST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,16,204,10,0,
+                    HIDC_CK_MRUFIRST
+    CONTROL         "Show f&ull menus after a short delay",
+                    IDC_CK_FULLMENUAFTERDELAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,28,29,194,10,0,HIDC_CK_FULLMENUAFTERDELAY
+    PUSHBUTTON      "&Reset Menu Usage Data",IDC_BN_MENUUSAGE,8,42,88,16,
+                    BS_MULTILINE
+    CONTROL         "&Large Icons",IDC_CK_LARGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,71,204,10,0,HIDC_CK_LARGE
+    CONTROL         "Show Screen&Tips on Toolbars",IDC_CK_SCREENTIP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,84,204,10,0,
+                    HIDC_CK_SCREENTIP
+    CONTROL         "Show s&hortcut Keys in ScreenTips",IDC_CK_SHORTCUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,97,192,10,0,
+                    HIDC_CK_SHORTCUT
+    LTEXT           "&Menu animation:",IDC_STATIC_MENU,18,111,66,8
+    COMBOBOX        IDC_CB_MENUANIMATION,87,109,56,57,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_CB_MENUANIMATION
+    CONTROL         "Other",IDC_CUSTOM1,"DDLabel",WS_TABSTOP,7,60,215,8
+    CONTROL         "Personalized Menus and Toolbars",IDC_CUSTOM2,"DDLabel",
+                    WS_TABSTOP,7,6,215,8
+END
+
+IDD_TOOLBAR DIALOGEX 0, 0, 230, 130
+STYLE WS_CHILD | WS_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&New...",IDC_NEW,162,19,61,14,WS_GROUP,0,HIDC_NEW
+    PUSHBUTTON      "Rename",IDC_RENAME,162,37,61,14,0,0,HIDC_RENAME
+    PUSHBUTTON      "Delete",IDC_DELETE,162,55,61,14,0,0,HIDC_DELETE
+    PUSHBUTTON      "&Reset...",IDC_RESET,162,73,61,14,0,0,HIDC_RESET
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_CB_MENUANIMATION, 0x403, 7, 0
+0x4e28, 0x6e6f, 0x2965, "\000" 
+    IDC_CB_MENUANIMATION, 0x403, 7, 0
+0x6152, 0x646e, 0x6d6f, "\000" 
+    IDC_CB_MENUANIMATION, 0x403, 7, 0
+0x6e55, 0x6f66, 0x646c, "\000" 
+    IDC_CB_MENUANIMATION, 0x403, 6, 0
+0x6c53, 0x6469, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_SLIBINGSCROLL TOOLBAR DISCARDABLE  9, 9
+BEGIN
+    BUTTON      ID_BUTTON40015
+    BUTTON      ID_BUTTON40016
+    BUTTON      ID_BUTTON40008
+    BUTTON      ID_BUTTON40014
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SLIBINGSCROLL       BITMAP  DISCARDABLE     "res\\bmp00004.bmp"
+IDB_CASCADE             BITMAP  DISCARDABLE     "res\\cascade.bmp"
+IDB_CUSTLISTBOX         BITMAP  DISCARDABLE     "res\\bmp00005.bmp"
+IDB_DYNABAR             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_GRAB1               BITMAP  DISCARDABLE     "res\\grab1.bmp"
+IDB_GRAB2               BITMAP  DISCARDABLE     "res\\grab2.bmp"
+IDB_GRAB3               BITMAP  DISCARDABLE     "res\\grab3.bmp"
+IDB_GRAB4               BITMAP  DISCARDABLE     "res\\grab4.bmp"
+IDB_MENUSCROLL          BITMAP  DISCARDABLE     "res\\menuscro.bmp"
+IDB_OVERFLOW            BITMAP  DISCARDABLE     "res\\overflow.bmp"
+IDB_SMCOMBO             BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_SUBMENUBMP          BITMAP  DISCARDABLE     "res\\submenub.bmp"
+IDB_SYSCLOSE            BITMAP  DISCARDABLE     "res\\sysclose.bmp"
+IDB_SYSMAX              BITMAP  DISCARDABLE     "res\\sysmax.bmp"
+IDB_SYSMINIMIZE         BITMAP  DISCARDABLE     "res\\sysminim.bmp"
+IDB_SYSRESTORE          BITMAP  DISCARDABLE     "res\\sysresto.bmp"
+IDB_TITEHORZ            BITMAP  DISCARDABLE     "res\\titehorz.bmp"
+IDB_TITEVERT            BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_EXPANDVERT          BITMAP  DISCARDABLE     "res\\expandve.bmp"
+IDB_EXPANDHORZ          BITMAP  DISCARDABLE     "res\\bmp00007.bmp"
+IDB_MENUEXPAND          BITMAP  DISCARDABLE     "res\\menuexpa.bmp"
+IDB_MENUCHECK           BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
+IDB_XPMDIBUTTONS        BITMAP  DISCARDABLE     "res\\bmp00006.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TYPELIB
+//
+
+1                       TYPELIB MOVEABLE PURE   "prj.tlb"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,0,24
+ PRODUCTVERSION 2,5,0,24
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Data Dynamics\0"
+            VALUE "FileDescription", "ActiveBar 2.5 Control\0"
+            VALUE "FileVersion", "2, 5, 0, 24\0"
+            VALUE "InternalName", "ActiveBar 2.5\0"
+            VALUE "LegalCopyright", "Copyright © 1999-2002 Data Dynamics\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ActiveBar2.ocx\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Data Dynamics ActiveBar 2.0 Control\0"
+            VALUE "ProductVersion", "2, 5, 0, 24\0"
+            VALUE "SpecialBuild", "\0"
+        END
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Data Dynamics\0"
+            VALUE "FileDescription", "ActiveBar 2.0 Control\0"
+            VALUE "FileVersion", "2, 5, 0, 24\0"
+            VALUE "InternalName", "ActiveBar 2.5\0"
+            VALUE "LegalCopyright", "Copyright © 1999-2001 Data Dynamics\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "ActiveBar2.ocx\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ActiveBar 2.5 Control\0"
+            VALUE "ProductVersion", "2, 5, 0, 24\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200, 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUBAND MENU DISCARDABLE 
+BEGIN
+    POPUP "TreeView"
+    BEGIN
+        MENUITEM "Button",                      ID_INSERTTOOL_BUTTON
+        MENUITEM "Dropdown Button",             ID_INSERTTOOL_DROPDOWNBUTTON
+        MENUITEM "Textbox",                     ID_INSERTTOOL_TEXTBOX
+        MENUITEM "Combobox",                    ID_INSERTTOOL_COMBOBOX
+        MENUITEM "Label",                       ID_INSERTTOOL_LABEL
+        MENUITEM "Separator",                   ID_INSERTTOOL_SEPARATOR
+        MENUITEM "Window List",                 ID_INSERTTOOL_WINDOWLIST
+        MENUITEM "ActiveX Control",             ID_INSERTTOOL_ACTIVEXCONTROL
+        MENUITEM "ActiveX Form",                ID_INSERTTOOL_ACTIVEXFORM
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_VERB_DESIGNER       "&Properties"
+    IDS_VERB_STANDALONE     "Stand A Lone Designer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONTEXTCUSTOMIZE    "&Customize..."
+    IDS_CUSTTABS_TOOLBARS   "Tool&bars"
+    IDS_CUSTTABS_COMMANDS   "&Commands"
+    IDS_CUSTOM_TOOLBARNAME  "Custom"
+    IDS_NEWTOOLBAR          "New Toolbar"
+    IDS_RENAMETOOLBAR       "Rename Toolbar"
+    IDS_TOOLBARNAMEEXISTS   "Toolbar name already exists. Use another name."
+    IDS_DELETETOOLBAR       "Are you sure you want to delete '%s' toolbar ?"
+    IDS_DELETETOOLBARTITLE  "Delete Toolbar"
+    IDS_CAT_NONE            "(None)"
+    IDS_ALT                 "Alt+"
+    IDS_CONTROL             "Ctrl+"
+    IDS_SHIFT               "Shift+"
+    IDS_NEW_TOOL            "Tool"
+    IDS_BANDFLAGS0          "Dock Top"
+    IDS_STRING2015          "Dock Bottom"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_BADBANDSINDEX   "Invalid Bands collection index"
+    IDS_ERR_BADCOLLINDEX    "Bad collection index"
+    IDS_ERR_IMAGEBITMAPNOTSET 
+                            "Cannot set the mask bitmap without setting the image bitmap first."
+    IDS_ERR_MASKINVALIDSIZE "The mask bitmap dimensions are not the same as the image bitmap."
+    IDS_ERR_COULDNOTCREATEDESIGNER 
+                            "Failed to create the ActiveBar's Designer."
+    IDS_ERR_DUPLICATEBANDNAME "Duplicate Band Name "
+    IDS_ERR_DUPLICATETOOLID "Duplicate Tool Id"
+    IDS_ERR_LAYOUT          "Invalid Layout File"
+    IDS_ERR_BANDLIMIT       "Your have exceeded the internal limit of %i Bands.  Do you want to continue loading this layout?"
+    IDS_ERR_INVALIDPROPERTYVALUE "Invalid Property Value"
+    IDS_ERR_INVALIDPICTURE  "The tool currently does not have a picture defined."
+    IDS_ERR_FAILEDTOGETWINDOWHANDLE 
+                            "Could not get the control's or form's Window Handle"
+    IDS_ERR_INPROPERBORDERSTYLE 
+                            "The form must have the BorderStyle Property set to None"
+    IDS_ERR_MUSTBEARRAYOFSTRINGS "Shortcuts must be an array of strings."
+    IDS_ERR_WRONGTOOLTYPE   "Invalid tool type, the type must be DDTTControl or DDTTForm"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_UNKNOWN         "Unknown Error"
+    IDS_ERR_CANNOTCREATEFILE "Cannot create file"
+    IDS_ERR_CANNOTOPENFILE  "Cannot open file"
+    IDS_ERR_INVALIDFILEFORMAT "Invalid file format"
+    IDS_ERR_BANDNOTFOUND    "Band not found"
+    IDS_ERR_CYCLICPOPUP     "Invalid SubBand value. Cycle detected."
+    IDS_ERR_OPENINVALIDPOPUP 
+                            "Cannot open SubBand of tool. The SubBand is already in use or has an invalid DockingArea. Use DDDAPopup for popup bands."
+    IDS_ERR_BADTOOLSINDEX   "Invalid Tools collection index"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SYSRESTORE          "&Restore"
+    IDS_SYSMOVE             "&Move"
+    IDS_SYSSIZE             "&Size"
+    IDS_SYSMIN              "Mi&nimize"
+    IDS_SYSMAX              "Ma&ximize"
+    IDS_SYSCLOSE            "&Close"
+    IDS_SYSNEXT             "&Next"
+    IDS_MINIMIZEWINDOW      "Minimize"
+    IDS_RESTOREWINDOW       "Restore"
+    IDS_CLOSEWINDOW         "Close"
+    IDS_TOOLBAR             "Tool&bars"
+    IDS_COMMANDS            "&Commands"
+    IDS_OPTIONS             "&Options"
+    IDS_CUSTOMIZE           "Customize"
+    IDS_KEYBOARD            "&Keyboard..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CLOSEBUTTON         "Close"
+    IDS_ACTIVEBAR           "Active Bar"
+    IDS_REPORTEXCEPTION     "Exception: %s, File: %s, Line: %i"
+    IDS_DESIGNER            "&Designer"
+    IDS_DESIGNERDOC         "Designer"
+    IDS_HIERARCHY           "Hierarchy"
+    IDS_CATEGORY            "Category"
+    IDS_DESIGNERTITLE       "ActiveBar Designer"
+    IDS_SYSCOMMAND          "miSysCommand"
+    IDS_POPUPSYSCOMMAND     "popupSysCommand"
+    IDS_MIWINDOW            "miWindow"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WINDOW              "&Window"
+    IDS_POPUPWINDOW         "popupWindow"
+    IDS_MIMDIBUTTON         "miMDIButton"
+    IDS_MICASCADE           "miCascade"
+    IDS_CASCADE             "&Cascade"
+    IDS_MITILEHORZ          "miTileHorz"
+    IDS_TILEHORZ            "Tile &Horizontally"
+    IDS_MITILEVERT          "miTileVert"
+    IDS_TILEVERT            "&Tile Vertically"
+    IDS_MISEPARATOR         "miSeparator"
+    IDS_SEPARATOR           "Separator"
+    IDS_DOCKBAND            "Band"
+    IDS_DOCKBANDDOC         "Band Properties"
+    IDS_ACTIVATE            "Activate"
+    IDS_TOOLNAME            "Tool%i"
+    IDS_TOOLRESET           "miReset"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING2016          "Dock Left"
+    IDS_STRING2017          "Dock Right"
+    IDS_STRING2018          "Float"
+    IDS_STRING2019          "Customize"
+    IDS_STRING2020          "Hide"
+    IDS_STRING2021          "Detach"
+    IDS_STRING2022          "Fixed"
+    IDS_STRING2023          "Stretch"
+    IDS_STRING2024          "Center Popup"
+    IDS_STRING2025          "Sizer"
+    IDS_STRING2026          "Close"
+    IDS_STRING2027          "Flat"
+    IDS_STRING2028          "Expand"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXCEPTION_ACCESS_VIOLATION "Access Violation"
+    IDS_EXCEPTION_ARRAY_BOUNDS_EXCEEDED "Array Bounds Exceeded"
+    IDS_EXCEPTION_BREAKPOINT "Break Point"
+    IDS_EXCEPTION_DATATYPE_MISALIGNMENT "Datatype Misalignment"
+    IDS_EXCEPTION_FLT_DENORMAL_OPERAND "Float Denormal Operand"
+    IDS_EXCEPTION_FLT_DIVIDE_BY_ZERO "Float Divide by zero"
+    IDS_EXCEPTION_FLT_INEXACT_RESULT "Float Inexact Result"
+    IDS_EXCEPTION_FLT_INVALID_OPERATION "Float Invalid Operation"
+    IDS_EXCEPTION_FLT_OVERFLOW "Float Overflow"
+    IDS_EXCEPTION_FLT_STACK_CHECK "Float Stack Check"
+    IDS_EXCEPTION_FLT_UNDERFLOW "Float underflow"
+    IDS_EXCEPTION_ILLEGAL_INSTRUCTION "Illegal Instruction"
+    IDS_EXCEPTION_IN_PAGE_ERROR "Page Error"
+    IDS_EXCEPTION_INT_DIVIDE_BY_ZERO "Integer Divide by Zero"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXCEPTION_INT_OVERFLOW "Integer Overflow"
+    IDS_EXCEPTION_INVALID_DISPOSITION "Invalid Disposition"
+    IDS_EXCEPTION_NONCONTINUABLE_EXCEPTION "Non Continuable Exception"
+    IDS_EXCEPTION_PRIV_INSTRUCTION "Privage Instruction"
+    IDS_EXCEPTION_SINGLE_STEP "Single Step"
+    IDS_EXCEPTION_STACK_OVERFLOW "Stack Overflow"
+    IDS_BACKGROUNDOPTIONS   "Dock Areas"
+    IDS_STRING5031          "Float"
+    IDS_STRING5032          "Popups"
+    IDS_STRING5033          "Client Area"
+    IDS_RENAMECAPTION       "Rename Toolbar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOOLDELETE          "miDelete"
+    IDS_TOOLRESETCAPTION    "&Reset"
+    IDS_TOOLDELETECAPTION   "&Delete"
+    IDS_TOOLEDITNAME        "miEditToolName"
+    IDS_TOOLEDITNAMECAPTION "&Name"
+    IDS_TOOLCOPYIMAGE       "miCopyImage"
+    IDS_TOOLCOPYIMAGECAPTION "&Copy Button Image"
+    IDS_TOOLPASTEIMAGE      "miPasteImage"
+    IDS_TOOLPASTEIMAGECAPTION "&Paste Button Image"
+    IDS_TOOLDEFAULTSTYLE    "miDefaultStyle"
+    IDS_TOOLDEFAULTSTYLECAPTION "Defa&ult Style"
+    IDS_TOOLTEXTONLY        "miTextOnly"
+    IDS_TOOLTEXTONLYCAPTION "&Text Only"
+    IDS_TOOLIMAGEONLY       "miImageOnly"
+    IDS_TOOLIMAGEONLYCAPTION "&Image Only"
+    IDS_TOOLIMAGEANDTEXT    "miImageAndText"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOOLIMAGEANDTEXTCAPTION "Image &and Text"
+    IDS_MORETOOLS           "tbtMoreTools"
+    IDS_POPUPMORETOOLS      "popupMoreTools"
+    IDS_POPUPALLTOOLS       "DDpopupAllToolsDD"
+    IDS_ALLTOOLSNAME        "miAllTools"
+    IDS_ALLTOOLSCAPTION     "Add or Remove Buttons"
+    IDS_RESETTOOLBAR        "Reset Toolbar"
+    IDS_MOREBUTTONS         "More Buttons"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_INVALIDSHORTCUT "Invalid shortcut"
+    IDS_ERR_DESIGNERFAILEDTOOPEN 
+                            "Failed to open the the ActiveBar 2.0 Designer.  The Designer is not register or not installed on your system."
+    IDS_ERR_WINDOWISNOTVALID "Window is not valid"
+    IDS_ERR_INVALIDPICTURETYPE 
+                            "Invalid picture type, the picture must be a bitmap."
+    IDS_ERR_ONLYONETOOLCANHAVEAUTOSIZE 
+                            "Only one tool can have the AutoSize property set to a value other than ddASNone."
+    IDS_ERR_SIZERFLAGMUSTBESET 
+                            "Sizer Band Flag must to set to use this property"
+    IDS_ERR_ONLYFORUSEWITHSDIAPPLICATIONS 
+                            "Only for use with SDI Applications."
+    IDS_ERR_NOTONSTATUSBAND "Status bar band cannot have child bands"
+    IDS_ERR_CHILDBANDSHAVETOBENORMAL 
+                            "Child bands must be set to the normal band type"
+    IDS_ERR_OUTOFMEMORY     "Out of memory"
+    IDS_ERR_NULLNAMENOTALLOWED "Nulll name is not allowed"
+    IDS_ERR_COMBOBOXISREADONLY 
+                            "Combobox is read only,  the text property can only be set if the value is contained in the list."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

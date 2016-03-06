@@ -1,0 +1,30 @@
+#ifndef BANDCHANGED_INCLUDED
+#define BANDCHANGED_INCLUDED
+
+typedef
+enum {
+	[helpstring("Band Added")] ddBandAdded = 0,
+	[helpstring("Band Deleted")] ddBandDeleted = 1,
+	[helpstring("Band Modified")] ddBandModified = 2,
+} BandChangeTypes;
+
+[uuid(DDC9DB53-5F79-11D2-A1B6-0060081C43D9), hidden]
+interface IDesignerNotifications {
+	HRESULT BandChanged([in] LPDISPATCH pBand, [in] LPDISPATCH pPage, [in] BandChangeTypes nType);
+	HRESULT ToolSelected([in] BSTR bstrBand, [in] BSTR bstrPage, [in] long nToolId);
+	};
+
+[uuid(1B9CB537-C02F-11D2-A277-0060081C43D9), hidden]
+interface IDesignerNotify {
+	HRESULT SetDirty();
+	HRESULT CreateTool([in] IDispatch* pBand, [in] long nToolType);
+	};
+
+[uuid(55F1245B-B9DC-11D2-A265-0060081C43D9), hidden]
+interface IDragDropManager {
+	HRESULT RegisterDragDrop(OLE_HANDLE hWnd, LPUNKNOWN pDropTarget);
+	HRESULT RevokeDragDrop(OLE_HANDLE hWnd);
+	HRESULT DoDragDrop(LPUNKNOWN pDataObject, LPUNKNOWN pDropSource, DWORD dwOKEffect, DWORD* pdwEffect);
+	};
+
+#endif

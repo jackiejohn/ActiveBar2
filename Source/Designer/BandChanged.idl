@@ -1,0 +1,9 @@
+#ifndef BANDCHANGED_INCLUDED
+#define BANDCHANGED_INCLUDED
+
+[uuid(DDC9DB53-5F79-11D2-A1B6-0060081C43D9)]
+interface IBandChanged {
+	HRESULT BandChanged([in] LPDISPATCH pBand, [in] LPDISPATCH pPage, [in] int nType);
+	};
+
+#endif

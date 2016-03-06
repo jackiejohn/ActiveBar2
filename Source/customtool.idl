@@ -1,0 +1,63 @@
+#ifndef __CUSTOMTOOL_H__
+#define __CUSTOMTOOL_H__
+
+#include "dispids.h"
+#include "customtool.h"
+
+/*[uuid(BFB73347-822A-1068-8849-00DD011087E8), version(1.0), helpstring("Useful help string."), helpcontext(2480)]
+dispinterface MyDispatchObject {
+	properties:
+		[id(1)] int x;	// An integer property named x.
+		[id(2)] BSTR y;	// A string property named y.	methods:
+		[id(3)] void show();		// No arguments, no result.
+		[id(11)] int computeit(int inarg, double *outarg);
+};
+*/
+
+[uuid(A4672F71-1E31-11D1-A96E-0060081C43D9)]
+dispinterface ICustomTool {
+	properties:
+	methods:
+	[id(DISPID_SETHOST)]
+	void SetHost([in] LPDISPATCH host);
+	[id(DISPID_GETFLAGS)]
+	void GetFlags([in,out] long *pFlags);
+	[id(DISPID_ONDRAW)]
+	void OnDraw([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int width,[in] int height);
+	[id(DISPID_GETSIZE)]
+	void GetSize([in,out] int *width,[in,out] int *height);
+	[id(DISPID_ONMOUSEENTER)]
+	void OnMouseEnter();
+	[id(DISPID_ONMOUSEEXIT)]
+	void OnMouseExit();
+	[id(DISPID_ONMOUSEDOWN)]
+	void OnMouseDown([in] short Button,[in] int x,[in] int y);
+	[id(DISPID_ONMOUSEUP)]
+	void OnMouseUp([in] short Button,[in] int x,[in] int y);
+	[id(DISPID_ONMOUSEDBLCLK)]
+	void OnMouseDblClk([in] short Button);
+	};
+
+[uuid(D56E5130-44D4-11D1-A9F8-0060081C43D9)]
+interface ICustomTool2 : IDispatch {
+	[id(DISPID_SETHOST)]
+	HRESULT SetHost([in] LPDISPATCH host);
+	[id(DISPID_GETFLAGS)]
+	HRESULT GetFlags([in,out] long *pFlags);
+	[id(DISPID_ONDRAW)]
+	HRESULT OnDraw([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int width,[in] int height);
+	[id(DISPID_GETSIZE)]
+	HRESULT GetSize([in,out] int *width,[in,out] int *height);
+	[id(DISPID_ONMOUSEENTER)]
+	HRESULT OnMouseEnter();
+	[id(DISPID_ONMOUSEEXIT)]
+	HRESULT OnMouseExit();
+	[id(DISPID_ONMOUSEDOWN)]
+	HRESULT OnMouseDown([in] short Button,[in] int x,[in] int y);
+	[id(DISPID_ONMOUSEUP)]
+	HRESULT OnMouseUp([in] short Button,[in] int x,[in] int y);
+	[id(DISPID_ONMOUSEDBLCLK)]
+	HRESULT OnMouseDblClk([in] short Button);
+	};
+
+#endif

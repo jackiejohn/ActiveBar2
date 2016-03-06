@@ -1,0 +1,96 @@
+#include <olectl.h>
+//#include <oleacc.h>
+#include "dispids.h"
+
+[
+	uuid(140C8648-A2B8-47B6-9A6F-D5EF276DAFEA),
+	helpstring("ActiveBar2 Private Library"),
+	helpfile("Activebar20.hlp"),
+	lcid(0x0000),
+	version(2.0)
+]
+library ActiveBar2PrivateLibrary {
+
+	// Standard Imports
+
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+	
+	#include "customtool.idl"
+	#include "BandChanged.idl"
+	#include "Categories.idl"
+	[uuid(89541522-2D31-11D2-A166-0060081C43D9),
+	odl,
+	hidden	]
+	interface IBarPrivate : IUnknown
+	{
+		[id(DISPID_REGISTERBANDCHANGE)]
+		HRESULT RegisterBandChange([in] IDesignerNotifications* pDesignerNotify);
+		[id(DISPID_REVOKEBANDCHANGE)]
+		HRESULT RevokeBandChange();
+		[id(DISPID_DESIGNERINITIALIZE)]
+		HRESULT DesignerInitialize([in]IDragDropManager* pDragDropManager, [in] IDesignerNotify* pDesigner);
+		[id(DISPID_DESIGNERSHUTDOWN)]
+		HRESULT DesignerShutdown();
+		[id(DISPID_SETDESIGNERMODIFIED)]
+		HRESULT SetDesignerModified();
+		[id(DISPID_EXCHANGETOOLBYID)]
+		HRESULT ExchangeToolById([in] IUnknown* pStream, [in] boolean vbSave, [in, out]IDispatch** ppTool);
+		[id(DISPID_EXCHANGETOOLBYBANDPAGETOOLID)]
+		HRESULT ExchangeToolByBandChildBandToolId([in] IUnknown* pStream, [in] BSTR bstrBand, BSTR bstrPage, [in] boolean vbSave, [in, out]IDispatch** ppTool);
+		[id(DISPID_SHUTDOWNADVISE)]
+		HRESULT ShutDownAdvise([in] OLE_HANDLE hWnd);
+		[id(DISPID_LIBRARY),propget]
+		HRESULT Library([out,retval]boolean *retval);
+		[id(DISPID_LIBRARY),propput]
+		HRESULT Library([in]boolean val);
+		[id(DISPID_CUSTOMIZEDRAGLOCK),propput]
+		HRESULT CustomizeDragLock([in]LPDISPATCH val);
+		[id(DISPID_VERIFYIMAGES)]
+		HRESULT VerifyAndCorrectImages();
+		[id(DISPID_ATTACH)]
+		HRESULT Attach([in]OLE_HANDLE hWndParent);
+		[id(DISPID_DETACH)]
+		HRESULT Detach();
+		[id(DISPID_DEACTIVATEWINDOW)]
+		HRESULT DeactivateWindow();
+		[id(DISPID_PRIVATEHWND),propget]
+		HRESULT PrivateHwnd(OLE_HANDLE* hWnd);
+		[id(DISPID_EXCHANGETOOLBYIDENTITY)]
+		HRESULT ExchangeToolByIdentity( IUnknown*pStream,  VARIANT_BOOL vbSave, IDispatch**ppTool);
+		[id(DISPID_EXCHANGETOOLBYBANDCHILDBANDTOOLIDENTITY)]
+		HRESULT ExchangeToolByBandChildBandToolIdentity( IUnknown*pStream,  BSTR bstrBand, BSTR bstrPage,  VARIANT_BOOL vbSave, IDispatch**ppTool);
+	};
+	[uuid(89541524-2D31-11D2-A166-0060081C43D9),
+	dual,
+	hidden	]
+	interface ICustomHost : IDispatch
+	{
+		[id(DISPID_HWND),propget]
+		HRESULT hWin([out,retval]OLE_HANDLE *retval);
+		[id(DISPID_HWND),propput]
+		HRESULT hWin([in]OLE_HANDLE val);
+		[id(DISPID_STATE),propget]
+		HRESULT State([out,retval]short *retval);
+		[id(DISPID_STATE),propput]
+		HRESULT State([in]short val);
+		[id(DISPID_REFRESH)]
+		HRESULT Refresh();
+		[id(DISPID_CLOSE)]
+		HRESULT Close();
+	};
+	[uuid(51973C54-CB0C-11D0-B5C9-00A0244A0E7A),
+	odl,
+	hidden	]
+	interface IPerPropertyBrowsing : IUnknown
+	{
+	};
+	[uuid(6AFD2D9C-F2B0-4E83-8606-12427961722A),
+	odl,
+	hidden	]
+	interface IDDPerPropertyBrowsing : IPerPropertyBrowsing
+	{
+		[id(DISPID_GETTYPE)]
+		HRESULT GetType([in] DISPID dispID, [out] long *pnType);
+	};
+}

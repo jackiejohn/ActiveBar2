@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Actbar", "Actbar2.vcxproj", "{9A748045-6A6D-4433-90A1-B9928868246F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AB DLL Debug|Win32 = AB DLL Debug|Win32
+		AB DLL Release|Win32 = AB DLL Release|Win32
+		Debug|Win32 = Debug|Win32
+		Japanese AB DLL Release|Win32 = Japanese AB DLL Release|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Debug|Win32.ActiveCfg = AB DLL Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Debug|Win32.Build.0 = AB DLL Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Release|Win32.ActiveCfg = AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Release|Win32.Build.0 = AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Debug|Win32.Build.0 = Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Japanese AB DLL Release|Win32.ActiveCfg = Japanese AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Japanese AB DLL Release|Win32.Build.0 = Japanese AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Release|Win32.ActiveCfg = Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

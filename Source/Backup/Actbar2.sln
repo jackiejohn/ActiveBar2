@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Actbar", "Actbar2.vcproj", "{9A748045-6A6D-4433-90A1-B9928868246F}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = Actbar2.vcproj
+		SccProjectName0 = \u0022$/ActBar2.0/Source\u0022,\u0020ETEAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = AB DLL Debug
+		ConfigName.1 = AB DLL Release
+		ConfigName.2 = Debug
+		ConfigName.3 = Japanese AB DLL Release
+		ConfigName.4 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Debug.ActiveCfg = AB DLL Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Debug.Build.0 = AB DLL Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Release.ActiveCfg = AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.AB DLL Release.Build.0 = AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Debug.ActiveCfg = Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Debug.Build.0 = Debug|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Japanese AB DLL Release.ActiveCfg = Japanese AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Japanese AB DLL Release.Build.0 = Japanese AB DLL Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Release.ActiveCfg = Release|Win32
+		{9A748045-6A6D-4433-90A1-B9928868246F}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

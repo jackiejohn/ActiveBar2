@@ -1,0 +1,6 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by prj.rc
+//
+#define HIDC_LST_PROPERTIES             0x8088040d    // IDD_DESIGNER1
+#define HIDC_TOOLBAR                    0x808803f3    // IDD_DESIGNER1
+#define HIDC_TREE_DESIGNER              0x80880409    // IDD_DESIGNER1

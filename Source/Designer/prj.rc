@@ -1,0 +1,1035 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TYPELIB
+//
+
+1                       TYPELIB MOVEABLE PURE   "prj.tlb"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,0,24
+ PRODUCTVERSION 2,5,0,24
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Data Dynamics\0"
+            VALUE "FileDescription", "ActiveBar 2.5 Designer\0"
+            VALUE "FileVersion", "2, 5, 0, 24\0"
+            VALUE "InternalName", "Designer\0"
+            VALUE "LegalCopyright", "Copyright © 1999-2002 Data Dynamics\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "Designer.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ActiveBar 2.0 Designer\0"
+            VALUE "ProductVersion", "2, 5, 0, 24\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ICONEDITOR DIALOG DISCARDABLE  0, 0, 264, 201
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Icon Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,224,7,33,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,24,33,14
+END
+
+IDD_BITMAPSCALE DIALOG DISCARDABLE  0, 0, 250, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Source image is larger than the current image size.",
+                    IDC_STATIC,7,7,159,8
+    LTEXT           "What would you like to do ?",IDC_STATIC,23,22,95,8
+    CONTROL         "Set tool size equal to source image size",IDC_OPT_EQUAL,
+                    "Button",BS_AUTORADIOBUTTON,25,35,141,10
+    CONTROL         "Scale Image to fit into current tool size",
+                    IDC_OPT_SCALETOTOOL,"Button",BS_AUTORADIOBUTTON,25,50,
+                    139,10
+    CONTROL         "Clip Image",IDC_OPT_CLIPIMAGE,"Button",
+                    BS_AUTORADIOBUTTON,25,65,128,10
+    DEFPUSHBUTTON   "OK",IDOK,193,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,24,50,14
+END
+
+IDD_CONFIRM DIALOG DISCARDABLE  0, 0, 214, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Confirm"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,103,50,50,14
+    LTEXT           "Static",IDC_MSG,7,7,200,23
+    CONTROL         "&Don't ask me this again",IDC_DONTSHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,35,115,10
+    PUSHBUTTON      "&No",IDCANCEL,157,50,50,14
+END
+
+IDD_DLG_POPUPS DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Popup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LISTBOX         IDC_LST_POPUP,7,7,109,81,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DLG_OPTIONS DIALOG DISCARDABLE  0, 0, 281, 119
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Save",IDC_STATIC,7,7,169,69
+    CONTROL         "Prompt before deleting Bands",IDC_CHK_BAND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,20,109,10
+    CONTROL         "Prompt before deleting Child Bands",IDC_CHK_PAGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,33,126,10
+    CONTROL         "Prompt before deleting Tools",IDC_CHK_TOOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,46,106,10
+    CONTROL         "Prompt before deleting Categories",IDC_CHK_CATEGORY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,59,122,10
+    GROUPBOX        "Library",IDC_STATIC,7,82,170,30
+    LTEXT           "Path",IDC_STATIC,12,92,16,8
+    EDITTEXT        IDC_ED_LIBPATH,36,91,119,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BN_GETPATH,158,91,14,12
+    CONTROL         "Auto create mask bitmap",IDC_CHK_AUTOCREATEMASK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,180,14,94,10
+    CONTROL         "Event Logging",IDC_CHK_EVENTLOGGING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,180,28,62,10
+    CONTROL         "Sort Bands",IDC_CHK_SORTBANDS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,180,42,51,10
+    DEFPUSHBUTTON   "OK",IDOK,205,98,32,14
+    PUSHBUTTON      "Cancel",IDCANCEL,242,98,32,14
+END
+
+IDD_LIBRARY DIALOGEX 0, 0, 294, 188
+STYLE DS_SYSMODAL | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CONTROLPARENT
+CAPTION "Library"
+MENU IDM_MAINWIN
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_TOOLBAR,7,6,280,21,0,WS_EX_CLIENTEDGE
+    CONTROL         "Tree1",IDC_TREE_DESIGNER,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,29,136,155,
+                    WS_EX_CLIENTEDGE,HIDC_TREE_DESIGNER
+    LISTBOX         IDC_LST_PROPERTIES,145,29,142,155,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_DLG_DEFINECOLOR DIALOGEX 0, 0, 181, 215
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Color"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         137,IDC_COLORSPECTRUM,"Static",SS_BITMAP,7,7,140,120,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_LUMINOSITY,"Static",SS_BLACKFRAME | WS_BORDER,156,
+                    7,11,120
+    CONTROL         "",IDC_STATIC_COLOR,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE | WS_BORDER,7,137,40,28
+    LTEXT           "Color |",IDC_STATIC,7,167,20,8
+    LTEXT           "S&olid",IDC_STATIC,28,167,16,8
+    RTEXT           "&Hue:",IDC_STATIC,55,139,16,8
+    EDITTEXT        IDC_ED_HUE,75,137,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_HUE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,100,138,8,
+                    11
+    RTEXT           "&Sat:",IDC_STATIC,57,155,14,8
+    EDITTEXT        IDC_ED_SAT,75,153,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_SAT,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,155,8,
+                    11
+    RTEXT           "&Lum:",IDC_STATIC,55,171,16,8
+    EDITTEXT        IDC_ED_LUM,75,169,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_LUM,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,102,171,8,
+                    11
+    CTEXT           "&Red:",IDC_STATIC,116,140,16,8
+    EDITTEXT        IDC_ED_RED,140,137,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_RED,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,163,137,8,
+                    11
+    RTEXT           "&Green:",IDC_STATIC,110,155,22,8
+    EDITTEXT        IDC_ED_GREEN,140,153,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_GREEN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,165,155,8,
+                    11
+    RTEXT           "Bl&ue:",IDC_STATIC,115,171,17,8
+    EDITTEXT        IDC_ED_BLUE,140,169,28,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_BLUE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,165,171,8,
+                    11
+    DEFPUSHBUTTON   "&Add Color",ID_ADDCOLOR,8,194,50,14
+    PUSHBUTTON      "&Close",ID_CLOSE,65,194,50,14
+    PUSHBUTTON      "&Help",ID_HELP2,122,194,50,14
+END
+
+IDD_DLG_TOOLS DIALOGEX 0, 0, 294, 170
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Main Tools Collection/Customization Tools"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_DESIGNER,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,7,8,138,155,WS_EX_CLIENTEDGE
+    LISTBOX         IDC_LST_PROPERTIES,147,8,140,155,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_DESIGNER DIALOGEX 0, 0, 382, 227
+STYLE WS_CHILD
+MENU IDM_MAINWIN
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Toolbar",IDC_TOOLBAR,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE | WS_GROUP,7,8,368,17,WS_EX_STATICEDGE
+    CONTROL         "Tree1",IDC_TREE_DESIGNER,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,29,180,191,
+                    WS_EX_CLIENTEDGE
+    LISTBOX         IDC_LST_PROPERTIES,190,29,185,167,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | 
+                    LBS_WANTKEYBOARDINPUT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "",IDC_ST_DESC,190,199,185,20,0,WS_EX_CLIENTEDGE
+END
+
+IDD_OPEN_ICONEDITOR DIALOGEX 0, 0, 352, 163
+STYLE DS_3DLOOK | DS_NOFAILCREATE | DS_CONTROL | WS_CHILD | WS_VISIBLE | 
+    WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Auto create mask",IDC_CHK_CREATEMASK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,272,115,71,10
+    LTEXT           "stc32",1119,5,5,262,153,SS_SUNKEN | NOT WS_VISIBLE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_PICTURE,"Static",SS_GRAYFRAME,273,25,74,67,
+                    WS_EX_CLIENTEDGE
+END
+
+IDD_DESIGNER1 DIALOGEX 0, 0, 396, 265
+STYLE DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "ActiveBar 2.0 Designer"
+MENU IDM_MAINWIN
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_DESIGNER,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_GROUP | WS_TABSTOP,7,
+                    29,188,192,WS_EX_CLIENTEDGE,HIDC_TREE_DESIGNER
+    LISTBOX         IDC_LST_PROPERTIES,201,29,188,169,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | 
+                    LBS_WANTKEYBOARDINPUT | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_CLIENTEDGE,HIDC_LST_PROPERTIES
+    DEFPUSHBUTTON   "OK",IDOK,193,244,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,242,244,46,14
+    PUSHBUTTON      "Apply",IDAPPLY,291,244,46,14,WS_DISABLED
+    PUSHBUTTON      "Help",IDHELP,343,244,46,14
+    CONTROL         "Toolbar",IDC_TOOLBAR,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_CENTERIMAGE,7,8,382,17,WS_EX_STATICEDGE,HIDC_TOOLBAR
+    LTEXT           "",IDC_ST_DESC,201,201,188,20,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ICONEDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_BITMAPSCALE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_CONFIRM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_DLG_POPUPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_LIBRARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_DLG_DEFINECOLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_DLG_TOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_DESIGNER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 375
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_OPEN_ICONEDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 347
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_DESIGNER1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 389
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 258
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MNU_BAND MENU DISCARDABLE 
+BEGIN
+    POPUP "TreeViewActivebar"
+    BEGIN
+        MENUITEM "Load Layout",                 ID_FILEOPEN
+        MENUITEM "Save Layout",                 ID_FILESAVE
+    END
+    POPUP "TreeViewBands"
+    BEGIN
+        MENUITEM "Tool Bar",                    ID_INSERTBAND_NORMAL
+        MENUITEM "Menu Bar",                    ID_INSERTBAND_MENU
+        MENUITEM "Child Menu Bar",              ID_INSERTBAND_CHILDMENU
+        MENUITEM "Popup Menu",                  ID_INSERTBAND_POPUP
+        MENUITEM "Status Bar",                  ID_INSERTBAND_STATUSBAR
+    END
+    POPUP "TreeViewBand"
+    BEGIN
+        MENUITEM "Button",                      ID_INSERTTOOL_BUTTON
+        MENUITEM "Dropdown Button",             ID_INSERTTOOL_DROPDOWNBUTTON
+        MENUITEM "Textbox",                     ID_INSERTTOOL_TEXTBOX
+        MENUITEM "Combobox",                    ID_INSERTTOOL_COMBOBOX
+        MENUITEM "Label",                       ID_INSERTTOOL_LABEL
+        MENUITEM "Separator",                   ID_INSERTTOOL_SEPARATOR
+        MENUITEM "Window List",                 ID_INSERTTOOL_WINDOWLIST
+        MENUITEM "ActiveX Control",             ID_INSERTTOOL_ACTIVEXCONTROL
+        MENUITEM "ActiveX Form",                ID_INSERTTOOL_ACTIVEXFORM
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_DELETEBAND
+    END
+    POPUP "TreeViewBandChildBands"
+    BEGIN
+        MENUITEM "Delete",                      ID_DELETEBAND
+    END
+    POPUP "TreeViewChildBands"
+    BEGIN
+        MENUITEM "Insert Band",                 ID_CREATECHILDBAND
+    END
+    POPUP "TreeViewChildBand"
+    BEGIN
+        MENUITEM "Button",                      ID_INSERTTOOL_BUTTON
+        MENUITEM "Dropdown Button",             ID_INSERTTOOL_DROPDOWNBUTTON
+        MENUITEM "Textbox",                     ID_INSERTTOOL_TEXTBOX
+        MENUITEM "Combobox",                    ID_INSERTTOOL_COMBOBOX
+        MENUITEM "Label",                       ID_INSERTTOOL_LABEL
+        MENUITEM "Separator",                   ID_INSERTTOOL_SEPARATOR
+        MENUITEM "Window List",                 ID_INSERTTOOL_WINDOWLIST
+        MENUITEM "ActiveX Control",             ID_INSERTTOOL_ACTIVEXCONTROL
+        MENUITEM "ActiveX Form",                ID_INSERTTOOL_ACTIVEXFORM
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_DELETECHILDBAND
+    END
+    POPUP "TreeViewTool"
+    BEGIN
+        MENUITEM "Apply All",                   ID_APPLYALLTOOL
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Bitmap",                 ID_EDITBITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_DELETETOOL
+    END
+    POPUP "TreeViewCategories"
+    BEGIN
+        MENUITEM "Insert",                      ID_CATEGORY_NEW
+    END
+    POPUP "TreeViewCategory"
+    BEGIN
+        MENUITEM "Button",                      ID_INSERTTOOL_BUTTON
+        MENUITEM "Dropdown Button",             ID_INSERTTOOL_DROPDOWNBUTTON
+        MENUITEM "Textbox",                     ID_INSERTTOOL_TEXTBOX
+        MENUITEM "Combobox",                    ID_INSERTTOOL_COMBOBOX
+        MENUITEM "Label",                       ID_INSERTTOOL_LABEL
+        MENUITEM "Separator",                   ID_INSERTTOOL_SEPARATOR
+        MENUITEM "ActiveX Control",             ID_INSERTTOOL_ACTIVEXCONTROL
+        MENUITEM "ActiveX Form",                ID_INSERTTOOL_ACTIVEXFORM
+        MENUITEM SEPARATOR
+        MENUITEM "Delete",                      ID_CATEGORY_DELETE
+    END
+END
+
+IDM_MAINWIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        ID_FILENEW
+        MENUITEM "&Open...",                    ID_FILEOPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save",                       ID_FILESAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILEEXIT
+    END
+    POPUP "&Utilities"
+    BEGIN
+        MENUITEM "&Menu Grab",                  ID_MENUGRAB
+        MENUITEM SEPARATOR
+        MENUITEM "Generate &Designer Report...", ID_REPORT
+        MENUITEM "Generate &Header File...",    ID_HEADER
+        MENUITEM "Generate &Select Statement",  ID_GEN_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Verify and Correct Image Reference Counts", 
+                                                ID_VERIFYIMAGEREFERENCECOUNT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   ID_HELP_CONTENTS
+        MENUITEM SEPARATOR
+        MENUITEM "&About ActiveBar",            ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_PAINT_BAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_PAINT_LASSO
+    BUTTON      ID_PAINT_PEN
+    BUTTON      ID_PAINT_PIPET
+    BUTTON      ID_PAINT_FILL
+    BUTTON      ID_PAINT_LINE
+    BUTTON      ID_PAINT_PATTERN
+    BUTTON      ID_PAINT_RECT0
+    BUTTON      ID_PAINT_RECT1
+    BUTTON      ID_PAINT_RECT2
+    BUTTON      ID_PAINT_CIRC0
+    BUTTON      ID_PAINT_CIRC1
+    BUTTON      ID_PAINT_CIRC2
+END
+
+IDB_STATEANDSHIFT TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_SNAPSHOT
+    SEPARATOR
+    BUTTON      ID_NORMAL_IMAGE
+    BUTTON      ID_PRESSED_IMAGE
+    BUTTON      ID_HOVER_IMAGE
+    BUTTON      ID_DISABLED_IMAGE
+    SEPARATOR
+    BUTTON      ID_SHIFT_LEFT
+    BUTTON      ID_SHIFT_UP
+    BUTTON      ID_SHIFT_DOWN
+    BUTTON      ID_SHIFT_RIGHT
+END
+
+IDR_FILEDEMENSIONS TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILEOPEN
+    BUTTON      ID_FILESAVE
+    SEPARATOR
+    BUTTON      ID_CUT
+    BUTTON      ID_COPY
+    BUTTON      ID_PASTE
+    SEPARATOR
+    BUTTON      ID_UNDO
+    BUTTON      ID_CLEAR
+    SEPARATOR
+    BUTTON      ID_STATICWIDTH
+    BUTTON      ID_WIDTH
+    BUTTON      ID_WIDTHSPIN
+    BUTTON      ID_STATICHEIGHT
+    BUTTON      ID_HEIGHT
+    BUTTON      ID_HEIGHTSPIN
+END
+
+IDR_DESIGNER TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_ACTIVEBARIMAGE
+    BUTTON      ID_BUTTON40073
+    BUTTON      ID_BUTTON40073
+    BUTTON      ID_BUTTON40074
+    BUTTON      ID_BUTTON40074
+    BUTTON      ID_BUTTON40075
+    BUTTON      ID_INSERT_BAND_STATUSBAR
+    BUTTON      ID_CHILDBANDSIMAGE
+    BUTTON      ID_CHILDBANDIMAGE
+    BUTTON      ID_BUTTON40092
+    BUTTON      ID_BUTTON40093
+    BUTTON      ID_TOOLIMAGE
+    BUTTON      ID_BUTTON40094
+    BUTTON      ID_BUTTON40095
+    BUTTON      ID_BUTTON40096
+    BUTTON      ID_BUTTON40119
+    BUTTON      ID_BUTTON40097
+    BUTTON      ID_BUTTON40098
+    BUTTON      ID_BUTTON40022
+    BUTTON      ID_BUTTON40013
+END
+
+IDR_TBDESIGNER TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILEOPEN
+    BUTTON      ID_FILESAVE
+    SEPARATOR
+    BUTTON      ID_LIBRARY
+    BUTTON      ID_MENUGRAB
+    BUTTON      ID_GEN_SELECT
+    SEPARATOR
+    BUTTON      ID_OPTIONS
+    SEPARATOR
+    BUTTON      ID_REPORT
+    BUTTON      ID_HEADER
+END
+
+IDR_TBLIBRARY TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILEOPEN
+    BUTTON      ID_FILESAVE
+    SEPARATOR
+    BUTTON      ID_CANCEL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PAINT_BAR           BITMAP  DISCARDABLE     "res\\iconedit.bmp"
+IDB_STATEANDSHIFT       BITMAP  DISCARDABLE     "res\\stateand.bmp"
+IDB_CYCLE               BITMAP  DISCARDABLE     "res\\cycle.bmp"
+IDR_FILEDEMENSIONS      BITMAP  DISCARDABLE     "res\\filedeme.bmp"
+IDB_HATCH               BITMAP  DISCARDABLE     "res\\hatchbmp.bmp"
+IDR_DESIGNER            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_TBDESIGNER          BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_CATEGORY            BITMAP  DISCARDABLE     "res\\category.bmp"
+IDB_HIERARCHY           BITMAP  DISCARDABLE     "res\\heirarch.bmp"
+IDR_TBLIBRARY           BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_SPECHIGH            BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_SPECLOW             BITMAP  DISCARDABLE     "res\\Spec.dib"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SNAPSHOT            CURSOR  DISCARDABLE     "res\\cursor1.cur"
+IDCC_BUCKET             CURSOR  DISCARDABLE     "res\\idcc_buc.cur"
+IDCC_DRAGTOOL           CURSOR  DISCARDABLE     "res\\idcc_dra.cur"
+IDCC_HAIR               CURSOR  DISCARDABLE     "res\\idcc_hai.cur"
+IDCC_MARKER             CURSOR  DISCARDABLE     "res\\idcc_mar.cur"
+IDCC_PEN                CURSOR  DISCARDABLE     "res\\idcc_pen.cur"
+IDCC_PIPET              CURSOR  DISCARDABLE     "res\\idcc_pip.cur"
+IDCC_SIZEWIN            CURSOR  DISCARDABLE     "res\\idcc_siz.cur"
+IDCC_SPRAY              CURSOR  DISCARDABLE     "res\\idcc_spr.cur"
+IDCC_DRAGTOOLNOT        CURSOR  DISCARDABLE     "res\\cur00001.cur"
+IDCC_DRAGTOOLMOVE       CURSOR  DISCARDABLE     "res\\cur00002.cur"
+IDC_HSPLITBAR           CURSOR  DISCARDABLE     "res\\splith.cur"
+IDC_LUMINOSITY          CURSOR  DISCARDABLE     "res\\cur00003.cur"
+IDC_MENUGRAB            CURSOR  DISCARDABLE     "res\\menugrab.cur"
+IDC_MENUGRABNOT         CURSOR  DISCARDABLE     "res\\cur00004.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINWIN             ICON    DISCARDABLE     "res\\mainwin.ico"
+IDI_ICON_CANCEL         ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOADPICT            "Load Picture"
+    IDS_SAVEIMAGE           "Save Picture"
+    IDS_CAT_NONE            "(None)"
+    IDS_DELETETOOLCONFIRM   "Are you sure that you want to delete this Tool."
+    IDS_DELETECATEGORYCONFIRM "Are you sure you want to delete this Category."
+    IDS_DELETEBANDCONFIRM   "Are you sure that you want to delete this Band."
+    IDS_DELETECHILDBANDCONFIRM 
+                            "Are you sure that you want to delete this Child Band."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CATEGORIES      "Customization Tools"
+    ID_PAINT_LASSO          "Lasso"
+    ID_PAINT_PEN            "Pen"
+    ID_PAINT_PATTERN        "Pattern"
+    ID_PAINT_FILL           "Fill"
+    ID_PAINT_LINE           "Line"
+    ID_HIERARCHY            "Hierarchy"
+    ID_PAINT_RECT0          "Border Rectangle "
+    ID_PAINT_RECT1          "Border Rectangle Filled"
+    ID_PAINT_RECT2          "Rectangle Filled"
+    ID_PAINT_CIRC0          "Border Circle"
+    ID_PAINT_CIRC1          "Border Circle Filled"
+    ID_PAINT_CIRC2          "Circle Filled"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS              "Options"
+    ID_REPORT               "Designer Report"
+    ID_HEADER               "Header File"
+    ID_LIBRARY              "Tool Library"
+    ID_SNAPSHOT             "Snap Shot"
+    ID_NORMAL_IMAGE         "Normal"
+    ID_PRESSED_IMAGE        "Pressed"
+    ID_HOVER_IMAGE          "Hover"
+    ID_DISABLED_IMAGE       "Disabled"
+    ID_SHIFT_LEFT           "Shift Left"
+    ID_SHIFT_UP             "Shift Up"
+    ID_SHIFT_DOWN           "Shift Down"
+    ID_PAINT_PIPET          "Dropper"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STATICWIDTH          "  Width "
+    ID_FILEOPEN             "Open"
+    ID_FILESAVE             "Save"
+    ID_STATICHEIGHT         "  Height "
+    ID_SHIFT_RIGHT          "Shift Right"
+    ID_CUT                  "Cut"
+    ID_COPY                 "Copy"
+    ID_PASTE                "Paste"
+    ID_UNDO                 "Undo"
+    ID_CLEAR                "Clear"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CUSTOMIZE           "Customize"
+    IDS_HIDE                "Hide"
+    IDS_DETACH              "Detach"
+    IDS_FIXED               "Fixed"
+    IDS_STRETCH             "Stretch"
+    IDS_CENTERPOPUP         "Center Popup"
+    IDS_FAILEDTOSETPROPERTY "Failed to set the property"
+    IDS_NAME                "Name"
+    IDS_CAPTION             "Caption"
+    IDS_BANDLIMIT           "Designer Band Limit"
+    IDS_CHILDBANDS          "Child Bands"
+    IDS_LIST                "(List)"
+    IDS_SHORTCUT            "(ShortCut)"
+    IDS_COMBOLIST           "(ComboList)"
+    IDS_SETIMAGE            "Could not set the image at index %i."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SETMASKIMAGE        "Could not set the Masked Image at index %i."
+    IDS_ACTIVEBAR           "ActiveBar"
+    IDS_ICONEDITOR          "Icon Editor"
+    IDS_SAVELAYOUTTYPE      "Activebar 2.0 Layout (*.tb2)|*.tb2|"
+    IDS_CATEGORYCREATE      "Category%i"
+    IDS_LOADPICTURETYPES    "Pictures (*.bmp,*.ico,*.cur,*.jpg,*.gif)|*.bmp;*.ico;*.cur;*.jpg;*.gif|Bitmaps (*.bmp,*.dib)|*.bmp;*.dib|Icons (*.ico)|*.ico|Cursors (*.cur)|*.cur|JPEG (*.jpg)|*.jpg|GIF (*.gif)|*.gif|"
+    IDS_SAVEPICTURETYPES    "Bitmap |*.bmp|"
+    IDS_BITMAPS             "(Images)"
+    IDS_AUTOCREATEMASK      "Auto create mask"
+    IDS_CHOOSELIBRARY       "Choose Library"
+    IDS_SORTBANDS           "Sort Bands"
+    IDS_ERR_FAILEDTOCREATESHORTCUTOBJECT "Failed to create a ShortCut Object"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_FAILEDTOGETBANDSOBJECT "The Bands Object is invalid."
+    IDS_ERR_FAILEDTOGETBANDOBJECT "The Band Object is invalid."
+    IDS_ERR_FAILEDTOGETCHILDBANDSOBJECT "The Child Bands Object is invalid."
+    IDS_ERR_FAILEDTOGETCHILDBANDOBJECT "The Child Band Object is invalid."
+    IDS_ERR_FAILEDTOGETTOOLS "The Tools Object is invalid."
+    IDS_ERR_FAILEDTOGETTOOL "The Tool Object is invalid."
+    IDS_ERR_FAILEDTOGETACTIVEBAROBJECT "The ActiveBar Object is invalid."
+    IDS_ERR_FAILEDTOCREATENEWBAND "Failed to create a new Band."
+    IDS_ERR_FAILEDTOCREATEANEWCHILDBAND "Failed to create a new Child Band."
+    IDS_ERR_FAILEDTOCREATEANEWTOOL "Failed to create a new Tool."
+    IDS_ERR_FAILEDTOGETBANDCOUNT "Failed to get the count of Band Objects."
+    IDS_ERR_FAILEDTOGETCHILDBANDCOUNT 
+                            "Failed to get the count of Child Bands."
+    IDS_ERR_FAILEDTOGETTOOLCOUNT "Failed to get the count of Tool Objects."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_LOADINGIMAGEFAILED "Failed to load the Image"
+    IDS_ERR_IMAGETOOBIG     "The Image is too big"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_COULDNOTCREATEBITMAP "Could not create the bitmap"
+    IDS_ERR_COULDNOTCREATEFILE "Could not create file"
+    IDS_ERR_COULDNOTSAVEIMAGE "Could not save image"
+    IDS_ERR_COULDNOTOPENCLIPBROAD "Could not open the clipboard"
+    IDS_ERR_COULDNOTSETCLIPBROAD "Could not set the clipboard"
+    IDS_ERR_COULDNOTCLOSECLIPBROAD "Could not close the clipboard"
+    IDS_ERR_COULDNOTGETCLIPBROADDATA "Could not get the clipboard data"
+    IDS_ERR_COULDNOTCREATEIPICTURE "Could not create an IPicture object"
+    IDS_ERR_FAILEDTOCREATETHETOOLDATAOBJECT 
+                            "Failed to create the Tool Data Object."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_LOAD            "Load"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_SAVE            "Save"
+    IDS_LAYOUTTYPE          "Activebar 2.0 Layout (*.tb2)|*.tb2|Activebar 1.0 Layout (*.tb)|*.tb|"
+    IDS_LAYOUTFILETYPE      "*.tb"
+    IDS_SAVELAYOUT          "Save Layout"
+    IDS_OPENLAYOUT          "Load Layout"
+    IDS_NEW_TOOL            "Tool"
+    IDS_REPORT              "Band Report"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_FAILEDTOOPENFILE "Failed to open file %s."
+    IDS_ERR_FAILEDTOCREATEASTREAM "Failed to create a stream"
+    IDS_ERR_FAILEDTOSAVELAYOUT "Failed to save layout."
+    IDS_ERR_FAILEDTOLOADLAYOUT "Failed to load layout."
+    IDS_ERR_FAILEDTOSETBANDTYPE "Failed to change the Band Type to %s."
+    IDS_ERR_FAILEDTOGETTHETOOLOBJECT "Failed to get the tool object."
+    IDS_ERR_FAILEDTODELETETOOL "Failed to delete the Tool"
+    IDS_ERR_FAILEDTOGETTOOLGATEGORY "Failed to get the Tool's category."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HEADERFILE          "Header File"
+    IDS_TRUE                "True"
+    IDS_FALSE               "False"
+    IDS_NONE                "(None)"
+    IDS_BITMAP              "(Bitmap)"
+    IDS_ICON                "(Icon)"
+    IDS_METAFILE            "(Metafile)"
+    IDS_ENHMETAFILE         "(Enhanced Metafile)"
+    IDS_SCROLLBAR           "Scrollbar"
+    IDS_DESKTOP             "Desktop"
+    IDS_ACTIVECAPTION       "Active Title Bar"
+    IDS_INACTIVECAPTION     "Inactive Title Bar"
+    IDS_MENU                "Menu Bar"
+    IDS_WINDOW              "Window Background"
+    IDS_WINDOWFRAME         "Window Frame"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXCEPTION_ACCESS_VIOLATION "Access Violation"
+    IDS_EXCEPTION_ARRAY_BOUNDS_EXCEEDED "Array Bounds Exceeded"
+    IDS_EXCEPTION_BREAKPOINT "Break Point"
+    IDS_EXCEPTION_DATATYPE_MISALIGNMENT "Datatype Misalignment"
+    IDS_EXCEPTION_FLT_DENORMAL_OPERAND "Float Denormal Operand"
+    IDS_EXCEPTION_FLT_DIVIDE_BY_ZERO "Float Divide by zero"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXCEPTION_FLT_INEXACT_RESULT "Float Inexact Result"
+    IDS_EXCEPTION_FLT_INVALID_OPERATION "Float Invalid Operation"
+    IDS_EXCEPTION_FLT_OVERFLOW "Float Overflow"
+    IDS_EXCEPTION_FLT_STACK_CHECK "Float Stack Check"
+    IDS_EXCEPTION_FLT_UNDERFLOW "Float underflow"
+    IDS_EXCEPTION_ILLEGAL_INSTRUCTION "Illegal Instruction"
+    IDS_EXCEPTION_IN_PAGE_ERROR "Page Error"
+    IDS_EXCEPTION_INT_DIVIDE_BY_ZERO "Integer Divide by Zero"
+    IDS_EXCEPTION_INT_OVERFLOW "Integer Overflow"
+    IDS_EXCEPTION_INVALID_DISPOSITION "Invalid Disposition"
+    IDS_EXCEPTION_NONCONTINUABLE_EXCEPTION "Non Continuable Exception"
+    IDS_EXCEPTION_PRIV_INSTRUCTION "Privage Instruction"
+    IDS_EXCEPTION_SINGLE_STEP "Single Step"
+    IDS_EXCEPTION_STACK_OVERFLOW "Stack Overflow"
+    IDS_DESIGNER            "&Designer"
+    IDS_DESIGNERDOC         "Designer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENUTEXT            "Menu Text"
+    IDS_WINDOWTEXT          "Window Text"
+    IDS_CAPTIONTEXT         "Active Title Bar Text"
+    IDS_ACTIVEBORDER        "Active Border"
+    IDS_INACTIVEBORDER      "Inactive Border"
+    IDS_APPWORKSPACE        "Application Workspace"
+    IDS_HIGHLIGHT           "Highlight"
+    IDS_HIGHLIGHTTEXT       "Highlight Text"
+    IDS_BTNFACE             "Button Face"
+    IDS_BTNSHADOW           "Button Shadow"
+    IDS_GRAYTEXT            "Disable Text"
+    IDS_BTNTEXT             "Button Text"
+    IDS_INACTIVECAPTIONTEXT "Inactive Title Bar Text"
+    IDS_BTNHIGHLIGHT        "Button Highlight"
+    IDS_3DDKSHADOW          "Button Dark Shadow"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_3DLIGHT             "Button Light Shadow"
+    IDS_INFOTEXT            "Tooltip Text"
+    IDS_INFOBK              "Tooltip Background"
+    IDS_SYSTEM              "System"
+    IDS_PALETTE             "Palette"
+    IDS_BANDNAME            "Band%i"
+    IDS_TOOLNAME            "Tool%i"
+    IDS_CHILDBANDNAME       "ChildBand%i"
+    IDS_CATEGORIES          "Categories"
+    IDS_DOCKLEFT            "Dock Left"
+    IDS_DOCKTOP             "Dock Top"
+    IDS_DOCKRIGHT           "Dock Right"
+    IDS_DOCKBUTTOM          "Dock Bottom"
+    IDS_FLOAT               "Float"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BANDTYPES           "Normal"
+    IDS_BANDTYPES1          "Menu Bar"
+    IDS_BANDTYPES2          "Popup"
+    IDS_BANDTYPES3          "Status Bar"
+    IDS_ALT                 "Alt+"
+    IDS_CONTROL             "Ctrl+"
+    IDS_SHIFT               "Shift+"
+    IDS_DUPLICATESHORTCUT   "Duplicate Shortcut"
+    IDS_ACTIVEBARHELP       "ActiveBar20.hlp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_FAILEDTODELETECATEGORY "Failed to delete the category."
+    IDS_ERR_FAILEDTOCREATECATEGORY "Failed to create category."
+    IDS_ERR_MENULOADFAILED  "Failed to load the menu."
+    IDS_ERR_FAILEDTOGETSUBMENU "Failed to get the sub menu."
+    IDS_ERR_TRACKPOPUPFAILED "TrackPopupMenu failed."
+    IDS_ERR_FAILEDTOINSERTTREEITEM "Failed to insert a tree item."
+    IDS_ERR_FAILEDTOSETTHETOOLSCAPTION "Failed to set the Tool's Caption."
+    IDS_ERR_FAILEDTOCREATEDESIGNER "Failed to create the designer objects."
+    IDS_ERR_COULDNOTGETPARENTTREEITEM "Could not get the parent tree item"
+    IDS_ERR_FAILEDTOSETLAYOUT "Failed to set the layout data."
+    IDS_ERR_FAILEDTOCREATECATEGORYTREE "Failed to create the category tree"
+    IDS_ERR_FAILEDTOCREATEHIERARCHYTREE "Failed to create the hierarchy tree"
+    IDS_ERR_FAILEDTOCONVERT "Failed to convert the layout"
+    IDS_ERR_FAILEDTOSETTOOLCATEGORY "Failed to set the tool's category."
+    IDS_ERR_FAILEDTOLOADDEFAULTLIBRARY "Failed to load the default library."
+    IDS_ERR_FAILEDTOINSERTTOOL "Failed to insert a Tool into Activebar.  "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DESIGNERTITLE       "ActiveBar Designer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_QUERYACTIVEBARINTERFACE 
+                            "Failed to query for the ActiveBar Interface."
+    IDS_FAILEDTORESTORELAYOUT "Failed to reset the layout informaion."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLDIALOG           "Main Tool Collection/Customization Tools"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MENUGRAB             "Menu Grab"
+    IDS_ACTIVEBARTREE       "ActiveBar Objects"
+    IDS_PROPERTYBROWSER     "Properties"
+    IDS_ERR_VERSIONNUMBER   "The ActiveBar ActiveX Version Number does not match the Designer's Version Number"
+    IDS_COMMITCHANGES       "Commit changes to ActiveBar."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_FAILEDTOLOADPICTURE "Failed to load picture"
+    IDS_ERR_COULDNOTEMPTYCLIPBROAD "Could not empty the clipbroad."
+    IDS_ERR_COULDNOTALLOCATEMEMORY "Could not allocate global memory"
+    IDS_ERR_COULDNOTLOCKMEMORY "Could not lock global memory"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GEN_SELECT           "Create select case statement and copy to clipboard"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

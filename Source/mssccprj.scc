@@ -1,0 +1,25 @@
+[SCC]
+SCC=This is a source code control file
+[Project1.vbp]
+SCC_Project_Name=this project is not under source code control
+SCC_Aux_Path=<This is an empty string for the mssccprj.scc file>
+
+[Actbar2.dsp]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/AB2/SOURCE", CKAAAAAA
+
+[Actbar2.dsw]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/AB2/SOURCE", CKAAAAAA
+
+[Actbar2.mak]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/AB2/SOURCE", CKAAAAAA
+
+[Actbar2.sln]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/AB2/SOURCE", CKAAAAAA
+
+[Actbar2.vcproj]
+SCC_Aux_Path = "D:\VSS"
+SCC_Project_Name = "$/AB2/SOURCE", CKAAAAAA

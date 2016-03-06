@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="AB DLL Debug|Win32">
+      <Configuration>AB DLL Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="AB DLL Release|Win32">
+      <Configuration>AB DLL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Japanese AB DLL Release|Win32">
+      <Configuration>Japanese AB DLL Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Actbar</ProjectName>
+    <SccProjectName>"$/ActBar2.0/Source", ETEAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{DA05ACA0-3323-44DB-9AB6-99397386D102}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+    <OutDir>.\Japanese_AB_DLL_Release\</OutDir>
+    <IntDir>.\Japanese_AB_DLL_Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+    <OutDir>.\AB_DLL_Release\</OutDir>
+    <IntDir>.\AB_DLL_Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+    <OutDir>.\Actbar___Win32_AB_DLL_Debug\</OutDir>
+    <IntDir>.\Actbar___Win32_AB_DLL_Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>.\;\ddlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;STRICT;_MT;_DDINC_MODELESS_CODE;_ABDLL;AR20;JAPBUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Japanese_AB_DLL_Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Japanese_AB_DLL_Release\Actbar2.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Japanese_AB_DLL_Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Japanese_AB_DLL_Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy .\release\actbar2.ocx ..\setup\distrib
+cd ..\setup\distrib
+prepall
+cd ..\..\source</Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Japanese_AB_DLL_Release\Actbar2.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Japanese_AB_DLL_Release\Actbar2.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>Japanese_AB_DLL_Release\AB2DLL.dll</OutputFile>
+      <ImportLibrary>.\Japanese_AB_DLL_Release\AB2DLL.lib</ImportLibrary>
+      <BaseAddress>0x35000000</BaseAddress>
+      <AdditionalDependencies>libcmt.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <ModuleDefinitionFile>.\ABDLLPRJ.DEF</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>.\;\ddlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;STRICT;_MT;_DDINC_MODELESS_CODE;_ABDLL;AR20;___ABDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\AB_DLL_Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\AB_DLL_Release\Actbar2.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\AB_DLL_Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\AB_DLL_Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy .\release\actbar2.ocx ..\setup\distrib
+cd ..\setup\distrib
+prepall
+cd ..\..\source</Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\AB_DLL_Release\Actbar2.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\AB_DLL_Release\Actbar2.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>AB_DLL_Release\AB2DLL.dll</OutputFile>
+      <ImportLibrary>.\AB_DLL_Release\AB2DLL.lib</ImportLibrary>
+      <BaseAddress>0x35000000</BaseAddress>
+      <AdditionalDependencies>libcmt.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <ModuleDefinitionFile>.\ABDLLPRJ.DEF</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.\;\ddlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_DDINC_MODELESS_CODE;_ABDLL;AR20;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Actbar___Win32_AB_DLL_Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Actbar___Win32_AB_DLL_Debug\Actbar2.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Actbar___Win32_AB_DLL_Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Actbar___Win32_AB_DLL_Debug\</ProgramDataBaseFileName>
+      <AdditionalOptions> /D /D </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Actbar___Win32_AB_DLL_Debug\Actbar2.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Actbar___Win32_AB_DLL_Debug\Actbar2.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Actbar___Win32_AB_DLL_Debug/AB2DLL.dll</OutputFile>
+      <ImportLibrary>.\Actbar___Win32_AB_DLL_Debug\AB2DLL.lib</ImportLibrary>
+      <BaseAddress>0x11000000</BaseAddress>
+      <AdditionalDependencies>libcmtd.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\ABDLLPRJ.DEF</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <OmitFramePointers>false</OmitFramePointers>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>.\;\ddlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;STRICT;_MT;_SCRIPTSTRING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\Actbar2.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>copy .\release\actbar2.ocx ..\setup\distrib
+cd ..\setup\distrib
+prepall
+cd ..\..\source</Command>
+    </PostBuildEvent>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Actbar2.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Actbar2.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Release/Actbar2.ocx</OutputFile>
+      <ImportLibrary>.\Release\Actbar2.lib</ImportLibrary>
+      <BaseAddress>0x35000000</BaseAddress>
+      <AdditionalDependencies>libcmt.lib;comctl32.lib;comsupp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>_DllMainCRTStartup%4012</EntryPointSymbol>
+      <ModuleDefinitionFile>.\PRJ.DEF</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_SCRIPTSTRING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Actbar2.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <AdditionalOptions> /D /D </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Actbar2.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Actbar2.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug/Actbar2.ocx</OutputFile>
+      <ImportLibrary>.\Debug\Actbar2.lib</ImportLibrary>
+      <BaseAddress>0x35000000</BaseAddress>
+      <AdditionalDependencies>libcmtd.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\PRJ.DEF</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="ABDLLPRJ.DEF">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="ActiveBar 2 work items.xls" />
+    <CustomBuild Include="PRJ.DEF">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="prj.tlb" />
+    <CustomBuild Include="Res\cur00001.cur" />
+    <CustomBuild Include="Res\cur00002.cur" />
+    <CustomBuild Include="Res\cursor1.cur" />
+    <CustomBuild Include="Res\H_POINT.CUR" />
+    <CustomBuild Include="Res\hsplitba.cur" />
+    <CustomBuild Include="Res\IDCC_DRA.CUR" />
+    <CustomBuild Include="Res\splith.cur" />
+    <CustomBuild Include="Res\splitv.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="band.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Bands.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Bar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Btabs.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CategoryMgr.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="catidreg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CBList.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ChildBands.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Custom.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="CustomizeListbox.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="customproxy.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DDASYNC.CPP">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Dib.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Dock.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Designer\DragDrop.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Designer\DragDropMgr.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="DropSource.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="enumx.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="EventLog.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="FDIALOG.CPP">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Flicker.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="fontholder.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="fregkey.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="FWND.CPP">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="guids.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ibar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ImageMgr.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ipserver.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="localizer.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Miniwin.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="pictureholder.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Popupwin.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">precomp.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">precomp.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">precomp.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Private.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="proppage.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Crt\QSORT.C">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Crt\rand.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="returnbool.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="returnstring.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ScriptString.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ShortCuts.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="StaticLink.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Streams.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="support.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="tool.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Tooltip.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Tppopup.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Crt\WCSCAT.C">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Crt\WCSCMP.C">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Crt\WCSLEN.C">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="WhatsThisHelp.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="WindowProc.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="xevents.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /D /D   /D /D </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Private.odl">
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">.\PrivateInterfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">Win32</TargetEnvironment>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">.\PrivateInterfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">Win32</TargetEnvironment>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">.\PrivateInterfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">Win32</TargetEnvironment>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\PrivateInterfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\PrivateInterfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+    </Midl>
+    <Midl Include="prj.odl">
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">.\prj.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">.\interfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">Win32</TargetEnvironment>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">.\prj.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">.\interfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">Win32</TargetEnvironment>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">.\prj.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">.\interfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">Win32</TargetEnvironment>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\prj.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\interfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\prj.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\interfaces.h</HeaderFileName>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="prj.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ResourceCompile Include="resJap\prjJap.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Japanese AB DLL Release|Win32'">resJap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AB DLL Release|Win32'">resJap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AB DLL Debug|Win32'">resJap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">resJap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">resJap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Band.h" />
+    <ClInclude Include="Bands.h" />
+    <ClInclude Include="Bar.h" />
+    <ClInclude Include="Btabs.h" />
+    <ClInclude Include="Categories.h" />
+    <ClInclude Include="CategoryMgr.h" />
+    <ClInclude Include="CATIDREG.H" />
+    <ClInclude Include="CBList.h" />
+    <ClInclude Include="ChildBands.h" />
+    <ClInclude Include="..\..\..\Program Files\Microsoft Visual Studio\VC98\CRT\SRC\CRUNTIME.H" />
+    <ClInclude Include="Custom.h" />
+    <ClInclude Include="CustomizeListbox.h" />
+    <ClInclude Include="customproxy.h" />
+    <ClInclude Include="customtool.h" />
+    <ClInclude Include="DDASYNC.H" />
+    <ClInclude Include="DEBUG.H" />
+    <ClInclude Include="Designer\DesignerInterfaces.h" />
+    <ClInclude Include="Dib.h" />
+    <ClInclude Include="Dispids.h" />
+    <ClInclude Include="Dock.h" />
+    <ClInclude Include="Designer\DragDrop.h" />
+    <ClInclude Include="Designer\DragDropMgr.h" />
+    <ClInclude Include="DropSource.h" />
+    <ClInclude Include="ENUMX.H" />
+    <ClInclude Include="ERRORS.H" />
+    <ClInclude Include="EventLog.h" />
+    <ClInclude Include="FDIALOG.H" />
+    <ClInclude Include="Flicker.h" />
+    <ClInclude Include="fontholder.h" />
+    <ClInclude Include="FREGKEY.H" />
+    <ClInclude Include="FWND.H" />
+    <ClInclude Include="GLOBALS.H" />
+    <ClInclude Include="GUIDS.H" />
+    <ClInclude Include="ImageMgr.h" />
+    <ClInclude Include="interfaces.h" />
+    <ClInclude Include="IPSERVER.H" />
+    <ClInclude Include="localizer.h" />
+    <ClInclude Include="MAP.H" />
+    <ClInclude Include="MINIWIN.H" />
+    <ClInclude Include="MTDLL.H" />
+    <ClInclude Include="Popupwin.h" />
+    <ClInclude Include="precomp.h" />
+    <ClInclude Include="PrivateInterfaces.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="returnbool.h" />
+    <ClInclude Include="returnstring.h" />
+    <ClInclude Include="ScriptString.h" />
+    <ClInclude Include="ShortCuts.h" />
+    <ClInclude Include="StaticLink.h" />
+    <ClInclude Include="Streams.h" />
+    <ClInclude Include="SUPPORT.H" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="Tooltip.h" />
+    <ClInclude Include="Tppopup.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="WindowProc.h" />
+    <ClInclude Include="XEVENTS.H" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\BITMAP1.BMP" />
+    <Image Include="Res\bitmap3.bmp" />
+    <Image Include="Res\bmp00001.bmp" />
+    <Image Include="Res\BMP00002.BMP" />
+    <Image Include="Res\BMP00003.BMP" />
+    <Image Include="Res\bmp00004.bmp" />
+    <Image Include="Res\bmp00005.bmp" />
+    <Image Include="Res\bmp00006.bmp" />
+    <Image Include="Res\bmp00007.bmp" />
+    <Image Include="Res\cascade.bmp" />
+    <Image Include="Res\CHECKBMP.BMP" />
+    <Image Include="Res\expandve.bmp" />
+    <Image Include="Res\GRAB1.BMP" />
+    <Image Include="Res\GRAB2.BMP" />
+    <Image Include="Res\GRAB3.BMP" />
+    <Image Include="Res\GRAB4.BMP" />
+    <Image Include="Res\icon1.ico" />
+    <Image Include="Res\ICON2.ICO" />
+    <Image Include="Res\menuexpa.bmp" />
+    <Image Include="Res\MENUSCRO.BMP" />
+    <Image Include="Res\OVERFLOW.BMP" />
+    <Image Include="Res\SUBMENUB.BMP" />
+    <Image Include="Res\SYSCLOSE.BMP" />
+    <Image Include="Res\SYSMAX.BMP" />
+    <Image Include="Res\SYSMINIM.BMP" />
+    <Image Include="Res\SYSRESTO.BMP" />
+    <Image Include="Res\titehorz.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

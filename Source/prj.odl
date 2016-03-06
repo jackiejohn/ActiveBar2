@@ -1,0 +1,1525 @@
+#include <olectl.h>
+#include "dispids.h"
+#include "hlp\ActiveBar20.hh"
+#include "hlp\ActiveBar2Ref.hh"
+#include "hlp\ActiveBarUG.hh"
+[
+	uuid(4932CEF1-2CAA-11D2-A165-0060081C43D9),
+	helpstring("Data Dynamics ActiveBar 2.0"),
+	helpfile("Activebar20.hlp"),
+	lcid(0x0000),
+	version(2.0)
+]
+library ActiveBar2Library {
+
+	// Standard Imports
+
+	import "oaidl.idl";
+	import "ocidl.idl"; 
+	//importlib(STDOLE_TLB);
+	//importlib(STDTYPE_TLB);
+
+	typedef
+	[uuid(4B48629D-56DD-4CD7-82A5-4ECAA499B940)]
+	enum tagAttachTypes{
+		[helpstring("Attach to an MDI Window")] ddatMDI=0,
+		[helpstring("Attach to an SDI Window")] ddatSDI=1,
+	} AttachTypes;
+
+	typedef
+	[uuid(06FB5E80-49CF-11D3-B61B-0060081C43D9)]
+	enum tagPopupBannerBackgroundStyles{
+		[helpstring("Normal")] ddPBBSNormal=0,
+		[helpstring("Gradient")] ddPBBSGradient=1,
+	} PopupBannerBackgroundStyles;
+
+	typedef
+	[uuid(16E16B2A-4F99-43A3-91FF-ADF9FBBBA101)]
+	enum tagPopupMenuFlagTypes{
+		[helpstring("(Default) The left side of the pop-up menu is located at x.")] ddPopupMenuLeftAlign=0x1,
+		[helpstring(" The pop-up menu is centered at x. ")] ddPopupMenuCenterAlign=0x2,
+		[helpstring("The right side of the pop-up menu is located at x.")] ddPopupMenuRightAlign=0x4,
+	} PopupMenuFlagTypes;
+
+	typedef
+	[uuid(698CFEC4-8BDC-4E46-9AC7-FA97B0192711)]
+	enum tagBackgroundOptionsTypes{
+		[helpstring("If a picture is defined paint it on the dock areas")] ddBODockAreas=0x1,
+		[helpstring("If a picture is defined paint it on the float windows")] ddBOFloat=0x2,
+		[helpstring("If a picture is defined paint it on the popup bands")] ddBOPopups=0x4,
+		[helpstring("If a picture is defined paint it on the client area of Activebar")] ddBOClientArea=0x8,
+	} BackgroundOptionsTypes;
+
+	typedef
+	[uuid(3A2FA96C-AFA9-4B90-9874-46758DBD5253)]
+	enum tagToolAutoSizeTypes{
+		[helpstring("Don't Auto Size")] ddTASNone=0,
+		[helpstring("Auto the remaining width of the band")] ddTASSpringWidth=1,
+		[helpstring("Auto the remaining height of the band")] ddTASSpringHeight=2,
+		[helpstring("Auto the remaining width and height of the band")] ddTASSpringBoth =3,
+	} ToolAutoSizeTypes;
+
+	typedef
+	[uuid(8954154D-2D31-11D2-A166-0060081C43D9)]
+	enum tagLabelStyles{
+		[helpstring("Normal")] ddLSNormal=0,
+		[helpstring("Insert Key")] ddLSInsert=1,
+		[helpstring("Capital Lock")] ddLSCapitalLock=2,
+		[helpstring("Number Lock")] ddLSNumberLock=3,
+		[helpstring("Scroll Lock")] ddLSScrollLock=4,
+		[helpstring("Date")] ddLSDate=5,
+		[helpstring("Time")] ddLSTime=6,
+	} LabelStyles;
+
+	typedef
+	[uuid(E1102892-75C9-4A33-9ABC-D14902E57424)]
+	enum tagLabelBevelStyles{
+		[helpstring("Flat")] ddLBFlat=0,
+		[helpstring("Raised")] ddLBRaised=1,
+		[helpstring("Inset")] ddLBInset=2,
+	} LabelBevelStyles;
+
+	typedef
+	[uuid(8954153F-2D31-11D2-A166-0060081C43D9)]
+	enum tagBandFlags{
+		[helpstring("Dock Left")] ddBFDockLeft=0x4,
+		[helpstring("Dock Top")] ddBFDockTop=0x1,
+		[helpstring("Dock Right")] ddBFDockRight=0x8,
+		[helpstring("Dock Bottom")] ddBFDockBottom=0x2,
+		[helpstring("Floating")] ddBFFloat=0x10,
+		[helpstring("Customizable")] ddBFCustomize=0x20,
+		[helpstring("Can Hide")] ddBFHide=0x40,
+		[helpstring("Detachable")] ddBFDetach=0x80,
+		[helpstring("Fixed")] ddBFFixed=0x100,
+		[helpstring("Stretch")] ddBFStretch=0x200,
+		[helpstring("Center Popup")] ddBFPopupFlipUp=0x400,
+		[helpstring("Sizer")] ddBFSizer=0x800,
+		[helpstring("Close")] ddBFClose=0x1000,
+		[helpstring("Flat")] ddBFFlat=0x2000,
+		[helpstring("Expand")] ddBFExpand=0x4000,
+	} BandFlags;
+
+	typedef
+	[uuid(89541540-2D31-11D2-A166-0060081C43D9)]
+	enum tagDockingAreaTypes{
+		[helpstring("Top Docking Area")] ddDATop=0,
+		[helpstring("Bottom Docking Area")] ddDABottom=1,
+		[helpstring("Left Docking Area")] ddDALeft=2,
+		[helpstring("Right Docking Area")] ddDARight=3,
+		[helpstring("Floating")] ddDAFloat=4,
+		[helpstring("Popup")] ddDAPopup=5,
+	} DockingAreaTypes;
+
+	typedef
+	[uuid(89541541-2D31-11D2-A166-0060081C43D9)]
+	enum tagTrackingStyles{
+		[helpstring("None")] ddTSNone=0,
+		[helpstring("Bevel")] ddTSBevel=1,
+		[helpstring("Color")] ddTSColor=2,
+	} TrackingStyles;
+
+	typedef
+	[uuid(89541542-2D31-11D2-A166-0060081C43D9)]
+	enum tagBandTypes{
+		[helpstring("Normal")] ddBTNormal=0,
+		[helpstring("Menu Bar")] ddBTMenuBar=1,
+		[helpstring("Popup")] ddBTPopup=2,
+		[helpstring("Status Bar")] ddBTStatusBar=3,
+		[helpstring("Child Menu Bar")] ddBTChildMenuBar=4,
+	} BandTypes;
+
+	typedef
+	[uuid(89541543-2D31-11D2-A166-0060081C43D9)]
+	enum tagCaptionPositionTypes{
+		[helpstring("Standard")] ddCPStandard=0,
+		[helpstring("Left")] ddCPLeft=1,
+		[helpstring("Right")] ddCPRight=2,
+		[helpstring("Above")] ddCPAbove=3,
+		[helpstring("Below")] ddCPBelow=4,
+		[helpstring("Center")] ddCPCenter=5,
+	} CaptionPositionTypes;
+
+	typedef
+	[uuid(89541544-2D31-11D2-A166-0060081C43D9)]
+	enum tagToolTypes{
+		[helpstring("Button")] ddTTButton=0,
+		[helpstring("Button DropDown")] ddTTButtonDropDown=1,
+		[helpstring("ComboBox")] ddTTCombobox=2,
+		[helpstring("Edit")] ddTTEdit=3,
+		[helpstring("Label")] ddTTLabel=4,
+		[helpstring("Separator")] ddTTSeparator=5,
+		[helpstring("ActiveX Control")] ddTTControl=6,
+		[helpstring("Form")] ddTTForm=7,
+		[helpstring("Window List")] ddTTWindowList=8,
+	} ToolTypes;
+
+	typedef
+	[uuid(A5A2D823-59D0-11D0-9C48-00A0C90F29FC)]
+	enum tagToolAlignmentTypes{
+		[helpstring("Left Top")] ddALeftTop=0,
+		[helpstring("Center Top")] ddACenterTop=1,
+		[helpstring("Right Top")] ddARightTop=2,
+		[helpstring("Left Center")] ddALeftCenter=3,
+		[helpstring("Center Center")] ddACenterCenter=4,
+		[helpstring("Right Center")] ddARightCenter=5,
+		[helpstring("Left Bottom")] ddALeftBottom=6,
+		[helpstring("Center Bottom")] ddACenterBottom=7,
+		[helpstring("Right Bottom")] ddARightBottom=8,
+	} ToolAlignmentTypes;
+
+	typedef
+	[uuid(28C83C93-DFAF-11D2-A2B2-0060081C43D9)]
+	enum tagChildBandStyles{
+		[helpstring("None")] ddCBSNone=0,
+		[helpstring("Tabs on top")] ddCBSToolbarTopTabs=1,
+		[helpstring("Tabs on bottom")] ddCBSToolbarBottomTabs=2,
+		[helpstring("Sliding Tabs")] ddCBSSlidingTabs=3,
+		[helpstring("Always on top tabs")] ddCBSTopTabs=4,
+		[helpstring("Always on bottom tabs")] ddCBSBottomTabs=5,
+		[helpstring("Always on left tabs")] ddCBSLeftTabs=6,
+		[helpstring("Always on right tabs")] ddCBSRightTabs=7,
+	} ChildBandStyles;
+
+	typedef
+	[uuid(89541547-2D31-11D2-A166-0060081C43D9)]
+	enum tagMenuFontStyles{
+		[helpstring("System menu font")] ddMSSystem=0,
+		[helpstring("Custom font")] ddMSCustom=1,
+	} MenuFontStyles;
+
+	typedef
+	[uuid(9AE3EBB3-CDCD-11D2-A28C-0060081C43D9)]
+	enum tagFont3DTypes{
+		[helpstring("None")] dd3DNone=0,
+		[helpstring("Raised w/ light shading")] dd3DRaisedLight=1,
+		[helpstring("Raised w/heavy shading")] dd3DRaisedHeavy=2,
+		[helpstring("Inset w/light shading")] dd3DInsetLight=3,
+		[helpstring("Inset w/heavy shading")] dd3DInsetHeavy=4,
+	} Font3DTypes;
+
+	typedef
+	[uuid(89541548-2D31-11D2-A166-0060081C43D9)]
+	enum tagPictureBackgroundStyles{
+		[helpstring("Center")] ddPBSCentered=0,
+		[helpstring("Stretched")] ddPBSStretched=1,
+		[helpstring("Tiled")] ddPBSTiled=2,
+	} PictureBackgroundStyles;
+
+	typedef
+	[uuid(9AE3EBB4-CDCD-11D2-A28C-0060081C43D9)]
+	enum tagChildBandBackgroundStyles{
+		[helpstring("Normal")] ddBSNormal=0,
+		[helpstring("Gradient")] ddBSGradient=1,
+		[helpstring("Picture")] ddBSPicture=2,
+	} ChildBandBackgroundStyles;
+
+	typedef
+	[uuid(8954154A-2D31-11D2-A166-0060081C43D9)]
+	enum tagSoundTypes{
+		[helpstring("File")] ddSTFile=0,
+		[helpstring("System")] ddSTSystem=1,
+	} SoundTypes;
+
+	typedef
+	[uuid(8954154B-2D31-11D2-A166-0060081C43D9)]
+	enum tagMenuStyles{
+		[helpstring("Unfold")] ddMSAnimateUnfold=0,
+		[helpstring("Slide")] ddMSAnimateSlide=1,
+		[helpstring("None")] ddMSAnimateNone=2,
+		[helpstring("Random")] ddMSAnimateRandom=3,
+	} MenuStyles;
+
+	typedef
+	[uuid(8954154C-2D31-11D2-A166-0060081C43D9)]
+	enum tagCustomizeListboxTypes{
+		[helpstring("Displays Bands")] ddCTBands=0,
+		[helpstring("Displays Categories")] ddCTCategories=1,
+		[helpstring("Displays Commands")] ddCTTools=2,
+	} CustomizeListboxTypes;
+
+	typedef
+	[uuid(8954154E-2D31-11D2-A166-0060081C43D9)]
+	enum tagImageStyles{
+		[helpstring("Normal")] ddISNormal=0,
+		[helpstring("Gray")] ddISGray=1,
+		[helpstring("Mask")] ddISMask=2,
+		[helpstring("Disable")] ddISDisabled=3,
+	} ImageStyles;
+
+	typedef
+	[uuid(8954154F-2D31-11D2-A166-0060081C43D9)]
+	enum tagCustomizeTypes{
+		[helpstring("Start")] ddCTCustomizeStart=0,
+		[helpstring("Stop")] ddCTCustomizeStop=1,
+	} CustomizeTypes;
+
+	typedef
+	[uuid(89541550-2D31-11D2-A166-0060081C43D9)]
+	enum tagComboStyles{
+		[helpstring("Normal")] ddCBSNormal=0,
+		[helpstring("Read Only")] ddCBSReadOnly=1,
+		[helpstring("Sorted")] ddCBSSorted=2,
+		[helpstring("Sorted Read Only")] ddCBSSortedReadOnly=3,
+	} ComboStyles;
+
+	typedef
+	[uuid(31636C20-5ECA-11D2-A1B4-0060081C43D9)]
+	enum tagGrabHandleStyles{
+		[helpstring("None")] ddGSNone=0,
+		[helpstring("Normal")] ddGSNormal=1,
+		[helpstring("Dot")] ddGSDot=2,
+		[helpstring("Slash")] ddGSSlash=3,
+		[helpstring("Stripe")] ddGSStripe=4,
+		[helpstring("Internet Explorer")] ddGSIE=5,
+		[helpstring("Flat")] ddGSFlat=6,
+		[helpstring("Caption")] ddGSCaption=7
+	} GrabHandleStyles;
+
+	typedef
+	[uuid(31636C21-5ECA-11D2-A1B4-0060081C43D9)]
+	enum tagCustomToolTypes{
+		[helpstring("None")] ddCTNone=0,
+		[helpstring("Custom Tool Interface")] ddCTCustomTool=1,
+		[helpstring("Custom Tool Interface 2")] ddCTCustomTool2=2,
+	} CustomToolTypes;
+
+	typedef
+	[uuid(2A424181-6F3D-11D2-A1D3-0060081C43D9)]
+	enum tagToolStyles{
+		[helpstring("Standard")] ddSStandard=0,
+		[helpstring("Text")] ddSText=1,
+		[helpstring("Icon")] ddSIcon=2,
+		[helpstring("Icon and Text")] ddSIconText=3,
+		[helpstring("Checked, Icon, and Text")] ddSCheckedIconText=4,
+	} ToolStyles;
+
+	typedef
+	[uuid(9AFEB401-82E6-11D2-A1F7-0060081C43D9)]
+	enum tagAutoSizeChildrenTypes{
+		[helpstring("None")] ddASNone=0,
+		[helpstring("Proportional")] ddASProportional=1,
+		[helpstring("Sizes only one control to the client area")] ddASClientArea=2,
+	} AutoSizeChildrenTypes;
+
+	typedef
+	[uuid(337BFAD0-8312-11D2-A1F7-0060081C43D9)]
+	enum tagSaveOptionTypes{
+		[helpstring("Save or Load to/from a file")] ddSOFile=0x1,
+		[helpstring("Save of Load to/from a byte array.")] ddSOByteArray=0x2,
+		[helpstring("Save of Load to/from a Resource")] ddSOResource=0x4,
+		[helpstring("Save of Load to/from a Stream")] ddSOStream=0x8,
+	} SaveOptionTypes;
+
+	typedef
+	[uuid(61F3F770-83D4-11D2-A1F8-0060081C43D9)]
+	enum tagLocalizationTypes{
+		[helpstring("Customization Dialog Caption")] ddLTCustomCaption=0,
+		[helpstring("Toolbar Tab Caption")] ddLTToolbarTab=1,
+		[helpstring("New Button")] ddLTNewButton=2,
+		[helpstring("New Toolbar Caption")] ddLTNewToolbarCaption=3,
+		[helpstring("Toolbar Name")] ddLTToolbarName=4,
+		[helpstring("Rename Button")] ddLTRenameButton=5,
+		[helpstring("Rename Dialog Caption")] ddLTRenameCaption=6,
+		[helpstring("Delete Button")] ddLTDeleteButton=7,
+		[helpstring("Delete Toolbar Caption")] ddLTDeleteToolbarCaption=8,
+		[helpstring("Delete Tool String")] ddLTDeleteToolString=9,
+		[helpstring("Reset Button")] ddLTResetButton=10,
+		[helpstring("Command Tab ")] ddLTCommandTab=11,
+		[helpstring("Options Tab")] ddLTOptionsTab=12,
+		[helpstring("Large Icons")] ddLTLargeIcons=13,
+		[helpstring("Screen tips")] ddLTScreenTips=14,
+		[helpstring("Shortcut keys in Screen tips")] ddLTShortcutKeys=15,
+		[helpstring("Menu Animation Label")] ddLTMenuAnimationLabel=16,
+		[helpstring("Menu animation none")] ddLTMANone=17,
+		[helpstring("Menu Animation Random")] ddLTMARandom=18,
+		[helpstring("Menu Animation Sliding")] ddLTMASlide=19,
+		[helpstring("Menu Animation Unfold")] ddLTMAUnfold=20,
+		[helpstring("Keyboard Command Button")] ddLTKeyboardButton=21,
+		[helpstring("Close Command Button")] ddLTCloseButton=22,
+		[helpstring("Ok Command Button")] ddLTOkButton=23,
+		[helpstring("Cancel Command Button")] ddLTCancelButton=24,
+		[helpstring("Categories Label")] ddLTCategoriesLabel=25,
+		[helpstring("Command Label")] ddLTCommandLabel=26,
+		[helpstring("Press New Shortcut Label")] ddLTPressNewShortcutLabel=27,
+		[helpstring("Current Keys Label")] ddLTCurrentKeysLabel=28,
+		[helpstring("Assign Button")] ddLTAssignButton=29,
+		[helpstring("Remove Button")] ddLTRemoveButton=30,
+		[helpstring("Reset All Button")] ddLTResetAllButton=31,
+		[helpstring("Description Button")] ddLTDescription=32,
+		[helpstring("Menu Customize")] ddLTMenuCustomize=33,
+		[helpstring("Keyboard Caption")] ddLTKeyboardCaption=34,
+		[helpstring("Show Menu MRU Items First")] ddLTMenuShowMRUFirst=35,
+		[helpstring("Show Full Menu after delay")] ddLTShowFullMenuAfterDelay=36,
+		[helpstring("Reset Menu Usage Data")] ddLTResetUsageData=37,
+		[helpstring("Other")] ddLTOther=38,
+		[helpstring("Personalized Menu")] ddLTPersonalizedMenu=39,
+		[helpstring("CommandDesc")] ddLTCommandDesc= 40,
+		[helpstring("More Button")] ddLTMoreButton= 41,
+		[helpstring("Alt")] ddLTAlt= 42,
+		[helpstring("Control")] ddLTControl= 43,
+		[helpstring("Shift")] ddLTShift= 44,
+		[helpstring("ModifySelection")] ddLTModifySelection = 45,
+		[helpstring("Minimize")] ddLTMinimizeButton= 46,
+		[helpstring("Restore")] ddLTRestoreButton= 47,
+		[helpstring("CloseWindow")] ddLTCloseWindowButton = 48,
+		[helpstring("Add or Remove button")] ddLTAddOrRemoveButton = 49,
+	} LocalizationTypes;
+
+	typedef
+	[uuid(36DE4900-0FAB-11D3-B9A8-0060081C43D9)]
+	enum tagCaptionAlignmentTypes {
+		[helpstring("Align Left")] ddCALeft=0,
+		[helpstring("Align Center")] ddCACenter=1,
+		[helpstring("Align Right")] ddCARight=2,
+	} CaptionAlignmentTypes;
+
+	typedef
+	[uuid(07ADAEA0-2FED-11D3-B5E6-0060081C43D9)]
+	enum tagImageTypes{
+		[helpstring("Normal")] ddITNormal=0,
+		[helpstring("Pressed")] ddITPressed=1,
+		[helpstring("Hover")] ddITHover=2,
+		[helpstring("Disabled")] ddITDisabled=3,
+	} ImageTypes;
+
+	typedef
+	[uuid(B8068060-34A9-11D3-B5EC-0060081C43D9)]
+	enum tagMenuVisibilityStyles{
+		[helpstring("Always Visible on Menu")] ddMVAlwaysVisible=0,
+		[helpstring("Visible of the Menu if recently used")] ddMVVisibleIfRecentlyUsed=1,
+	} MenuVisibilityStyles;
+
+	typedef
+	[uuid(8AB8EFF0-3891-11D3-B5F1-0060081C43D9)]
+	enum tagPersonalizedMenuTypes{
+		[helpstring("Disable personalized menus")] ddPMDisabled=0,
+		[helpstring("Display personalized menu on click and on hover")] ddPMDisplayOnHover=1,
+		[helpstring("Display personalized menu on click")] ddPMDisplayOnClick=2,
+	} PersonalizedMenuTypes;
+
+	typedef
+	[uuid(900AF530-094F-11D3-B993-0060081C43D9)]
+	enum tagCreatedByTypes{
+		[helpstring("Application")] ddCBApplication=0,
+		[helpstring("User")] ddCBUser=1,
+		[helpstring("Detached Floating")] ddCBDetached=2,
+		[helpstring("System Created")] ddCBSystem=3,
+	} CreatedByTypes;
+	interface IPerPropertyBrowsing;
+	interface IActiveBar2;
+	interface IBand;
+	interface ITool;
+	coclass Band;
+	coclass Bands;
+	coclass Tool;
+	coclass Tools;
+	coclass ChildBands;
+	coclass ComboList;
+	coclass ReturnString;
+	coclass ReturnBool;
+	coclass ShortCut;
+
+	[uuid(4932CEF2-2CAA-11D2-A165-0060081C43D9),
+	dual	]
+	interface IActiveBar2 : IDispatch
+	{
+		[id(DISPID_BANDS),propget,helpcontext(csPBandsActiveBar2),helpstring("Returns collection of band objects")]
+		HRESULT Bands([out,retval]Bands * *retval);
+		[id(DISPID_DISPLAYTOOLTIPS),propget,helpcontext(csPDisplayToolTipsActiveBar2),helpstring("Determines whether tooltips will be displayed when user hovers over tools")]
+		HRESULT DisplayToolTips([out,retval]boolean *retval);
+		[id(DISPID_DISPLAYTOOLTIPS),propput]
+		HRESULT DisplayToolTips([in]boolean val);
+		[id(DISPID_DISPLAYKEYS),propget,helpcontext(csPDisplayKeysInToolTipActiveBar2),helpstring("Determines whether shortcut keys will be displayed in tooltips")]
+		HRESULT DisplayKeysInToolTip([out,retval]boolean *retval);
+		[id(DISPID_DISPLAYKEYS),propput]
+		HRESULT DisplayKeysInToolTip([in]boolean val);
+		[id(DISPID_TOOLS),propget,helpcontext(csPToolsActiveBar2),helpstring("Returns collection of tool objects used for runtime customization")]
+		HRESULT Tools([out,retval]Tools * *retval);
+		[id(DISPID_ACTIVEBAND),propget,helpcontext(csPActiveBandActiveBar2),helpstring("Returns the band that contains the tool that has input focus (such as an edit or combobox tool)")]
+		HRESULT ActiveBand([out,retval]Band * *retval);
+		[id(DISPID_ACTIVEBAND),propput]
+		HRESULT ActiveBand([in]Band * val);
+		[id(DISPID_FONT),propget,helpcontext(csPFontActiveBar2),helpstring("Sets/Gets font used for text displayed on tools")]
+		HRESULT Font([out,retval]IFontDisp * *retval);
+		[id(DISPID_FONT),propput]
+		HRESULT Font([in]IFontDisp * val);
+		[id(DISPID_FONT),propputref,helpcontext(csPFontActiveBar2),helpstring("Sets/Gets font used for text displayed on tools")]
+		HRESULT Font([in]IFontDisp * * val);
+		[id(DISPID_DCDATAPATH),propget,helpcontext(csPDataPathActiveBar2),helpstring("Sets/Gets URL for asyncronous layout download")]
+		HRESULT DataPath([out,retval]BSTR *retval);
+		[id(DISPID_DCDATAPATH),propput]
+		HRESULT DataPath([in]BSTR val);
+		[id(DISPID_MENUFONTSTYLE),propget,helpcontext(csPMenuFontStyleActiveBar2),helpstring("Determines whether to use the Font property or operating system settings for menu fonts")]
+		HRESULT MenuFontStyle([out,retval]MenuFontStyles *retval);
+		[id(DISPID_MENUFONTSTYLE),propput]
+		HRESULT MenuFontStyle([in]MenuFontStyles val);
+		[id(DISPID_PICTURE),propget,helpcontext(csPPictureActiveBar2),helpstring("Sets/Gets background texture for toolbars")]
+		HRESULT Picture([out,retval]IPictureDisp * *retval);
+		[id(DISPID_PICTURE),propput]
+		HRESULT Picture([in]IPictureDisp * val);
+		[id(DISPID_PICTURE),propputref,helpcontext(csPPictureActiveBar2),helpstring("Sets/Gets background texture for toolbars")]
+		HRESULT Picture([in]IPictureDisp * * val);
+		[id(DISPID_BACKCOLOR),propget,helpcontext(csPBackColorActiveBar2),helpstring("Sets/Gets 3D background color")]
+		HRESULT BackColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_BACKCOLOR),propput]
+		HRESULT BackColor([in]OLE_COLOR val);
+		[id(DISPID_FORECOLOR),propget,helpcontext(csPForeColorActiveBar2),helpstring("Sets/Gets 3D foreground color")]
+		HRESULT ForeColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_FORECOLOR),propput]
+		HRESULT ForeColor([in]OLE_COLOR val);
+		[id(DISPID_HIGHLIGHTCOLOR),propget,helpcontext(csPHighLightColorActiveBar2),helpstring("Sets/Gets 3D highlight color")]
+		HRESULT HighlightColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_HIGHLIGHTCOLOR),propput]
+		HRESULT HighlightColor([in]OLE_COLOR val);
+		[id(DISPID_SHADOWCOLOR),propget,helpcontext(csPShadowColorActiveBar2),helpstring("Sets/Gets 3D shadow color")]
+		HRESULT ShadowColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_SHADOWCOLOR),propput]
+		HRESULT ShadowColor([in]OLE_COLOR val);
+		[id(DISPID_CONTROLFONT),propget,helpcontext(csPControlFontActiveBar2),helpstring("Sets/Gets font used for combo/edit style tools")]
+		HRESULT ControlFont([out,retval]IFontDisp * *retval);
+		[id(DISPID_CONTROLFONT),propput]
+		HRESULT ControlFont([in]IFontDisp * val);
+		[id(DISPID_CONTROLFONT),propputref,helpcontext(csPControlFontActiveBar2),helpstring("Sets/Gets font used for combo/edit style tools")]
+		HRESULT ControlFont([in]IFontDisp * * val);
+		[id(DISPID_RECALCLAYOUT),helpcontext(csMRecalcLayoutActiveBar2),helpstring("Recalculates the layout of docked and floating bands")]
+		HRESULT RecalcLayout();
+		[id(DISPID_CUSTOMIZE),helpcontext(csMCustomizeActiveBar2),helpstring("Starts runtime customization")]
+		HRESULT Customize([in] CustomizeTypes nCustomize);
+		[id(DISPID_RELEASEFOCUS),helpcontext(csMReleaseFocusActiveBar2),helpstring("Release focus from edit or combobox style tool")]
+		HRESULT ReleaseFocus();
+		[id(DISPID_SAVE),helpcontext(csMSaveActiveBar2),helpstring("Saves a specific band or the complete layout to a file")]
+		HRESULT Save([in] BSTR BandName, [in] BSTR FileName, [in] SaveOptionTypes SerializeOptions, [out, retval] VARIANT* vData);
+		[id(DISPID_LOAD),helpcontext(csMLoadActiveBar2),helpstring("Loads a specific band or the complete layout from a file")]
+		HRESULT Load([in] BSTR BandName, [in] VARIANT *vData, [in] SaveOptionTypes SerializeOptions);
+		[id(DISPID_SAVELAYOUT),helpcontext(csMSaveLayoutChangesActiveBar2),helpstring("Saves the just the layout information to a byte array or file")]
+		HRESULT SaveLayoutChanges([in] BSTR FileName, [in] SaveOptionTypes SerializeOptions, [out,retval] VARIANT *vData);
+		[id(DISPID_LOADLAYOUT),helpcontext(csMLoadLayoutChangesActiveBar2),helpstring("Loads the layout infomation from a byte array or file.")]
+		HRESULT LoadLayoutChanges([in] VARIANT *vData, [in] SaveOptionTypes SerializeOptions);
+		[id(DISPID_ABOUTBOX),helpcontext(csMAboutActiveBar2),helpstring("Displays about box")]
+		HRESULT About();
+		[id(DISPID_ABREFRESH),helpcontext(csMRefreshActiveBar2),helpstring("Repaints all toolbars")]
+		HRESULT Refresh();
+		[id(DISPID_ONSYSCOLORCHANGED),helpcontext(csMOnSysColorChangedActiveBar2),helpstring("This function should be called when system colors change")]
+		HRESULT OnSysColorChanged();
+		[id(DISPID_CHILDBANDFONT),propget,helpcontext(csPChildBandFontActiveBar2),helpstring("Sets/Gets font used for text displayed on tools")]
+		HRESULT ChildBandFont([out,retval]IFontDisp * *retval);
+		[id(DISPID_CHILDBANDFONT),propput]
+		HRESULT ChildBandFont([in]IFontDisp * val);
+		[id(DISPID_CHILDBANDFONT),propputref,helpcontext(csPChildBandFontActiveBar2),helpstring("Sets/Gets font used for text displayed on tools")]
+		HRESULT ChildBandFont([in]IFontDisp * * val);
+		[id(DISPID_PLAYSOUND),helpcontext(csMPlaySoundActiveBar2),helpstring("Plays a sound from a file or a system sound")]
+		HRESULT PlaySound([in]BSTR szSound, [in]SoundTypes stType);
+		[id(DISPID_MENUANIMATION),propget,helpcontext(csPMenuAnimationActiveBar2),helpstring("Sets the Style of Menus ActiveBar will display")]
+		HRESULT MenuAnimation([out,retval]MenuStyles *retval);
+		[id(DISPID_MENUANIMATION),propput]
+		HRESULT MenuAnimation([in]MenuStyles val);
+		[id(DISPID_LARGEICONS),propget,helpcontext(csPLargeIconsActiveBar2),helpstring("Determines whether ActiveBar displays large or regular sized icons")]
+		HRESULT LargeIcons([out,retval]boolean *retval);
+		[id(DISPID_LARGEICONS),propput]
+		HRESULT LargeIcons([in]boolean val);
+		[id(DISPID_IMAGEMANAGER),propget,hidden,helpstring("Allow you to share Image managers between ActiveBars")]
+		HRESULT ImageManager([out,retval]VARIANT *retval);
+		[id(DISPID_IMAGEMANAGER),propput,hidden]
+		HRESULT ImageManager([in]VARIANT val);
+		[id(DISPID_WHATSTHISHELPMODE),propget,helpcontext(csPWhatsThisHelpModeActiveBar2),helpstring("Detemines whether context-sensitive Help is active")]
+		HRESULT WhatsThisHelpMode([out,retval]boolean *retval);
+		[id(DISPID_WHATSTHISHELPMODE),propput]
+		HRESULT WhatsThisHelpMode([in]boolean val);
+		[id(DISPID_ALIGNTOFORM),propget,helpcontext(csPAlignToFormActiveBar2),helpstring("Detemines whether ActiveBar fills the entire SDI Form's Client Area")]
+		HRESULT AlignToForm([out,retval]boolean *retval);
+		[id(DISPID_ALIGNTOFORM),propput]
+		HRESULT AlignToForm([in]boolean val);
+		[id(DISPID_AUTOSIZE),propget,helpcontext(csPAutoSizeChildrenActiveBar2),helpstring("Determines whether ActiveBar will reposition child control on an SDI Form")]
+		HRESULT AutoSizeChildren([out,retval]AutoSizeChildrenTypes *retval);
+		[id(DISPID_AUTOSIZE),propput]
+		HRESULT AutoSizeChildren([in]AutoSizeChildrenTypes val);
+		[id(DISPID_LOCALESTRING),helpcontext(csSetLocalizationTypes),helpstring("Sets the strings for localization")]
+		HRESULT Localize([in]LocalizationTypes Index, [in]BSTR LocaleString);
+		[id(DISPID_REGCHILDMENU),helpcontext(csMRegisterChildMenuActiveBar2),helpstring("Registers a Child Menu Band with ActiveBar")]
+		HRESULT RegisterChildMenu([in] OLE_HANDLE hWndChild, [in] BSTR strChildMenuName);
+		[id(DISPID_FILEVERSION),propget,helpcontext(csPVersionActiveBar2),helpstring("Return the vesion number of ActiveBar")]
+		HRESULT Version([out,retval]BSTR *retval);
+		[id(DISPID_AUTOUPDATESTATUSBAR),propget,helpcontext(csPAutoUpdateStatusBarActiveBar2),helpstring("Determines whether ActiveBar automatically updates the status bar if one is present")]
+		HRESULT AutoUpdateStatusBar([out,retval]boolean *retval);
+		[id(DISPID_AUTOUPDATESTATUSBAR),propput]
+		HRESULT AutoUpdateStatusBar([in]boolean val);
+		[id(DISPID_PERSONALIZEDMENU),propget,helpcontext(csPPersonalizedMenusActiveBar2),helpstring("Determines the behavior of personalized (most recently used) submenus.")]
+		HRESULT PersonalizedMenus([out,retval]PersonalizedMenuTypes *retval);
+		[id(DISPID_PERSONALIZEDMENU),propput]
+		HRESULT PersonalizedMenus([in]PersonalizedMenuTypes val);
+		[id(DISPID_SAVEMENUUSAGEDATA),helpcontext(csMSaveMenuUsageDataActiveBar2),helpstring("Saves the Menu Usage Data")]
+		HRESULT SaveMenuUsageData([in] BSTR szFileName, [in] SaveOptionTypes SerializeOptions, [out, retval] VARIANT *vData);
+		[id(DISPID_LOADMENUUSAGEDATA),helpcontext(csMLoadMenuUsageDataActiveBar2),helpstring("Loads the Menu Usage Data")]
+		HRESULT LoadMenuUsageData([in] VARIANT *vData, [in] SaveOptionTypes SerializeOptions);
+		[id(DISPID_CLEARMENUUSAGEDATA),helpcontext(csMClearMenuUsageDataActiveBar2),helpstring("Clears the menu usage data")]
+		HRESULT ClearMenuUsageData();
+		[id(DISPID_CLIENTAREACONTROL),propputref]
+		HRESULT ClientAreaControl([in]LPDISPATCH *retval);
+		[id(DISPID_CLIENTAREACONTROL),propput]
+		HRESULT ClientAreaControl([in]LPDISPATCH val);
+		[id(DISPID_USERDEFINEDCUSTOMIZE),propget,helpcontext(csPUserDefinedCustomizationActivebar2),helpstring("Determines whether the default customization dialog will be used when the user clicks Customize on the system context menu.")]
+		HRESULT UserDefinedCustomization([out,retval]boolean *retval);
+		[id(DISPID_USERDEFINEDCUSTOMIZE),propput]
+		HRESULT UserDefinedCustomization([in]boolean val);
+		[id(DISPID_GETTOOLFROMPOS),helpstring("Given a screen location returns the tool at that location")]
+		HRESULT GetToolFromPosition([in] long x, [in] long y, [out, retval] Tool** tool);
+		[id(DISPID_GETBANDFROMPOSITION),helpstring("Given a screen location returns the tool at that location")]
+		HRESULT GetBandFromPosition([in] long x, [in] long y, [out, retval] Band** band);
+		[id(DISPID_FIREDBLCLICKEVENT),propget,helpcontext(csPFireDblClickEventActivebar2),helpstring("When set to False ActiveBar will not Fire DblClick on a tool")]
+		HRESULT FireDblClickEvent([out,retval]boolean *retval);
+		[id(DISPID_FIREDBLCLICKEVENT),propput]
+		HRESULT FireDblClickEvent([in]boolean val);
+		[id(DISPID_3DLIGHT),propget,helpcontext(csPThreeDLightActiveBar2),helpstring("3D highlight color for popup bands.")]
+		HRESULT ThreeDLight([out,retval]OLE_COLOR *retval);
+		[id(DISPID_3DLIGHT),propput]
+		HRESULT ThreeDLight([in]OLE_COLOR val);
+		[id(DISPID_3DDARKSHADOW),propget,helpcontext(csPThreeDDarkShadowActiveBar2),helpstring("3D shadow color for popup bands.")]
+		HRESULT ThreeDDarkShadow([out,retval]OLE_COLOR *retval);
+		[id(DISPID_3DDARKSHADOW),propput]
+		HRESULT ThreeDDarkShadow([in]OLE_COLOR val);
+		[id(DISPIDTOOLALLPYWAY),helpcontext(csMApplyAllTool),helpstring("Apply this tool's properties to all tool with the same I Id")]
+		HRESULT ApplyAll([in] Tool *tool);
+		[id(DISPID_BACKGROUNDOPTION),propget,helpcontext(csPBackgroundOptionActiveBar2)]
+		HRESULT BackgroundOption([out,retval]short *retval);
+		[id(DISPID_BACKGROUNDOPTION),propput]
+		HRESULT BackgroundOption([in]short val);
+		[id(DISPID_CLIENTAREALEFT),propget,helpcontext(csPClientAreaLeftActiveBar2),helpstring("Returns the client area left.")]
+		HRESULT ClientAreaLeft([out,retval]long *retval);
+		[id(DISPID_CLIENTAREATOP),propget,helpcontext(csPClientAreaTopActiveBar2),helpstring("Returns the client area top.")]
+		HRESULT ClientAreaTop([out,retval]long *retval);
+		[id(DISPID_CLIENTAREAWIDTH),propget,helpcontext(csPClientAreaWidthActiveBar2),helpstring("Returns the client area width.")]
+		HRESULT ClientAreaWidth([out,retval]long *retval);
+		[id(DISPID_CLIENTAREAHEIGHT),propget,helpcontext(csPClientAreaHeightActiveBar2),helpstring("Returns the client area height.")]
+		HRESULT ClientAreaHeight([out,retval]long *retval);
+		[id(DISPID_SDICHILDWINDOWCLASS),propget,hidden]
+		HRESULT SDIChildWindowClass([out,retval]BSTR *retval);
+		[id(DISPID_SDICHILDWINDOWCLASS),propput,hidden]
+		HRESULT SDIChildWindowClass([in]BSTR val);
+		[id(DISPID_CLIENTAREAHWND),propput]
+		HRESULT ClientAreaHWnd([in]OLE_HANDLE val);
+		[id(DISPID_USEUNICODE),propget]
+		HRESULT UseUnicode([out,retval]boolean *retval);
+		[id(DISPID_USEUNICODE),propput]
+		HRESULT UseUnicode([in]boolean val);
+		[id(DISPID_XPLOOK),propget]
+		HRESULT XPLook([out,retval]boolean *retval);
+		[id(DISPID_XPLOOK),propput]
+		HRESULT XPLook([in]boolean val);
+	};
+	
+	[uuid(4932CEF3-2CAA-11D2-A165-0060081C43D9)]
+	dispinterface IActiveBar2Events
+	{
+		properties:
+		methods:
+		[id(DISPID_TOOLCLICK),helpcontext(csEClickActiveBar2),helpstring("Fired when a user presses primary mouse button on a tool or a menu option")]
+		void ToolClick([in] Tool *tool);
+		[id(DISPID_RESET),helpcontext(csEResetActiveBar2),helpstring("Fired when pressing the reset command in the customize dialog or excuting reset method on the ActiveBar Control")]
+		void Reset([in] BSTR BandName);
+		[id(DISPID_NEWTOOLBAR),helpcontext(csENewToolbarActiveBar2),helpstring("Fired when user presses New Toolbar in the Customize Dialog")]
+		void NewToolbar([in] ReturnString *Name);
+		[id(DISPID_COMBODROP),helpcontext(csEComboDropActiveBar2),helpstring("Fired when user clicks the drop drop arrow of a Combobox Tool")]
+		void ComboDrop([in] Tool *tool);
+		[id(DISPID_COMBOSELCHANGE),helpcontext(csEComboSelChangeActiveBar2),helpstring("Fired when the current item selection is changed is a Combobox Tool")]
+		void ComboSelChange([in] Tool *tool);
+		[id(DISPID_TEXTCHANGE),helpcontext(csETextChangeActiveBar2),helpstring("Fired when text changes in Text or Combobox Tool")]
+		void TextChange([in] Tool *tool);
+		[id(DISPID_OPEN),helpcontext(csEBandOpenActiveBar2),helpstring("Fired when user opens a band by selecting it from the context list of bands")]
+		void BandOpen([in] Band *band, [in] ReturnBool *Cancel);
+		[id(DISPID_BANDCLOSE),helpcontext(csEBandCloseActiveBar2),helpstring("Fired when user closes a band by de-selecting it from the context list of bands or closing it while floating")]
+		void BandClose([in] Band *band);
+		[id(DISPID_TOOLDBLCLK),helpcontext(csEToolDblClickActiveBar2),helpstring("Fired when a Toolbar Tool is double clicked")]
+		void ToolDblClick([in] Tool *tool);
+		[id(DISPID_MOVE),helpcontext(csEBandMoveActiveBar2),helpstring("Fired when a Toolbar Band is moved across the screen")]
+		void BandMove([in] Band *band);
+		[id(DISPID_BANDRESIZE),helpcontext(csEBandResizeActiveBar2),helpstring("Fired when a band is resized")]
+		void BandResize([in] Band *band, [in, out]VARIANT *Widths, [in, out]VARIANT *Heights, [in] long BandWidth, [in] long BandHeight);
+		[id(DISPID_ERROR),helpcontext(csEErrorActiveBar2),helpstring("Fired when an internal ActiveBar Error occurs")]
+		void Error([in] short Number,[in] ReturnString *Description,[in] long Scode,[in] BSTR Source,[in] BSTR HelpFile,[in] long HelpContext,[in,out] ReturnBool * CancelDisplay);
+		[id(DISPID_DATAREADY),helpcontext(csEDataReadyActiveBar2),helpstring("Fired when an asynchronous data download is complete")]
+		void DataReady();
+		[id(DISPID_MOUSEENTER),helpcontext(csEMouseEnterActiveBar2),helpstring("Fired when a tool moves into a Tool's Area")]
+		void MouseEnter([in] Tool *tool);
+		[id(DISPID_MOUSEEXIT),helpcontext(csEMouseExitActiveBar2),helpstring("Fired when the cursor moves out of a Tool's area")]
+		void MouseExit([in] Tool *tool);
+		[id(DISPID_MENUITEMENTER),helpcontext(csEMenuItemEnterActiveBar2)]
+		void MenuItemEnter([in] Tool *tool);
+		[id(DISPID_MENUITEMEXIT),helpcontext(csEMenuItemExitActiveBar2)]
+		void MenuItemExit([in] Tool *tool);
+		[id(DISPID_KEYDOWN),helpstring("Occurs when the user presses a key while ActiveBar has the focus.")]
+		void KeyDown([in] short keycode,[in] short shift);
+		[id(DISPID_KEYUP),helpstring("Occurs when the user releases a key while ActiveBar has the focus.")]
+		void KeyUp([in] short keycode,[in] short shift);
+		[id(DISPID_CHILDBANDCHANGE),helpcontext(csEChildBandChangeActiveBar2),helpstring("Occurs when a Child Band is clicked")]
+		void ChildBandChange([in] Band * band);
+		[id(DISPID_CUSTOMIZEBEGIN),helpcontext(csECustomizeBeginActiveBar2)]
+		void CustomizeBegin();
+		[id(DISPID_FILEDROP),helpcontext(csEFileDropActiveBar2)]
+		void FileDrop([in] Band *band, [in] BSTR FileName);
+		[id(DISPID_CUSTOMIZEEND),helpcontext(csECustomizeEndActiveBar2)]
+		void  CustomizeEnd([in] boolean bModified);
+		[id(DISPID_MOUSEDOWN)]
+		void  MouseDown([in] short Button, [in] short Shift, [in] float x, [in] float y);
+		[id(DISPID_MOUSEMOVE)]
+		void  MouseMove([in] short Button, [in] short Shift, [in] float x, [in] float y);
+		[id(DISPID_MOUSEUP)]
+		void MouseUp([in] short Button, [in] short Shift, [in] float x, [in] float y);
+		[id(DISPID_RESIZE),helpcontext(csEResizeActiveBar2)]
+		void Resize([in] long Left, [in] long Top, [in] long Width, [in] long Height);
+		[id(DISPID_BANDDOCK),helpcontext(csEBandDockActiveBar2)]
+		void BandDock([in] Band *band);
+		[id(DISPID_BANDUNDOCK),helpcontext(csEBandUndockActiveBar2)]
+		void BandUndock([in] Band *band);
+		[id(DISPID_TOOLRESET),helpcontext(csEToolResetActiveBar2)]
+		void ToolReset([in]Tool *tool);
+		[id(DISPID_GOTFOCUS),helpcontext(csEToolGotFocusActiveBar2)]
+		void  ToolGotFocus([in] Tool *tool);
+		[id(DISPID_LOSTFOCUS),helpcontext(csEToolLostFocusActiveBar2)]
+		void ToolLostFocus([in] Tool *tool);
+		[id(DISPID_WHATSTHISHELPEVENT),helpcontext(csEWhatsThisHelpActiveBar2)]
+		void WhatsThisHelp([in] Band *band, [in]Tool *tool, [in] long HelpId);
+		[id(DISPID_CUSTOMIZEHELP),helpstring("Gives the Control Id that help is being request on in the customized Dialog")]
+		void CustomizeHelp([in] short ControlId);
+		[id(DISPID_TOOLKEYDOWN),hidden,helpstring("Occurs when the user presses a key while an edit or combobox tool has the focus.")]
+		void _ToolKeyDown([in] short keycode,[in] short shift);
+		[id(DISPID_TOOLKEYUP),hidden,helpstring("Occurs when the user releases a key while an edit or combobox tool has the focus.")]
+		void _ToolKeyUp([in] Tool* tool, [in] short keycode,[in] short shift);
+		[id(DISPID_CLICK),helpcontext(csEClickActiveBar2)]
+		void Click();
+		[id(DISPID_DOUBLECLICK),helpcontext(csPFireDblClickEventActivebar2)]
+		void DblClick();
+		[id(DISPID_CUSTOMIZETOOLCLICK),helpcontext(csECustomizeToolClickActiveBar2),helpstring("This event is fired when a tool is clicked during customization")]
+		void CustomizeToolClick([in] Tool *tool);
+		[id(DISPID_TOOLKEYPRESS),hidden,helpstring("Occurs when the user presses and releases an ANSI key.")]
+		void _ToolKeyPress([in] Tool* tool, [in] long keyascii );
+		[id(DISPID_TOOLCOMBOCLOSE),hidden]
+		void _ToolComboClose([in] Tool* tool);
+		[id(DISPID_TOOLKEYDOWN2),helpcontext(csEToolKeyDownActiveBar2)]
+		void ToolKeyDown([in] Tool* tool, [in, out] short* keycode,[in] short shift);
+		[id(DISPID_TOOLKEYUP2),helpcontext(csEToolKeyUpActiveBar2),helpstring("Occurs when the user releases a key while an edit or combobox tool has the focus.")]
+		void ToolKeyUp([in] Tool* tool, [in, out] short* keycode,[in] short shift);
+		[id(DISPID_TOOLKEYPRESS2),helpcontext(csEToolKeyPressActiveBar2),helpstring("Occurs when the user presses and releases an ANSI key.")]
+		void ToolKeyPress([in] Tool* tool, [in, out] long* keyascii );
+		[id(DISPID_TOOLCOMBOCLOSE2),helpcontext(csEToolComboCloseActiveBar2)]
+		void ToolComboClose([in] Tool* tool);
+		[id(DISPID_QUERYUNLOAD),helpstring("Is fired when an application is shutting down.  Setting Cancel to something other than 0 tells ActiveBar to release an close forms and controls")]
+		void QueryUnload([out] short* Cancel);
+	};
+	[uuid(6AFD2D9C-F2B0-4E83-8606-12427961722A),
+	odl	]
+	interface IDDPerPropertyBrowsing : IPerPropertyBrowsing
+	{
+		[id(DISPID_GETTYPE)]
+		HRESULT GetType([in] DISPID dispID, [out] long *pnType);
+	};
+	[uuid(89541521-2D31-11D2-A166-0060081C43D9),
+	dual,
+	hidden	]
+	interface IBands : IDispatch
+	{
+		[id(0),helpcontext(csMItemBands)]
+		HRESULT Item([in] VARIANT *Index,[out,retval] Band **retval);
+		[id(1),helpcontext(csMCountBands)]
+		HRESULT Count([out,retval] short *retval);
+		[id(2),helpcontext(csMAddBands)]
+		HRESULT Add([in] BSTR name,[out,retval] Band **retval);
+		[id(3),helpcontext(csMRemoveBands)]
+		HRESULT Remove([in] VARIANT *Index);
+		[id(DISPID_REMOVEALL),helpcontext(csMRemoveAllBands)]
+		HRESULT RemoveAll();
+		[id(DISPID_INSERTBAND),hidden]
+		HRESULT InsertBand([in] int index,[in] IBand *pBand);
+		[id(-4),hidden]
+		HRESULT _NewEnum([out,retval] IUnknown * * retval);
+	};
+	
+	[uuid(89541520-2D31-11D2-A166-0060081C43D9),
+	dual,
+	hidden	]
+	interface IBand : IDispatch
+	{
+		[id(DISPID_CAPTION),propget,helpcontext(csCaptionBand),helpstring("A string that is displayed on Tabs, Window Title, & Grabhandle Area")]
+		HRESULT Caption([out,retval]BSTR *retval);
+		[id(DISPID_CAPTION),propput]
+		HRESULT Caption([in]BSTR val);
+		[id(DISPID_FLAGS),propget,helpcontext(csSetBandFlags),helpstring("Is a double word value that define certain properties of a band")]
+		HRESULT Flags([out,retval]BandFlags *retval);
+		[id(DISPID_FLAGS),propput]
+		HRESULT Flags([in]BandFlags val);
+		[id(DISPID_DOCKINGAREA),propget,helpcontext(csPDockingAreaBand)]
+		HRESULT DockingArea([out,retval]DockingAreaTypes *retval);
+		[id(DISPID_DOCKINGAREA),propput]
+		HRESULT DockingArea([in]DockingAreaTypes val);
+		[id(DISPID_HPAD),propget,helpcontext(csPToolsHPaddingBand)]
+		HRESULT ToolsHPadding([out,retval]long *retval);
+		[id(DISPID_HPAD),propput]
+		HRESULT ToolsHPadding([in]long val);
+		[id(DISPID_VPAD),propget,helpcontext(csPToolsVPaddingBand)]
+		HRESULT ToolsVPadding([out,retval]long *retval);
+		[id(DISPID_VPAD),propput]
+		HRESULT ToolsVPadding([in]long val);
+		[id(DISPID_HSPACE),propget,helpcontext(csPToolsHSpacingBand)]
+		HRESULT ToolsHSpacing([out,retval]long *retval);
+		[id(DISPID_HSPACE),propput]
+		HRESULT ToolsHSpacing([in]long val);
+		[id(DISPID_VSPACE),propget,helpcontext(csPToolsVSpacingBand)]
+		HRESULT ToolsVSpacing([out,retval]long *retval);
+		[id(DISPID_VSPACE),propput]
+		HRESULT ToolsVSpacing([in]long val);
+		[id(DISPID_MOUSETRACKING),propget,helpcontext(csPMouseTrackingBand)]
+		HRESULT MouseTracking([out,retval]TrackingStyles *retval);
+		[id(DISPID_MOUSETRACKING),propput]
+		HRESULT MouseTracking([in]TrackingStyles val);
+		[id(DISPID_HEIGHT),propget,helpcontext(csPHeightBand)]
+		HRESULT Height([out,retval]long *retval);
+		[id(DISPID_HEIGHT),propput]
+		HRESULT Height([in]long val);
+		[id(DISPID_LEFT),propget,helpcontext(csPLeftBand)]
+		HRESULT Left([out,retval]long *retval);
+		[id(DISPID_LEFT),propput]
+		HRESULT Left([in]long val);
+		[id(DISPID_TOP),propget,helpcontext(csPTopBand)]
+		HRESULT Top([out,retval]long *retval);
+		[id(DISPID_TOP),propput]
+		HRESULT Top([in]long val);
+		[id(DISPID_BANDTYPE),propget,helpcontext(csPTypeBand)]
+		HRESULT Type([out,retval]BandTypes *retval);
+		[id(DISPID_BANDTYPE),propput]
+		HRESULT Type([in]BandTypes val);
+		[id(DISPID_VISIBLE),propget,helpcontext(csPVisibleBand)]
+		HRESULT Visible([out,retval]boolean *retval);
+		[id(DISPID_VISIBLE),propput]
+		HRESULT Visible([in]boolean val);
+		[id(DISPID_WIDTH),propget,helpcontext(csPWidthBand)]
+		HRESULT Width([out,retval]long *retval);
+		[id(DISPID_WIDTH),propput]
+		HRESULT Width([in]long val);
+		[id(DISPID_WRAPPABLE),propget,helpcontext(csPWrapToolsBand)]
+		HRESULT WrapTools([out,retval]boolean *retval);
+		[id(DISPID_WRAPPABLE),propput]
+		HRESULT WrapTools([in]boolean val);
+		[id(DISPID_CURRENTTOOL),propget,helpcontext(csPActiveToolBand)]
+		HRESULT ActiveTool([out,retval]Tool* *retval);
+		[id(DISPID_CURRENTTOOL),propputref,helpcontext(csPActiveToolBand)]
+		HRESULT ActiveTool([in]Tool* *retval);
+		[id(DISPID_CURRENTTOOL),propput]
+		HRESULT ActiveTool([in]Tool* val);
+		[id(DISPID_DOCKINGOFFSET),propget,helpcontext(csPDockingOffsetBand)]
+		HRESULT DockingOffset([out,retval]long *retval);
+		[id(DISPID_DOCKINGOFFSET),propput]
+		HRESULT DockingOffset([in]long val);
+		[id(DISPID_BANDTOOLS),propget,helpcontext(csPToolsBand)]
+		HRESULT Tools([out,retval]Tools * *retval);
+		[id(DISPID_DOCKLINE),propget,helpcontext(csPDockLineBand)]
+		HRESULT DockLine([out,retval]short *retval);
+		[id(DISPID_DOCKLINE),propput]
+		HRESULT DockLine([in]short val);
+		[id(DISPID_CREATEDBY),propget,helpcontext(csSetCreatedByTypes)]
+		HRESULT CreatedBy([out,retval]CreatedByTypes *retval);
+		[id(DISPID_CREATEDBY),propput]
+		HRESULT CreatedBy([in]CreatedByTypes val);
+		[id(DISPID_CHILDBANDSTYLE),propget,helpcontext(csPChildBandStyleBand)]
+		HRESULT ChildBandStyle([out,retval]ChildBandStyles *retval);
+		[id(DISPID_CHILDBANDSTYLE),propput]
+		HRESULT ChildBandStyle([in]ChildBandStyles val);
+		[id(DISPID_CHILDBANDS),propget,helpcontext(csPChildBandsBand)]
+		HRESULT ChildBands([out,retval]ChildBands* *retval);
+		[id(DISPID_ISDETACHED),propget,hidden,helpstring("Has the band been detached from a menu ")]
+		HRESULT IsDetached([out,retval]boolean *retval);
+		[id(DISPID_ISDETACHED),propput,hidden]
+		HRESULT IsDetached([in]boolean val);
+		[id(DISPID_GRABHANDLESTYLE),propget,helpcontext(csPGrabHandleStyleBand),helpstring("Is the style of the grab handle that is present on the band if any")]
+		HRESULT GrabHandleStyle([out,retval]GrabHandleStyles *retval);
+		[id(DISPID_GRABHANDLESTYLE),propput]
+		HRESULT GrabHandleStyle([in]GrabHandleStyles val);
+		[id(DISPID_BANDNAME),propget,helpcontext(csPNameBand),helpstring("The name of the band")]
+		HRESULT Name([out,retval]BSTR *retval);
+		[id(DISPID_BANDNAME),propput]
+		HRESULT Name([in]BSTR val);
+		[id(DISPID_CLONEBAND),hidden]
+		HRESULT Clone([out,retval] IBand **pBand);
+		[id(DISPID_BANDCOPYTO),hidden]
+		HRESULT CopyTo([in] IBand *pBand);
+		[id(DISPID_DSGGETSIZE),hidden]
+		HRESULT DSGGetSize([in] int dx,[in] int dy,[in] int bandType,[out] int *w, [out] int *h);
+		[id(DISPID_DSGDRAW),hidden]
+		HRESULT DSGDraw([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int w,[in] int h);
+		[id(DISPID_DSGCALCDROPINDEX),hidden]
+		HRESULT DSGCalcDropIndex([in] int x,[in] int y, [out] int *dropIndex,[out] int *direction);
+		[id(DISPID_DSGINSERTTOOL),hidden]
+		HRESULT DSGInsertTool([in] int index,[in] ITool *pTool);
+		[id(DISPID_DSGCALCHIT),hidden]
+		HRESULT DSGCalcHit([in] int x,[in] int y, [out] int *index);
+		[id(DISPID_DSGDRAWSEL),hidden]
+		HRESULT DSGDrawSelection([in] OLE_HANDLE hdc,[in] int x, [in] int y,[in] int width, [in] int index);
+		[id(DISPID_TRACKPOPUP),helpcontext(csMPopupMenuBand)]
+		HRESULT PopupMenu([in, optional] VARIANT flags, [in, optional] VARIANT x, [in, optional] VARIANT y);
+		[id(DISPID_SETDROPLOC),hidden]
+		HRESULT DSGSetDropLoc([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int w,[in] int h,[in] int dropIndex,[in] int direction);
+		[id(DISPID_REFRESH),helpcontext(csMRefreshBand)]
+		HRESULT Refresh();
+		[id(DISPID_DSHCALCHITEX),hidden]
+		HRESULT DSGCalcHitEx([in] int x,[in] int y,[out] int *pHit);
+		[id(DISPID_TRACKPOPUPEX),helpcontext(csMPopupMenuExBand),helpstring("Displays popup menu with no-dismissal area")]
+		HRESULT PopupMenuEx([in] int flags, [in] int x,[in] int y,[in] int left,[in] int top,[in] int right,[in] int bottom,[out,retval] boolean *bDoubleClicked);
+		[id(DISPID_TAGVARIANT),propget,helpcontext(csPTagVariantBand),helpstring("Allows you to store information that is associated with this Band")]
+		HRESULT TagVariant([out,retval]VARIANT *retval);
+		[id(DISPID_TAGVARIANT),propput]
+		HRESULT TagVariant([in]VARIANT val);
+		[id(DISPID_DOCKEDHORZWIDTH),propget,helpcontext(csPDockedHorzWidthBand),helpstring("If the Band has the Sizable Bit set of it's Band Flag Property this property is the Horizontally Docked Width of the Band")]
+		HRESULT DockedHorzWidth([out,retval]long *retval);
+		[id(DISPID_DOCKEDHORZWIDTH),propput]
+		HRESULT DockedHorzWidth([in]long val);
+		[id(DISPID_DOCKEDHORZHEIGHT),propget,helpcontext(csPDockedHorzHeightBand),helpstring("If the Band has the Sizable Bit set of it's Band Flag Property this property is the Horizontally Docked Height of the Band")]
+		HRESULT DockedHorzHeight([out,retval]long *retval);
+		[id(DISPID_DOCKEDHORZHEIGHT),propput]
+		HRESULT DockedHorzHeight([in]long val);
+		[id(DISPID_DOCKEDVERTWIDTH),propget,helpcontext(csPDockedVertWidthBand),helpstring("If the Band has the Sizable Bit set of it's Band Flag Property this property is the Vertically Docked Width of the Band")]
+		HRESULT DockedVertWidth([out,retval]long *retval);
+		[id(DISPID_DOCKEDVERTWIDTH),propput]
+		HRESULT DockedVertWidth([in]long val);
+		[id(DISPID_DOCKEDVERTHEIGHT),propget,helpcontext(csPDockedVertHeightBand),helpstring("If the Band has the Sizable Bit set of it's Band Flag Property this property is the Vertically Docked Height of the Band")]
+		HRESULT DockedVertHeight([out,retval]long *retval);
+		[id(DISPID_DOCKEDVERTHEIGHT),propput]
+		HRESULT DockedVertHeight([in]long val);
+		[id(DISPID_ISBANDCHILD),hidden,helpstring("This is a hidden property used by the designer to tell if a band is a child of another band")]
+		HRESULT IsChild([out, retval] boolean* IsChild);
+		[id(DISPID_AUTOSIZEFORMS),propget,helpcontext(csPAutoSizeFormsBand),helpstring("Automatically size the Form Tools on a bands and no resize event is fired")]
+		HRESULT AutoSizeForms([out,retval]boolean *retval);
+		[id(DISPID_AUTOSIZEFORMS),propput]
+		HRESULT AutoSizeForms([in]boolean val);
+		[id(DISPID_DISPLAYMORETOOLSBUTTON),propget,helpcontext(csPDisplayMoreToolsButtonBand),helpstring("Displays the More tools button or just an indicator")]
+		HRESULT DisplayMoreToolsButton([out,retval]boolean *retval);
+		[id(DISPID_DISPLAYMORETOOLSBUTTON),propput]
+		HRESULT DisplayMoreToolsButton([in]boolean val);
+		[id(DISPID_PICTURE),propget,helpcontext(csPPictureBand)]
+		HRESULT Picture([out,retval]IPictureDisp * *retval);
+		[id(DISPID_PICTURE),propput]
+		HRESULT Picture([in]IPictureDisp * val);
+		[id(DISPID_PICTURE),propputref,helpcontext(csPPictureBand)]
+		HRESULT Picture([in]IPictureDisp * * val);
+		[id(DISPID_PICTUREBACKGROUNDSTYLE),propget,helpcontext(csSetPictureBackgroundStyle)]
+		HRESULT PopupBannerBackgroundStyle([out,retval]PopupBannerBackgroundStyles *retval);
+		[id(DISPID_PICTUREBACKGROUNDSTYLE),propput]
+		HRESULT PopupBannerBackgroundStyle([in]PopupBannerBackgroundStyles val);
+		[id(DISPID_PICTUREBACKGROUNDCOLOR),propget,helpcontext(csPPopupBannerBackgroundColorBand)]
+		HRESULT PopupBannerBackgroundColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_PICTUREBACKGROUNDCOLOR),propput]
+		HRESULT PopupBannerBackgroundColor([in]OLE_COLOR val);
+		[id(DISPID_DDEXCHANGE),hidden]
+		HRESULT DragDropExchange([in] IUnknown* pStream, [in] boolean vbSave);
+		[id(DISPID_GETTOOLINDEX),helpcontext(csMGetToolIndexBand),helpstring("Returns the index of a tool")]
+		HRESULT GetToolIndex([in] VARIANT *tool, [out, retval] short *index);
+		[id(DISPID_VERTMINWIDTH),propget,helpcontext(csPDockedVertMinWidthBand),helpstring("The minimum width a sizable Band can have")]
+		HRESULT DockedVertMinWidth([out,retval]short *retval);
+		[id(DISPID_VERTMINWIDTH),propput]
+		HRESULT DockedVertMinWidth([in]short val);
+		[id(DISPID_HORZMINWIDTH),propget,helpcontext(csPDockedHorzMinWidthBand),helpstring("The minimum width a sizable Band can have")]
+		HRESULT DockedHorzMinWidth([out,retval]short *retval);
+		[id(DISPID_HORZMINWIDTH),propput]
+		HRESULT DockedHorzMinWidth([in]short val);
+		[id(DISPID_SCROLLINGSPEED),propget,helpcontext(csPScrollingSpeedBand),helpstring("Controls the scrolling speed of popup menus")]
+		HRESULT ScrollingSpeed([out,retval]short *retval);
+		[id(DISPID_SCROLLINGSPEED),propput]
+		HRESULT ScrollingSpeed([in]short val);
+	};
+	[uuid(8954152E-2D31-11D2-A166-0060081C43D9),
+	oleautomation,
+	dual,
+	hidden	]
+	interface ITool : IDispatch
+	{
+		[id(DISPID_TOOLID),propget,helpcontext(csPIDTool)]
+		HRESULT ID([out,retval]long *retval);
+		[id(DISPID_TOOLID),propput]
+		HRESULT ID([in]long val);
+		[id(DISPID_NAME),propget,helpcontext(csPNameTool)]
+		HRESULT Name([out,retval]BSTR *retval);
+		[id(DISPID_NAME),propput]
+		HRESULT Name([in]BSTR val);
+		[id(DISPID_HELPCONTEXTID),propget,helpcontext(csPHelpContextIDTool)]
+		HRESULT HelpContextID([out,retval]long *retval);
+		[id(DISPID_HELPCONTEXTID),propput]
+		HRESULT HelpContextID([in]long val);
+		[id(DISPID_TOOLTIPTEXT),propget,helpcontext(csPTooltipTextTool)]
+		HRESULT TooltipText([out,retval]BSTR *retval);
+		[id(DISPID_TOOLTIPTEXT),propput]
+		HRESULT TooltipText([in]BSTR val);
+		[id(DISPID_ENABLED),propget,helpcontext(csPEnabledTool)]
+		HRESULT Enabled([out,retval]boolean *retval);
+		[id(DISPID_ENABLED),propput]
+		HRESULT Enabled([in]boolean val);
+		[id(DISPID_CHECKED),propget,helpcontext(csPCheckedTool)]
+		HRESULT Checked([out,retval]boolean *retval);
+		[id(DISPID_CHECKED),propput]
+		HRESULT Checked([in]boolean val);
+		[id(DISPID_CAPTION),propget,helpcontext(csPCaptionTool)]
+		HRESULT Caption([out,retval]BSTR *retval);
+		[id(DISPID_CAPTION),propput]
+		HRESULT Caption([in]BSTR val);
+		[id(DISPID_STYLE),propget,helpcontext(csSetToolStyles)]
+		HRESULT Style([out,retval]ToolStyles *retval);
+		[id(DISPID_STYLE),propput]
+		HRESULT Style([in]ToolStyles val);
+		[id(DISPID_CAPTIONPOSITION),propget,helpcontext(csSetCaptionPositionTypes)]
+		HRESULT CaptionPosition([out,retval]CaptionPositionTypes *retval);
+		[id(DISPID_CAPTIONPOSITION),propput]
+		HRESULT CaptionPosition([in]CaptionPositionTypes val);
+		[id(DISPID_SHORTCUTS),propget,helpcontext(csPShortCutsTool)]
+		HRESULT ShortCuts([out,retval]VARIANT *retval);
+		[id(DISPID_SHORTCUTS),propput]
+		HRESULT ShortCuts([in]VARIANT val);
+		[id(DISPID_DESCRIPTION),propget,helpcontext(csPDescriptionTool)]
+		HRESULT Description([out,retval]BSTR *retval);
+		[id(DISPID_DESCRIPTION),propput]
+		HRESULT Description([in]BSTR val);
+		[id(DISPID_CONTROLTYPE),propget,helpcontext(csPControlTypeTool)]
+		HRESULT ControlType([out,retval]ToolTypes *retval);
+		[id(DISPID_CONTROLTYPE),propput]
+		HRESULT ControlType([in]ToolTypes val);
+		[id(DISPID_TCUSTOM),propget,helpcontext(csPCustomTool)]
+		HRESULT Custom([out,retval]IDispatch * *retval);
+		[id(DISPID_TCUSTOM),propputref,helpcontext(csPCustomTool)]
+		HRESULT Custom([in]IDispatch * *retval);
+		[id(DISPID_TCUSTOM),propput]
+		HRESULT Custom([in]IDispatch * val);
+		[id(DISPID_WIDTH),propget,helpcontext(csPWidthTool)]
+		HRESULT Width([out,retval]long *retval);
+		[id(DISPID_WIDTH),propput]
+		HRESULT Width([in]long val);
+		[id(DISPID_HEIGHT),propget,helpcontext(csPHeightTool)]
+		HRESULT Height([out,retval]long *retval);
+		[id(DISPID_HEIGHT),propput]
+		HRESULT Height([in]long val);
+		[id(DISPID_ALIGNMENT),propget,helpcontext(csSetToolAlignmentTypes)]
+		HRESULT Alignment([out,retval]ToolAlignmentTypes *retval);
+		[id(DISPID_ALIGNMENT),propput]
+		HRESULT Alignment([in]ToolAlignmentTypes val);
+		[id(DISPID_CATEGORY),propget,helpcontext(csPCategoryTool)]
+		HRESULT Category([out,retval]BSTR *retval);
+		[id(DISPID_CATEGORY),propput]
+		HRESULT Category([in]BSTR val);
+		[id(DISPID_SUBBAND),propget,helpcontext(csPSubBandTool)]
+		HRESULT SubBand([out,retval]BSTR *retval);
+		[id(DISPID_SUBBAND),propput]
+		HRESULT SubBand([in]BSTR val);
+		[id(DISPID_TOOLTEXT),propget,helpcontext(csPTextTool)]
+		HRESULT Text([out,retval]BSTR *retval);
+		[id(DISPID_TOOLTEXT),propput]
+		HRESULT Text([in]BSTR val);
+		[id(DISPID_CBLISTCOUNT),propget,helpcontext(csPCBListCountTool)]
+		HRESULT CBListCount([out,retval]short *retval);
+		[id(DISPID_CBWIDTH),propget,helpcontext(csPCBWidthTool)]
+		HRESULT CBWidth([out,retval]short *retval);
+		[id(DISPID_CBWIDTH),propput]
+		HRESULT CBWidth([in]short val);
+		[id(DISPID_CBLISTINDEX),propget,helpcontext(csPCBListIndexTool)]
+		HRESULT CBListIndex([out,retval]short *retval);
+		[id(DISPID_CBLISTINDEX),propput]
+		HRESULT CBListIndex([in]short val);
+		[id(DISPID_CBSTYLE),propget,helpcontext(csPCBStyleTool)]
+		HRESULT CBStyle([out,retval]ComboStyles *retval);
+		[id(DISPID_CBSTYLE),propput]
+		HRESULT CBStyle([in]ComboStyles val);
+		[id(DISPID_CBLIST),propget,helpcontext(csPCBListTool)]
+		HRESULT CBList([out,retval]ComboList * *retval);
+		[id(DISPID_CBLIST),propput]
+		HRESULT CBList([in]ComboList * val);
+		[id(DISPID_TOOLVISIBLE),propget,helpcontext(csPVisibleTool)]
+		HRESULT Visible([out,retval]boolean *retval);
+		[id(DISPID_TOOLVISIBLE),propput]
+		HRESULT Visible([in]boolean val);
+		[id(DISPID_DRAWPICT),hidden]
+		HRESULT DrawPict([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int w,[in] int h, [in] boolean enabled);
+		[id(DISPID_CLONE),hidden]
+		HRESULT Clone([out,retval] ITool **pTool);
+		[id(DISPID_COPYTO),hidden]
+		HRESULT CopyTo([in,out] ITool **pDest);
+		[id(DISPID_GETSIZE),hidden]
+		HRESULT GetSize([in] short bandType,[out] int *cx,[out] int *cy);
+		[id(DISPID_EXTDRAW),hidden]
+		HRESULT ExtDraw([in] OLE_HANDLE hdc,[in] int x,[in] int y,[in] int w,[in] int h,[in] short bandType,[in] boolean fSel);
+		[id(DISPID_SETPICTURE),helpcontext(csMSetPictureTool)]
+		HRESULT SetPicture([in] ImageTypes index,[in] IPictureDisp *picture,[in,optional] VARIANT color);
+		[id(DISPID_SETPICTUREMASK),helpcontext(csMSetPictureMaskTool)]
+		HRESULT SetPictureMask([in] ImageTypes index, [in] IPictureDisp *mask);
+		[id(DISPID_BITMAP),propget,hidden,helpcontext(HX_Icon_Editor)]
+		HRESULT Bitmap([in] ImageTypes index, [out, retval] OLE_HANDLE *hBitmap);
+		[id(DISPID_BITMAP),propput,hidden,helpcontext(HX_Icon_Editor)]
+		HRESULT Bitmap([in] ImageTypes index, [in] OLE_HANDLE hBitmap);
+		[id(DISPID_GETMASKCOLOR),hidden]
+		HRESULT GetMaskColor([out] OLE_COLOR *mcolor);
+		[id(DISPID_GETPICTURE),helpcontext(csMGetPictureTool)]
+		HRESULT GetPicture([in] ImageTypes index,[out,retval] IPictureDisp **retval);
+		[id(DISPID_SETFOCUS),helpcontext(csMSetFocusTool)]
+		HRESULT SetFocus();
+		[id(DISPID_TOOLDEFAULT),propget,helpcontext(csPDefaultTool),helpstring("Set/Gets wheather the tool is the default command on a popup menu")]
+		HRESULT Default([out,retval]boolean *retval);
+		[id(DISPID_TOOLDEFAULT),propput]
+		HRESULT Default([in]boolean val);
+		[id(DISPID_HWND),propget,helpstring("Returns the handle to the tool window")]
+		HRESULT hWnd([out,retval]OLE_HANDLE *retval);
+		[id(DISPID_HWND),propput]
+		HRESULT hWnd([in]OLE_HANDLE val);
+		[id(DISPID_VARIANT),propget,helpcontext(csPTagVariantTool)]
+		HRESULT TagVariant([out,retval]VARIANT *retval);
+		[id(DISPID_VARIANT),propput]
+		HRESULT TagVariant([in]VARIANT val);
+		[id(DISPID_LABELSTYLE),propget,helpcontext(csPLabelStyleTool)]
+		HRESULT LabelStyle([out,retval]LabelStyles *retval);
+		[id(DISPID_LABELSTYLE),propput]
+		HRESULT LabelStyle([in]LabelStyles val);
+		[id(DISPID_DDEXCHANGE),hidden]
+		HRESULT DragDropExchange([in] IUnknown* pStream, boolean vSave);
+		[id(DISPID_CLEAR),helpcontext(csMCBClearTool)]
+		HRESULT CBClear();
+		[id(DISPID_ADDITEM),hidden,helpcontext(csMCBAddItemTool)]
+		HRESULT _CBAddItem([in]BSTR Item, [in,optional]long Index);
+		[id(DISPID_REMOVEITEM),helpcontext(csMCBRemoveItemTool)]
+		HRESULT CBRemoveItem([in]long Index);
+		[id(DISPID_CBLIST2),propget,helpcontext(csPListTool)]
+		HRESULT List([in]long Index, [retval, out]BSTR* Item);
+		[id(DISPID_CBLIST2),propput,helpcontext(csPListTool)]
+		HRESULT List([in] long Index, [in]BSTR Item);
+		[id(DISPID_AUTOREPEAT),propget,helpcontext(csPAutoRepeatTool)]
+		HRESULT AutoRepeat([out,retval]boolean *retval);
+		[id(DISPID_AUTOREPEAT),propput]
+		HRESULT AutoRepeat([in]boolean val);
+		[id(DISPID_AUTOREPEATINTERVAL),propget,helpcontext(csPAutoRepeatIntervalTool)]
+		HRESULT AutoRepeatInterval([out,retval]short *retval);
+		[id(DISPID_AUTOREPEATINTERVAL),propput]
+		HRESULT AutoRepeatInterval([in]short val);
+		[id(DISPID_MASKBITMAP),propget,hidden]
+		HRESULT MaskBitmap([in] ImageTypes index, [out, retval] OLE_HANDLE *hBitmap);
+		[id(DISPID_MASKBITMAP),propput,hidden]
+		HRESULT MaskBitmap([in] ImageTypes index, [in] OLE_HANDLE hBitmap);
+		[id(DISPID_MENUVISIBILITY),propget,helpcontext(csPMenuVisibilityTool),helpstring("Always display menu item or only when recently used")]
+		HRESULT MenuVisibility([out,retval]MenuVisibilityStyles *retval);
+		[id(DISPID_MENUVISIBILITY),propput]
+		HRESULT MenuVisibility([in]MenuVisibilityStyles val);
+		[id(DISPID_ITEMDATA),propput,helpcontext(csPCBItemDataTool)]
+		HRESULT CBItemData([in] int Index, [in] long Data);
+		[id(DISPID_ITEMDATA),propget,helpcontext(csPCBItemDataTool)]
+		HRESULT CBItemData([in] int Index, [retval, out] long *Data);
+		[id(DISPID_LEFT),propget,helpcontext(csPLeftTool),helpstring("Gives the left coordinate of a tool")]
+		HRESULT Left([out,retval]long *retval);
+		[id(DISPID_TOP),propget,helpcontext(csPTopTool),helpstring("Gives the top coordinate of a tool")]
+		HRESULT Top([out,retval]long *retval);
+		[id(DISPID_IMAGEWIDTH),propget,helpcontext(csPImageWidthTool),helpstring("Image is scaled to this width")]
+		HRESULT ImageWidth([out,retval]short *retval);
+		[id(DISPID_IMAGEWIDTH),propput]
+		HRESULT ImageWidth([in]short val);
+		[id(DISPID_IMAGEHEIGHT),propget,helpcontext(csPImageHeightTool),helpstring("The Image is scaled to this height")]
+		HRESULT ImageHeight([out,retval]short *retval);
+		[id(DISPID_IMAGEHEIGHT),propput]
+		HRESULT ImageHeight([in]short val);
+		[id(DISPID_LABELBEVEL),propget,helpcontext(csPLabelBevelTool),helpstring("Flat, Raised, Inset")]
+		HRESULT LabelBevel([out,retval]LabelBevelStyles *retval);
+		[id(DISPID_LABELBEVEL),propput]
+		HRESULT LabelBevel([in]LabelBevelStyles val);
+		[id(DISPID_TOOLAUTOSIZE),propget,helpcontext(csPAutoSizeTool),helpstring("Fills the remain area of a band")]
+		HRESULT AutoSize([out,retval]ToolAutoSizeTypes *retval);
+		[id(DISPID_TOOLAUTOSIZE),propput]
+		HRESULT AutoSize([in]ToolAutoSizeTypes val);
+		[id(DISPID_SELSTART),propget,helpcontext(csPSelStartTool),helpstring("Returns or sets the starting point of text selected; indicates the position of the insertion point if no text is selected.")]
+		HRESULT SelStart([out,retval]short *retval);
+		[id(DISPID_SELSTART),propput]
+		HRESULT SelStart([in]short val);
+		[id(DISPID_SELLENGTH),propget,helpcontext(csPSelLengthTool),helpstring("Returns or sets the number of characters selected.")]
+		HRESULT SelLength([out,retval]short *retval);
+		[id(DISPID_SELLENGTH),propput]
+		HRESULT SelLength([in]short val);
+		[id(DISPID_ADDITEM2),helpcontext(csMCBAddItemTool),helpstring("Adds an item to the ComboBox control")]
+		HRESULT CBAddItem([in]BSTR Item, [in,optional]VARIANT Index);
+		[id(DISPID_CBLINES),propget]
+		HRESULT CBLines([out,retval]short *retval);
+		[id(DISPID_CBLINES),propput]
+		HRESULT CBLines([in]short val);
+		[id(DISPID_NEWINDEX),propget]
+		HRESULT CBNewIndex([out,retval]long *retval);
+	};
+	[uuid(89541524-2D31-11D2-A166-0060081C43D9),
+	dual,
+	hidden	]
+	interface ICustomHost : IDispatch
+	{
+		[id(DISPID_HWND),propget]
+		HRESULT hWin([out,retval]OLE_HANDLE *retval);
+		[id(DISPID_HWND),propput]
+		HRESULT hWin([in]OLE_HANDLE val);
+		[id(DISPID_STATE),propget]
+		HRESULT State([out,retval]short *retval);
+		[id(DISPID_STATE),propput]
+		HRESULT State([in]short val);
+		[id(DISPID_REFRESH)]
+		HRESULT Refresh();
+		[id(DISPID_CLOSE)]
+		HRESULT Close();
+	};
+	
+	[uuid(8954152F-2D31-11D2-A166-0060081C43D9),
+	oleautomation,
+	dual,
+	hidden	]
+	interface ITools : IDispatch
+	{
+		[id(0),helpcontext(csMItemTools)]
+		HRESULT Item([in] VARIANT *Index,[out,retval] Tool **retval);
+		[id(1),helpcontext(csMCountTools)]
+		HRESULT Count([out,retval] short *retval);
+		[id(2),helpcontext(csMAddTools)]
+		HRESULT Add([in] long toolid,[in] BSTR name,[out,retval] Tool **retval);
+		[id(3),helpcontext(csMRemoveTools)]
+		HRESULT Remove([in] VARIANT *Index);
+		[id(DISPID_REMOVEALL),helpcontext(csMRemoveAllTools)]
+		HRESULT RemoveAll();
+		[id(DISPID_INSERTTOOL),hidden,helpcontext(csMInsertTools)]
+		HRESULT InsertTool([in] int index, [in] ITool *pTool,[in] boolean fClone);
+		[id(DISPID_CREATETOOL),hidden]
+		HRESULT CreateTool([out,retval] ITool **pTool);
+		[id(DISPID_DELETETOOL),hidden]
+		HRESULT DeleteTool([in] ITool *pTool);
+		[id(DISPID_COPYTO),hidden]
+		HRESULT CopyTo([in] ITools *pTools);
+		[id(DISPID_INSTL),helpcontext(csMInsertTools)]
+		HRESULT Insert([in] int index,[in] Tool *tool);
+		[id(-4),hidden]
+		HRESULT _NewEnum([out,retval] IUnknown * * retval);
+		[id(DISPID_ITEMBYID),hidden]
+		HRESULT ItemById([in] LONG id,[out,retval] Tool **retval);
+	};
+	
+	[uuid(BF2D9130-7BE6-11D0-9C95-00A0C90F29FC),
+	oleautomation,
+	dual	]
+	interface IReturnString : IDispatch
+	{
+		[id(0),propget,helpcontext(0)]
+		HRESULT Value([out,retval] BSTR * retval);
+		[id(0),propput,helpcontext(0)]
+		HRESULT Value([in] BSTR retval);
+	};
+	[uuid(28C83C92-DFAF-11D2-A2B2-0060081C43D9),
+	dual	]
+	interface IChildBands : IDispatch
+	{
+		[id(0),helpcontext(csMItemChildBands)]
+		HRESULT Item([in] VARIANT *Index,[out,retval] Band **retval);
+		[id(1),helpcontext(csMCountChildBands),helpstring("Return the number of child bands")]
+		HRESULT Count([out,retval] short *retval);
+		[id(2),helpcontext(csMAddChildBands),helpstring("Add a child band to the end of the collection")]
+		HRESULT Add([in] BSTR name,[out,retval] Band **retval);
+		[id(3),helpcontext(csMRemoveChildBands),helpstring("Remove a child band from the collection")]
+		HRESULT Remove([in] VARIANT *Index);
+		[id(-4),hidden]
+		HRESULT _NewEnum([out,retval] IUnknown * * retval);
+		[id(DISPID_FONT3D),propget,helpcontext(csPChildBandFont3DChildBands),helpstring("Three d font style for captions on a sliding tab")]
+		HRESULT ChildBandFont3D([out,retval]Font3DTypes *retval);
+		[id(DISPID_FONT3D),propput]
+		HRESULT ChildBandFont3D([in]Font3DTypes val);
+		[id(DISPID_PICTUREBACKGROUND),propget,helpcontext(csPPictureBackgroundChildBands),helpstring("The background picture for sliding tabs")]
+		HRESULT PictureBackground([out,retval]IPictureDisp * *retval);
+		[id(DISPID_PICTUREBACKGROUND),propput]
+		HRESULT PictureBackground([in]IPictureDisp * val);
+		[id(DISPID_PICTUREBACKGROUND),propputref,helpcontext(csPPictureBackgroundChildBands),helpstring("The background picture for sliding tabs")]
+		HRESULT PictureBackground([in]IPictureDisp * * val);
+		[id(DISPID_PICTUREBACKGROUNDMASKCOLOR),propget,helpcontext(csPPictureBackgroundMaskColorChildBands),helpstring("Picture background color for sliding tabs")]
+		HRESULT PictureBackgroundMaskColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_PICTUREBACKGROUNDMASKCOLOR),propput]
+		HRESULT PictureBackgroundMaskColor([in]OLE_COLOR val);
+		[id(DISPID_PICTUREBACKGROUNDSTYLE),propget,helpcontext(csPPictureBackgroundStyleChildBands),helpstring("Picture background styles for sliding tabs")]
+		HRESULT PictureBackgroundStyle([out,retval]PictureBackgroundStyles *retval);
+		[id(DISPID_PICTUREBACKGROUNDSTYLE),propput]
+		HRESULT PictureBackgroundStyle([in]PictureBackgroundStyles val);
+		[id(DISPID_PICTUREBACKGROUNDUSEMASK),propget,helpcontext(csPPictureBackgroundUseMaskChildBands),helpstring("Picture background use mask for sliding tabs")]
+		HRESULT PictureBackgroundUseMask([out,retval]boolean *retval);
+		[id(DISPID_PICTUREBACKGROUNDUSEMASK),propput]
+		HRESULT PictureBackgroundUseMask([in]boolean val);
+		[id(DISPID_PAGEBACKCOLOR),propget,helpcontext(csPBackColorChildBands),helpstring("Pages background color for use with sliding tabs")]
+		HRESULT BackColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_PAGEBACKCOLOR),propput]
+		HRESULT BackColor([in]OLE_COLOR val);
+		[id(DISPID_CHILDBANDBACKGROUNDSTYLE),propget,helpcontext(csPChildBandBackgroundStyleChildBands),helpstring("ChildBand's Background style for use with sliding tabs")]
+		HRESULT ChildBandBackgroundStyle([out,retval]ChildBandBackgroundStyles *retval);
+		[id(DISPID_CHILDBANDBACKGROUNDSTYLE),propput]
+		HRESULT ChildBandBackgroundStyle([in]ChildBandBackgroundStyles val);
+		[id(DISPID_PAGEFORECOLOR),propget,helpcontext(csPForeColorChildBands),helpstring("Child Band's fore color for the captions on a sliding tab")]
+		HRESULT ForeColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_PAGEFORECOLOR),propput]
+		HRESULT ForeColor([in]OLE_COLOR val);
+		[id(DISPID_CHILDBANDCAPTIONALIGNMENT),propget,helpcontext(csPChildBandCaptionAlignmentChildBands),helpstring("ChildBand Caption Alignment for use with Sliding tabs")]
+		HRESULT ChildBandCaptionAlignment([out,retval]CaptionAlignmentTypes *retval);
+		[id(DISPID_CHILDBANDCAPTIONALIGNMENT),propput]
+		HRESULT ChildBandCaptionAlignment([in]CaptionAlignmentTypes val);
+		[id(DISPID_HIGHLIGHTCOLOR),propget,helpcontext(csPHighLightColorActiveBar2),helpstring("The highlight color for the edges of tools on a sliding tab")]
+		HRESULT HighLightColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_HIGHLIGHTCOLOR),propput]
+		HRESULT HighLightColor([in]OLE_COLOR val);
+		[id(DISPID_SHADOWCOLOR),propget,helpcontext(csPShadowColorActiveBar2),helpstring("The shadow color for the edges of tools on a sliding tab")]
+		HRESULT ShadowColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_SHADOWCOLOR),propput]
+		HRESULT ShadowColor([in]OLE_COLOR val);
+		[id(DISPID_TOOLFORECOLOR),propget,helpcontext(csPToolForeColorChildBands),helpstring("The fore color for the tools on a sliding tab")]
+		HRESULT ToolForeColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_TOOLFORECOLOR),propput]
+		HRESULT ToolForeColor([in]OLE_COLOR val);
+		[id(DISPID_CURRENTCHILDBAND),propget,helpcontext(csPCurrentChildBandChildBands),helpstring("Set or returns the index of the current band in the ChildBands collection")]
+		HRESULT CurrentChildBand([out,retval]Band * *retval);
+		[id(DISPID_CURRENTCHILDBAND),propputref,helpcontext(csPCurrentChildBandChildBands),helpstring("Set or returns the index of the current band in the ChildBands collection")]
+		HRESULT CurrentChildBand([in]Band * *retval);
+		[id(DISPID_CURRENTCHILDBAND),propput]
+		HRESULT CurrentChildBand([in]Band * val);
+		[id(DISPID_REMOVEALL),helpcontext(csMRemoveAllBands),helpstring("Remove all of the child bands")]
+		HRESULT RemoveAll();
+		[id(DISPID_GRADIENTENDCOLOR),propget,helpcontext(csPGradientEndColorChildBands)]
+		HRESULT GradientEndColor([out,retval]OLE_COLOR *retval);
+		[id(DISPID_GRADIENTENDCOLOR),propput]
+		HRESULT GradientEndColor([in]OLE_COLOR val);
+	};
+	
+	[uuid(89541523-2D31-11D2-A166-0060081C43D9),
+	dual	]
+	interface IComboList : IDispatch
+	{
+		[id(2),helpcontext(csMAddItemComboList)]
+		HRESULT AddItem([in] BSTR name);
+		[id(3),helpcontext(csMRemoveComboList)]
+		HRESULT Remove([in] VARIANT *Index);
+		[id(0),helpcontext(csMItemComboList)]
+		HRESULT Item([in] VARIANT *Index,[out,retval] BSTR *retval);
+		[id(DISPID_CLEAR),helpcontext(csMClearComboList)]
+		HRESULT Clear();
+		[id(DISPID_COUNT),helpcontext(csMCountComboList)]
+		HRESULT Count([out,retval] short *retval);
+		[id(DISPID_INSERTITEM),helpcontext(csMInsertItemComboList)]
+		HRESULT InsertItem([in] int index,[in] BSTR name);
+		[id(DISPID_ITEMDATA),propput,helpcontext(csPItemDataComboList)]
+		HRESULT ItemData([in] VARIANT Index, [in] long Data);
+		[id(DISPID_ITEMDATA),propget,helpcontext(csPItemDataComboList)]
+		HRESULT ItemData([in] VARIANT Index, [retval,out] long* Data);
+		[id(DISPID_COPYTO),hidden]
+		HRESULT CopyTo([in,out] IComboList **pComboList);
+		[id(DISPID_NEWINDEX),propget]
+		HRESULT NewIndex([out,retval]long *retval);
+	};
+	
+	[uuid(B2B5EB40-8826-11D0-9CAF-00A0C90F29FC),
+	oleautomation,
+	dual	]
+	interface IReturnBool : IDispatch
+	{
+		[id(0),propget,helpcontext(0)]
+		HRESULT Value([out,retval] boolean * retval);
+		[id(0),propput,helpcontext(0)]
+		HRESULT Value([in] boolean retval);
+	};
+	
+	[uuid(89541525-2D31-11D2-A166-0060081C43D9),
+	dual	]
+	interface ICustomizeListbox : IDispatch
+	{
+		[id(DISPID_LISTBOXTYPE),propget,helpcontext(csPTypeCustomizeListbox),helpstring("Changes the type of Customize Listbox")]
+		HRESULT Type([out,retval]CustomizeListboxTypes *retval);
+		[id(DISPID_LISTBOXTYPE),propput]
+		HRESULT Type([in]CustomizeListboxTypes val);
+		[id(DISPID_ACTIVEBAR),propput]
+		HRESULT ActiveBar([in]LPDISPATCH val);
+		[id(DISPID_ADDBAND),helpcontext(csMAddCustomizeListbox)]
+		HRESULT Add(BSTR strName, BandTypes btType);
+		[id(DISPID_DELETEBAND),helpcontext(csMDeleteCustomizeListbox)]
+		HRESULT Delete();
+		[id(DISPID_BANDRENAME),helpcontext(csMRenameCustomizeListbox)]
+		HRESULT Rename(BSTR strNew);
+		[id(DISPID_RESET),helpcontext(csMResetCustomizeListbox)]
+		HRESULT Reset();
+		[id(DISPID_CATEGORY),propget,helpcontext(csPCategoryCustomizeListbox)]
+		HRESULT Category([out,retval]BSTR *retval);
+		[id(DISPID_CATEGORY),propput]
+		HRESULT Category([in]BSTR val);
+		[id(DISPID_FONT),propget]
+		HRESULT Font([out,retval]IFontDisp * *retval);
+		[id(DISPID_FONT),propput]
+		HRESULT Font([in]IFontDisp * val);
+		[id(DISPID_FONT),propputref]
+		HRESULT Font([in]IFontDisp * * val);
+		[id(DISPID_TOOLDRAGDROP),propget,hidden]
+		HRESULT ToolDragDrop([out,retval]boolean *retval);
+		[id(DISPID_TOOLDRAGDROP),propput,hidden]
+		HRESULT ToolDragDrop([in]boolean val);
+	};
+	
+	[uuid(89541526-2D31-11D2-A166-0060081C43D9),
+	hidden	]
+	dispinterface ICustomizeListboxEvents
+	{
+		properties:
+		methods:
+		[id(DISPID_SELCHANGEBAND),helpcontext(csESelChangeBandCustomizeListbox)]
+		HRESULT SelChangeBand([in]Band *pBand);
+		[id(DISPID_SELCHANGECATEGORY),helpcontext(csESelChangeCategoryCustomizeListbox)]
+		HRESULT SelChangeCategory([in]BSTR strCategory);
+		[id(DISPID_SELCHANGETOOL),helpcontext(csESelChangeToolCustomizeListbox)]
+		HRESULT SelChangeTool([in]Tool *pTool);
+		[id(DISPID_ERROR),helpcontext(csEErrorCustomizeListbox)]
+		void Error([in] short Number,[in] ReturnString *Description,[in] long Scode,[in] BSTR Source,[in] BSTR HelpFile,[in] long HelpContext,[in,out] ReturnBool * CancelDisplay);
+	};
+	//typedef struct  tagCALPOLESTR
+ //   {
+	//	ULONG cElems;
+ //   /* [size_is] */ LPOLESTR *pElems;
+ //   }	CALPOLESTR;
+
+	//typedef struct tagCALPOLESTR  *LPCALPOLESTR;
+
+	//typedef struct  tagCADWORD
+ //   {
+ //   ULONG cElems;
+ //   /* [size_is] */ DWORD  *pElems;
+ //   }	CADWORD;
+
+	//typedef struct tagCADWORD  *LPCADWORD;
+
+//	[uuid(376BD3AA-3845-101B-84ED-08002B2EC713),
+//	odl	]
+//	interface IPerPropertyBrowsing : IUnknown
+//	{
+//		[id(0)]
+//		HRESULT GetDisplayString([in] DISPID dispID,[out] BSTR  *pBstr);
+//		[id(1)]
+//		HRESULT MapPropertyToPage([in] DISPID dispID,[out] CLSID  *pClsid);
+////		[id(2)]
+////		HRESULT GetPredefinedStrings([in]  DISPID dispID, [out]  CALPOLESTR  *pCaStringsOut, [out]  CADWORD  *pCaCookiesOut);
+//		[id(3)]
+//		HRESULT GetPredefinedValue([in] DISPID dispID,[in] DWORD dwCookie,[out] VARIANT  *pVarOut);
+//	};
+	[uuid(89541527-2D31-11D2-A166-0060081C43D9),
+	dual,
+	hidden	]
+	interface IImageMgr : IUnknown
+	{
+		[id(DISPID_PALETTE),propget]
+		HRESULT Palette([out,retval]OLE_HANDLE *retval);
+		[id(DISPID_PALETTE),propput]
+		HRESULT Palette([in]OLE_HANDLE val);
+		[id(DISPID_CREATEIMAGE)]
+		HRESULT CreateImage([out]long* nImageId, [in]boolean bDesignerCreated);
+		[id(DISPID_CREATEIMAGESIZE)]
+		HRESULT CreateImageEx([out]long* nImageId, [in] int nCx, [in] int nCy, [in]boolean bDesignerCreated, [in]boolean bXPCached);
+		[id(DISPID_ADDREFIMAGE)]
+		HRESULT AddRefImage([in] long nImageId);
+		[id(DISPID_REFCOUNTIMAGE)]
+		HRESULT RefCntImage([in] long nImageId, [out]long* nRefCnt);
+		[id(DISPID_RELEASEIMAGE)]
+		HRESULT ReleaseImage([in] long* nImageId);
+		[id(DISPID_SIZE)]
+		HRESULT Size([in] long nImageId, [out] long* nCx, [out] long* nCy);
+		[id(DISPID_PUTIMAGEBITMAP)]
+		HRESULT PutImageBitmap([in] long nImageId, [in] boolean vbDesignerCreated, [in] OLE_HANDLE hBitmap);
+		[id(DISPID_GETIMAGEBITMAP)]
+		HRESULT GetImageBitmap([in] long nImageId, [in] boolean vbUseMask, [out, retval] OLE_HANDLE* hBitmap );
+		[id(DISPID_GETMASKBITMAP)]
+		HRESULT PutMaskBitmap([in] long nImageId, [in] boolean vbDesignerCreated, [in] OLE_HANDLE hBitmap);
+		[id(DISPID_PUTMASKBITMAP),helpstring("Put Mask Bitmap")]
+		HRESULT GetMaskBitmap([in] long nImageId, [out, retval] OLE_HANDLE* hBitmap);
+		[id(DISPID_BITBLTEX)]
+		HRESULT BitBltEx([in]OLE_HANDLE hDC, [in] long nImageId, [in] long nX, [in] long nY, [in]long nRop, ImageStyles isStyle);
+		[id(DISPID_SCALEBLT)]
+		HRESULT ScaleBlt([in] OLE_HANDLE hDC, [in] long nImageId, [in] long nX, [in] long nY, [in] long nWidth, [in] long nHeight, [in] long nRop, ImageStyles isStyle);
+		[id(DISPID_COMPACT)]
+		HRESULT Compact();
+		[id(DISPID_IMAGEINITIALSIZE)]
+		HRESULT BitmapInitialSize([in] short nCx, [in] short nCy, [in] short nSize);
+		[id(DISPID_IMAGEGROWBY)]
+		HRESULT BitmapGrowBy([in] short nCx, [in] short nCy, [in] short nGrowBy);
+		[id(DISPID_MASKINITIALSIZE)]
+		HRESULT MaskBitmapInitialSize([in] short nCx, [in] short nCy, [in] short nSize);
+		[id(DISPID_MASKGROWBY)]
+		HRESULT MaskBitmapGrowBy([in] short nCx, [in] short nCy, [in] short nGrowBy);
+		[id(DISPID_MASKCOLOR),propget]
+		HRESULT MaskColor([in] long nImageId, [out, retval] OLE_COLOR *MaskColor);
+		[id(DISPID_MASKCOLOR),propput]
+		HRESULT MaskColor([in] long nImageId, [in] OLE_COLOR MaskColor);
+	};
+	[uuid(7FCDDEA0-359F-11D3-B5EE-0060081C43D9),
+	oleautomation,
+	dual	]
+	interface IShortCut : IDispatch
+	{
+		[id(0),propget,defaultbind]
+		HRESULT Value([out,retval]BSTR *retval);
+		[id(0),propput,defaultbind]
+		HRESULT Value([in]BSTR val);
+		[id(DISPID_SET),hidden]
+		HRESULT Set([in] short nIndex, [in] long nKeyCode, [in] long nKeyboardCode, [in] boolean bShift);
+		[id(DISPID_CONTROLCODE),hidden]
+		HRESULT SetControlCode([in] long nControlCode);
+		[id(DISPID_CLONE),hidden]
+		HRESULT Clone([out,retval] IShortCut **pShortCut);
+		[id(DISPID_CLEAR)]
+		HRESULT Clear();
+		[id(DISPID_GETKEYCODE),hidden]
+		HRESULT GetKeyCode([in] short nIndex, [out, retval] long *retval);
+		[id(DISPID_SHORTISEQUAL),hidden,helpstring("Are two ShortCuts Equal")]
+		HRESULT IsEqual([in] ShortCut* aShortCut);
+	};
+	
+	// CoClass for object ActiveBar2 Class
+	[ uuid(4932CEF4-2CAA-11D2-A165-0060081C43D9)
+	, control, licensed, helpcontext(4), version(2.0)]	coclass ActiveBar2 {
+		[default] interface IActiveBar2;
+		[default, source] dispinterface IActiveBar2Events;
+	};
+	// CoClass for object Bands Class
+	[ uuid(89541530-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass Bands {
+		[default] interface IBands;
+	};
+	// CoClass for object Band
+	[ uuid(89541531-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass Band {
+		[default] interface IBand;
+	};
+	// CoClass for object Tool
+	[ uuid(89541532-2D31-11D2-A166-0060081C43D9)
+	, helpstring("Tool Object"), version(2.0)]	coclass Tool {
+		[default] interface ITool;
+	};
+	// CoClass for object Tools Class
+	[ uuid(89541533-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass Tools {
+		[default] interface ITools;
+	};
+	// CoClass for object ReturnString
+	[ uuid(89541534-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass ReturnString {
+		[default] interface IReturnString;
+	};
+	[ uuid(28C83C91-DFAF-11D2-A2B2-0060081C43D9)
+	, version(2.0)]	coclass ChildBands {
+		[default] interface IChildBands;
+	};
+	// CoClass for object ComboList Class
+	[ uuid(89541537-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass ComboList {
+		[default] interface IComboList;
+	};
+	// CoClass for object ReturnBool
+	[ uuid(8954153A-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass ReturnBool {
+		[default] interface IReturnBool;
+	};
+	// CoClass for object CustomizeListbox Class
+	[ uuid(8954153B-2D31-11D2-A166-0060081C43D9)
+	, control, version(2.0)]	coclass CustomizeListbox {
+		[default] interface ICustomizeListbox;
+		[default, source] dispinterface ICustomizeListboxEvents;
+	};
+	// CoClass for object ImageMgr Class
+	[ uuid(8954153E-2D31-11D2-A166-0060081C43D9)
+	, version(2.0)]	coclass ImageMgr {
+		[default] interface IUnknown;
+	};
+	[ uuid(4FA6E110-359F-11D3-B5EE-0060081C43D9)]	coclass ShortCut {
+		[default] interface IShortCut;
+	};
+}

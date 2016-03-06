@@ -1,0 +1,248 @@
+:Base ActiveBar2Ref.hlp
+:Title ActiveBar 2.0 Reference
+1 ActiveBar 2.0 Reference
+2 ActiveBar2 Control
+3 ActiveBar2 Control=csCtlActiveBar2
+3 ActiveBar2 Properties
+4 ActiveBand=csPActiveBandActiveBar2
+4 AlignToForm=csPAlignToFormActiveBar2
+4 AllowDuplicateToolIds=csPAllowDuplicateToolIdsActiveBar2
+4 Bands=csPBandsActiveBar2
+4 ChildBandFont=csPChildBandFontActiveBar2
+4 ControlFont=csPControlFontActiveBar2
+4 DataPath=csPDataPathActiveBar2
+4 DisplayKeysInToolTip=csPDisplayKeysInToolTipActiveBar2
+4 DisplayToolTips=csPDisplayToolTipsActiveBar2
+4 HighLightColor=csPHighLightColorActiveBar2
+4 LargeIcons=csPLargeIconsActiveBar2
+4 MenuAnimation=csPMenuAnimationActiveBar2
+4 MenuFontStyle=csPMenuFontStyleActiveBar2
+4 ShadowColor=csPShadowColorActiveBar2
+4 Tools=csPToolsActiveBar2
+4 Version=csPVersionActiveBar2
+4 WhatsThisHelpMode=csPWhatsThisHelpModeActiveBar2
+3 ActiveBar2 Events
+4 BandClose=csEBandCloseActiveBar2
+4 BandDock=csEBandDockActiveBar2
+4 BandMove=csEBandMoveActiveBar2
+4 BandOpen=csEBandOpenActiveBar2
+4 BandResize=csEBandResizeActiveBar2
+4 BandUndock=csEBandUndockActiveBar2
+4 ChildBandChange=csEChildBandChangeActiveBar2
+4 Click=csEClickActiveBar2
+4 ComboDrop=csEComboDropActiveBar2
+4 ComboSelChange=csEComboSelChangeActiveBar2
+4 CustomizeBegin=csECustomizeBeginActiveBar2
+4 CustomizeEnd=csECustomizeEndActiveBar2
+4 DataReady=csEDataReadyActiveBar2
+4 DblClick=csEDblClickActiveBar2
+4 Error=csEErrorActiveBar2
+4 FileDrop=csEFileDropActiveBar2
+4 MenuItemEnter=csEMenuItemEnterActiveBar2
+4 MenuItemExit=csEMenuItemExitActiveBar2
+4 MouseEnter=csEMouseEnterActiveBar2
+4 MouseExit=csEMouseExitActiveBar2
+4 NewToolbar=csENewToolbarActiveBar2
+4 PreCustomizeMenu=csEPreCustomizeMenuActiveBar2
+4 PreSysMenu=csEPreSysMenuActiveBar2
+4 Reset=csEResetActiveBar2
+4 Resize=csEResizeActiveBar2
+4 TextChange=csETextChangeActiveBar2
+4 ToolGotFocus=csEToolGotFocusActiveBar2
+4 ToolLostFocus=csEToolLostFocusActiveBar2
+4 ToolReset=csEToolResetActiveBar2
+4 WhatsThisHelp=csEWhatsThisHelpActiveBar2
+3 ActiveBar2 Methods
+4 About=csMAboutActiveBar2
+4 Customize=csMCustomizeActiveBar2
+4 Load=csMLoadActiveBar2
+4 LoadLayoutChanges=csMLoadLayoutChangesActiveBar2
+4 Localize=csMLocalizeActiveBar2
+4 OnSysColorChanged=csMOnSysColorChangedActiveBar2
+4 PlaySound=csMPlaySoundActiveBar2
+4 RecalcLayout=csMRecalcLayoutActiveBar2
+4 Refresh=csMRefreshActiveBar2
+4 RegisterChildMenu=csMRegisterChildMenuActiveBar2
+4 ReleaseFocus=csMReleaseFocusActiveBar2
+4 Save=csMSaveActiveBar2
+4 SaveLayoutChanges=csMSaveLayoutChangesActiveBar2
+2 Band Object
+3 Band Object=csCtlBand
+3 Band Properties
+4 AutoSizeForms=csPAutoSizeFormsBand
+4 ChildBands=csPChildBandsBand
+4 ChildBandStyle=csPChildBandStyleBand
+4 CreatedBy=csPCreatedByBand
+4 CurrentChildBand=csPCurrentChildBandBand
+4 CurrentTool=csPCurrentToolBand
+4 DisplayHandles=csPDisplayHandlesBand
+4 DockedHorzHeight=csPDockedHorzHeightBand
+4 DockedHorzWidth=csPDockedHorzWidthBand
+4 DockedVertHeight=csPDockedVertHeightBand
+4 DockedVertWidth=csPDockedVertWidthBand
+4 DockingArea=csPDockingAreaBand
+4 DockingOffset=csPDockingOffsetBand
+4 DockLine=csPDockLineBand
+4 Flags=csPFlagsBand
+4 GrabHandleStyle=csPGrabHandleStyleBand
+4 Height=csPHeightBand
+4 Left=csPLeftBand
+4 MaxHeight=csPMaxHeightBand
+4 MaxWidth=csPMaxWidthBand
+4 MouseTracking=csPMouseTrackingBand
+4 Name=csPNameBand
+4 TagVariant=csPTagVariantBand
+4 Tools=csPToolsBand
+4 ToolsHPadding=csPToolsHPaddingBand
+4 ToolsHSpacing=csPToolsHSpacingBand
+4 ToolsVPadding=csPToolsVPaddingBand
+4 ToolsVSpacing=csPToolsVSpacingBand
+4 Top=csPTopBand
+4 Type=csPTypeBand
+4 Visible=csPVisibleBand
+4 Width=csPWidthBand
+4 WrapTools=csPWrapToolsBand
+3 Band Methods
+4 Refresh=csMRefreshBand
+4 TrackPopup=csMTrackPopupBand
+4 TrackPopupEx=csMTrackPopupExBand
+2 Tool Object
+3 Tool Object=csCtlTool
+3 Tool Properties
+4 Alignment=csPAlignmentTool
+4 AutoRepeat=csPAutoRepeatTool
+4 AutoRepeatInterval=csPAutoRepeatIntervalTool
+4 CaptionPosition=csPCaptionPositionTool
+4 Category=csPCategoryTool
+4 CBList=csPCBListTool
+4 CBListCount=csPCBListCountTool
+4 CBListIndex=csPCBListIndexTool
+4 CBStyle=csPCBStyleTool
+4 CBWidth=csPCBWidthTool
+4 Checked=csPCheckedTool
+4 ControlType=csPControlTypeTool
+4 Custom=csPCustomTool
+4 Default=csPDefaultTool
+4 Description=csPDescriptionTool
+4 Height=csPHeightTool
+4 HelpContextID=csPHelpContextIDTool
+4 ID=csPIDTool
+4 LabelStyle=csPLabelStyleTool
+4 List=csPListTool
+4 Name=csPNameTool
+4 ShortCuts=csPShortCutsTool
+4 Style=csPStyleTool
+4 SubBand=csPSubBandTool
+4 TagVariant=csPTagVariantTool
+4 Text=csPTextTool
+4 TooltipText=csPTooltipTextTool
+4 Visible=csPVisibleTool
+4 Width=csPWidthTool
+3 Tool Methods
+4 CBAddItem=csMCBAddItemTool
+4 CBClear=csMCBClearTool
+4 CBRemoveItem=csMCBRemoveItemTool
+4 GetPicture=csMGetPictureTool
+4 SetFocus=csMSetFocusTool
+4 SetPicture=csMSetPictureTool
+4 SetPictureMask=csMSetPictureMaskTool
+2 Bands Object
+3 Bands Object=csCtlBands
+3 Bands Methods
+4 Add=csMAddBands
+4 Count=csMCountBands
+4 Item=csMItemBands
+4 Remove=csMRemoveBands
+4 RemoveAll=csMRemoveAllBands
+2 Tools Object
+3 Tools Object=csCtlTools
+3 Tools Methods
+4 Add=csMAddTools
+4 Count=csMCountTools
+4 Insert=csMInsertTools
+4 Item=csMItemTools
+4 Remove=csMRemoveTools
+4 RemoveAll=csMRemoveAllTools
+2 ChildBands Object
+3 ChildBands Object=csCtlChildBands
+3 ChildBands Properties
+4 BackColor=csPBackColorChildBands
+4 ChildBandBackgroundStyle=csPChildBandBackgroundStyleChildBands
+4 ChildBandCaptionAlignment=csPChildBandCaptionAlignmentChildBands
+4 ChildBandFont3D=csPChildBandFont3DChildBands
+4 ForeColor=csPForeColorChildBands
+4 HighLightColor=csPHighLightColorChildBands
+4 PictureBackground=csPPictureBackgroundChildBands
+4 PictureBackgroundMaskColor=csPPictureBackgroundMaskColorChildBands
+4 PictureBackgroundStyle=csPPictureBackgroundStyleChildBands
+4 PictureBackgroundUseMask=csPPictureBackgroundUseMaskChildBands
+4 ShadowColor=csPShadowColorChildBands
+4 ToolForeColor=csPToolForeColorChildBands
+3 ChildBands Methods
+4 Add=csMAddChildBands
+4 Count=csMCountChildBands
+4 Item=csMItemChildBands
+4 Remove=csMRemoveChildBands
+2 ComboList Object
+3 ComboList Object=csCtlComboList
+3 ComboList Properties
+4 ItemData=csPItemDataComboList
+3 ComboList Methods
+4 AddItem=csMAddItemComboList
+4 Clear=csMClearComboList
+4 Count=csMCountComboList
+4 InsertItem=csMInsertItemComboList
+4 Item=csMItemComboList
+4 Remove=csMRemoveComboList
+2 CustomizeListbox Control
+3 CustomizeListbox Control=csCtlCustomizeListbox
+3 CustomizeListbox Properties
+4 ActiveBar=csPActiveBarCustomizeListbox
+4 Category=csPCategoryCustomizeListbox
+4 ToolDragDrop=csPToolDragDropCustomizeListbox
+4 Type=csPTypeCustomizeListbox
+3 CustomizeListbox Events
+4 Error=csEErrorCustomizeListbox
+4 SelChangeBand=csESelChangeBandCustomizeListbox
+4 SelChangeCategory=csESelChangeCategoryCustomizeListbox
+4 SelChangeTool=csESelChangeToolCustomizeListbox
+3 CustomizeListbox Methods
+4 Add=csMAddCustomizeListbox
+4 Delete=csMDeleteCustomizeListbox
+4 Rename=csMRenameCustomizeListbox
+4 Reset=csMResetCustomizeListbox
+1  Constants
+2 BandChangeTypes Constants=csSetBandChangeTypes
+2 BandFlags Constants=csSetBandFlags
+2 BandTypes Constants=csSetBandTypes
+2 CaptionAlignmentTypes Constants=csSetCaptionAlignmentTypes
+2 CaptionPositionTypes Constants=csSetCaptionPositionTypes
+2 ChildBandBackgroundStyle Constants=csSetChildBandBackgroundStyle
+2 ChildBandStyles Constants=csSetChildBandStyles
+2 ComboStyles Constants=csSetComboStyles
+2 CreatedByTypes Constants=csSetCreatedByTypes
+2 CustomizeListboxTypes Constants=csSetCustomizeListboxTypes
+2 CustomizeTypes Constants=csSetCustomizeTypes
+2 CustomToolTypes Constants=csSetCustomToolTypes
+2 DDAutoSizeChildrenTypes Constants=csSetDDAutoSizeChildrenTypes
+2 DDGrabHandleStyle Constants=csSetDDGrabHandleStyle
+2 DockingArea Constants=csSetDockingArea
+2 Font3DTypes Constants=csSetFont3DTypes
+2 ImageStyles Constants=csSetImageStyles
+2 LabelStyles Constants=csSetLabelStyles
+2 LocalizationTypes Constants=csSetLocalizationTypes
+2 MenuFontStyles Constants=csSetMenuFontStyles
+2 MenuStyles Constants=csSetMenuStyles
+2 PictureBackgroundStyle Constants=csSetPictureBackgroundStyle
+2 SaveOptionTypes Constants=csSetSaveOptionTypes
+2 SoundTypes Constants=csSetSoundTypes
+2 ToolAlignmentTypes Constants=csSetToolAlignmentTypes
+2 ToolStyles Constants=csSetToolStyles
+2 ToolTypes Constants=csSetToolTypes
+2 TrackingStyles Constants=csSetTrackingStyles
+2 BandFlags (Enumeration)=csCstBandFlagsEnumeration
+2 CreatedByTypes (Enumeration)=csCstCreatedByTypesEnumeration
+2 DockingArea (Enumeration)=csCstDockingAreaEnumeration
+2 Add Band and Tool=csCstAddBandandTool
+2 Add Two Bands=csCstAddTwoBands
+2 Save & Load Layout to Byte Array=csCstSaveLoadLayouttoByteArray

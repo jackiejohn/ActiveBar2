@@ -1,0 +1,23 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by prj.rc
+//
+#define HIDC_ASSIGN                     0x80970405    // IDD_KEYBOARD
+#define HIDC_CB_MENUANIMATION           0x806b0400    // IDD_OPTIONS
+#define HIDC_CK_FULLMENUAFTERDELAY      0x806b0402    // IDD_OPTIONS
+#define HIDC_CK_LARGE                   0x806b03fd    // IDD_OPTIONS
+#define HIDC_CK_MRUFIRST                0x806b0401    // IDD_OPTIONS
+#define HIDC_CK_SCREENTIP               0x806b03fe    // IDD_OPTIONS
+#define HIDC_CK_SHORTCUT                0x806b03ff    // IDD_OPTIONS
+#define HIDC_CLOSE                      0x80970404    // IDD_KEYBOARD
+#define HIDC_DELETE                     0x809303fe    // IDD_TOOLBAR
+#define HIDC_DESCRIPTION                0x809703f2    // IDD_KEYBOARD
+#define HIDC_ED_SHORTCUT                0x80970408    // IDD_KEYBOARD
+#define HIDC_LB_KEYS                    0x80970403    // IDD_KEYBOARD
+#define HIDC_LT_CATEGORY                0x80970401    // IDD_KEYBOARD
+#define HIDC_LT_COMMANDS                0x80970402    // IDD_KEYBOARD
+#define HIDC_NEW                        0x809303fc    // IDD_TOOLBAR
+#define HIDC_REMOVE                     0x80970406    // IDD_KEYBOARD
+#define HIDC_RENAME                     0x809303fd    // IDD_TOOLBAR
+#define HIDC_RESET                      0x809303ff    // IDD_TOOLBAR
+#define HIDC_RESETALL                   0x80970407    // IDD_KEYBOARD
+#define HIDOK                           0x80010001    // IDD_ABOUT
